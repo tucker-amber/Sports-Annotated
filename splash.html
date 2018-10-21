@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" alt="logo" width="80px">
+    <span class="font-weight-bold">Sports Annotated</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Another Link?</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Cool Cat Pics</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Link 6</a>
+      </li>
+    </ul>
+
+  </div>  
+</nav>
+<br>
+
+<div class="container bg-light">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="footballOnField.jpg" class="mx-auto d-block border p-3" alt="Football On Field" width="500px">
+    </div>
+    <div class="carousel-item">
+      <img src="pileUp.jpg"  class="mx-auto d-block border p-3" alt="Player Pile Up" width="500px">
+    </div>
+    <div class="carousel-item">
+      <img src="tomBrady.jpg"  class="mx-auto d-block border p-3" alt="Tom Brady" width="400px">
+    </div>
+    <div class="carousel-item">
+      <img src="bearsPackers.jpg"  class="mx-auto d-block border p-3" alt="Packers v Bears" width="400px">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+</div>
+
+</body>
+</html>
