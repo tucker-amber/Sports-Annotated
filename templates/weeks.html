@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Match History</title>
+  <!-- Setting initial meta data-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      position: relative;
+  }
+  ul.nav-pills {
+      top: 20px;
+      position: fixed;
+  }
+  div.col-8 div {
+      height: 500px;
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<!-- Using Nav class to to help get to different url pages-->
+<nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="../static/images/logo.png" alt="logo" width="80px">
+    <span class="font-weight-bold">Sports Annotated</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Teams</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="{{url_for('weeks')}}">Match History</a>
+      </li>
+      <li class="nav-item pr-2">
+        <a class="nav-link" href="#">Players</a>
+      </li>
+    </ul>
+  </div>  
+</nav>
+<!--Container class involving tabs to allow user to navigate to different parts of the page -->
+  <div class="container-fluid">
+    <div class ="text-center"><h1>The weeks of NFL games played</h1></div>
+    <div class="row">
+      <ul class="nav nav-tabs" id="myScrollspy">
+		  <li class="nav-items">
+		    <a class="nav-link" href="#Week One">Week One</a>
+		  </li>
+		  <li class="nav-items">
+		    <a class="nav-link" href="#Week Two">Week Two</a>
+		  </li>
+		  <li class="nav-items">
+		    <a class="nav-link" href="#Week Three">Week Three</a>
+		  </li>
+      </ul>
+	</div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9 col-10">
+      <div id="Week One">    
+        <h3 style = "background-color: powderblue">Week One</h3>
+		<table class="table table-sm table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Game #</th>
+					<th scope="col">Team 1</th>
+					<th scope="col">Team 2</th>
+					<th scope="col">Score</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td><img src ="../static/images/Falcons.png" alt = "NFL team">Falcons</td>
+					<td><img src ="../static/images/eagles.png" alt = "NFL team">Eagles</td>
+					<td>12  -  18</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td><img src ="../static/images/bengals.png" alt = "NFL team">Bengals</td>
+					<td><img src ="../static/images/colts.png" alt = "NFL team">Colts</td>
+					<td>34  -  23</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td><img src ="../static/images/bills.png" alt = "NFL team">Bills</td>
+					<td><img src ="../static/images/ravens.png" alt = "NFL team">Ravens</td>
+					<td>3  -  27</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td><img src ="../static/images/buccaneers.png" alt = "NFL team">Buccaneers</td>
+					<td><img src ="../static/images/saints.png" alt = "NFL team">Saints</td>
+					<td>48  -  40</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td><img src ="../static/images/texans.png" alt = "NFL team">Texans</td>
+					<td><img src ="../static/images/patriots.png" alt = "NFL team">Patriots</td>
+					<td>20  -  27</td>
+				</tr>
+				<tr>
+					<th scope="row">6</th>
+					<td><img src ="../static/images/49ers.png" alt = "NFL team">49ers</td>
+					<td><img src ="../static/images/vikings.png" alt = "NFL team">Vikings</td>
+					<td>16  -  24</td>
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td><img src ="../static/images/titans.png" alt = "NFL team">Titans</td>
+					<td><img src ="../static/images/dolphins.png" alt = "NFL team">Dolphins</td>
+					<td>20  -  27</td>
+				</tr>
+				<tr>
+					<th scope="row">8</th>
+					<td><img src ="../static/images/jaguars.png" alt = "NFL team">Jaguars</td>
+					<td><img src ="../static/images/ny.png" alt = "NFL team">Giants</td>
+					<td>20  -  15</td>
+				</tr>
+				<tr>
+					<th scope="row">9</th>
+					<td><img src ="../static/images/steelers.png" alt = "NFL team">Steelers</td>
+					<td><img src ="../static/images/browns.png" alt = "NFL team">Browns</td>
+					<td>21  -  21</td>
+				</tr>
+				<tr>
+					<th scope="row">10</th>
+					<td><img src ="../static/images/kc.png" alt = "NFL team">Chiefs</td>
+					<td><img src ="../static/images/chargers.png" alt = "NFL team">Chargers</td>
+					<td>38  -  28</td>
+				</tr>
+				<tr>
+					<th scope="row">11</th>
+					<td><img src ="../static/images/cowboys.png" alt = "NFL team">Cowboys</td>
+					<td><img src ="../static/images/panthers.png" alt = "NFL team">Panthers</td>
+					<td>8  -  16</td>
+				</tr>
+				<tr>
+					<th scope="row">12</th>
+					<td><img src ="../static/images/redskins.png" alt = "NFL team">Redskins</td>
+					<td><img src ="../static/images/cardinals.png" alt = "NFL team">Cardinals</td>
+					<td>24  -  6</td>
+				</tr>
+				<tr>
+					<th scope="row">13</th>
+					<td><img src ="../static/images/seahawks.png" alt = "NFL team">Seahawks</td>
+					<td><img src ="../static/images/broncos.png" alt = "NFL team">Broncos</td>
+					<td>24  -  27</td>
+				</tr>
+				<tr>
+					<th scope="row">14</th>
+					<td><img src ="../static/images/bears.png" alt = "NFL team">Bears</td>
+					<td><img src ="../static/images/packers.png" alt = "NFL team">Packers</td>
+					<td>23  -  24</td>
+				</tr>
+				<tr>
+					<th scope="row">15</th>
+					<td><img src ="../static/images/jets.png" alt = "NFL team">Jets</td>
+					<td><img src ="../static/images/lions.png" alt = "NFL team">Lions</td>
+					<td>48  -  17</td>
+				</tr>
+				<tr>
+					<th scope="row">16</th>
+					<td><img src ="../static/images/rams.png" alt = "NFL team">Rams</td>
+					<td><img src ="../static/images/raiders.png" alt = "NFL team">Raiders</td>
+					<td>33  -  13</td>
+				</tr>
+			</tbody>
+		</table>
+      </div>
+      <div id="Week Two" > 
+        <h3 style = "background-color: powderblue">Week Two</h3>
+		<table class="table table-sm table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Game #</th>
+					<th scope="col">Team 1</th>
+					<th scope="col">Team 2</th>
+					<th scope="col">Score</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td><img src ="../static/images/ravens.png" alt = "NFL team">Ravens</td>
+					<td><img src ="../static/images/bengals.png" alt = "NFL team">Bengals</td>
+					<td>23  -  34</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td><img src ="../static/images/kc.png" alt = "NFL team">Chiefs</td>
+					<td><img src ="../static/images/steelers.png" alt = "NFL team">Steelers</td>
+					<td>42  -  37</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td><img src ="../static/images/dolphins.png" alt = "NFL team">Dolphins</td>
+					<td><img src ="../static/images/jets.png" alt = "NFL team">Jets</td>
+					<td>20  -  12</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td><img src ="../static/images/eagles.png" alt = "NFL team">Eagles</td>
+					<td><img src ="../static/images/buccaneers.png" alt = "NFL team">buccaneers</td>
+					<td>21  -  27</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td><img src ="../static/images/browns.png" alt = "NFL team">Browns</td>
+					<td><img src ="../static/images/saints.png" alt = "NFL team">Saints</td>
+					<td>18  -  21</td>
+				</tr>
+				<tr>
+					<th scope="row">6</th>
+					<td><img src ="../static/images/colts.png" alt = "NFL team">Colts</td>
+					<td><img src ="../static/images/redskins.png" alt = "NFL team">Redskins</td>
+					<td>21  -  9</td>
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td><img src ="../static/images/chargers.png" alt = "NFL team">Chargers</td>
+					<td><img src ="../static/images/bills.png" alt = "NFL team">Bills</td>
+					<td>31  -  20</td>
+				</tr>
+				<tr>
+					<th scope="row">8</th>
+					<td><img src ="../static/images/vikings.png" alt = "NFL team">Vikings</td>
+					<td><img src ="../static/images/packers.png" alt = "NFL team">Packers</td>
+					<td>29  -  29</td>
+				</tr>
+				<tr>
+					<th scope="row">9</th>
+					<td><img src ="../static/images/panthers.png" alt = "NFL team">Panthers</td>
+					<td><img src ="../static/images/Falcons.png" alt = "NFL team">Falcons</td>
+					<td>24  -  31</td>
+				</tr>
+				<tr>
+					<th scope="row">10</th>
+					<td><img src ="../static/images/seahawks.png" alt = "NFL team">Seahawks</td>
+					<td><img src ="../static/images/bears.png" alt = "NFL team">Bears</td>
+					<td>17  -  24</td>
+				</tr>
+				<tr>
+					<th scope="row">11</th>
+					<td><img src ="../static/images/texans.png" alt = "NFL team">Texans</td>
+					<td><img src ="../static/images/titans.png" alt = "NFL team">Titans</td>
+					<td>17  -  20</td>
+				</tr>
+				<tr>
+					<th scope="row">12</th>
+					<td><img src ="../static/images/cardinals.png" alt = "NFL team">Cardinals</td>
+					<td><img src ="../static/images/rams.png" alt = "NFL team">Rams</td>
+					<td>0  -  34</td>
+				</tr>
+				<tr>
+					<th scope="row">13</th>
+					<td><img src ="../static/images/lions.png" alt = "NFL team">Lions</td>
+					<td><img src ="../static/images/49ers.png" alt = "NFL team">49ers</td>
+					<td>27  -  30</td>
+				</tr>
+				<tr>
+					<th scope="row">14</th>
+					<td><img src ="../static/images/raiders.png" alt = "NFL team">Raiders</td>
+					<td><img src ="../static/images/broncos.png" alt = "NFL team">Broncos</td>
+					<td>19  -  20</td>
+				</tr>
+				<tr>
+					<th scope="row">15</th>
+					<td><img src ="../static/images/patriots.png" alt = "NFL team">Patriots</td>
+					<td><img src ="../static/images/jaguars.png" alt = "NFL team">Jaguars</td>
+					<td>20  -  31</td>
+				</tr>
+				<tr>
+					<th scope="row">16</th>
+					<td><img src ="../static/images/ny.png" alt = "NFL team">Giants</td>
+					<td><img src ="../static/images/cowboys.png" alt = "NFL team">Cowboys</td>
+					<td>13  -  20</td>
+				</tr>
+			</tbody>
+		</table>
+      </div>        
+      <div id="Week Three"> 
+		<div>
+        <h3 style = "background-color: powderblue">Week Three</h3>
+		</div>
+		<table class="table table-sm table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Game #</th>
+					<th scope="col">Team 1</th>
+					<th scope="col">Team 2</th>
+					<th scope="col">Score</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td><img src ="../static/images/jets.png" alt = "NFL team">Jets</td>
+					<td><img src ="../static/images/browns.png" alt = "NFL team">Browns</td>
+					<td>17  -  21</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td><img src ="../static/images/bills.png" alt = "NFL team">Bills</td>
+					<td><img src ="../static/images/vikings.png" alt = "NFL team">Vikings</td>
+					<td>27  -  6</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td><img src ="../static/images/ny.png" alt = "NFL team">Giants</td>
+					<td><img src ="../static/images/texans.png" alt = "NFL team">Texans</td>
+					<td>27  -  22</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td><img src ="../static/images/packers.png" alt = "NFL team">Packers</td>
+					<td><img src ="../static/images/redskins.png" alt = "NFL team">Redskins</td>
+					<td>17  -  31</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td><img src ="../static/images/49ers.png" alt = "NFL team">49ers</td>
+					<td><img src ="../static/images/kc.png" alt = "NFL team">Chiefs</td>
+					<td>27  -  38</td>
+				</tr>
+				<tr>
+					<th scope="row">6</th>
+					<td><img src ="../static/images/raiders.png" alt = "NFL team">Raiders</td>
+					<td><img src ="../static/images/dolphins.png" alt = "NFL team">Dolphins</td>
+					<td>20  -  28</td>
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td><img src ="../static/images/colts.png" alt = "NFL team">colts</td>
+					<td><img src ="../static/images/eagles.png" alt = "NFL team">Eagles</td>
+					<td>16  -  20</td>
+				</tr>
+				<tr>
+					<th scope="row">8</th>
+					<td><img src ="../static/images/titans.png" alt = "NFL team">Titans</td>
+					<td><img src ="../static/images/jaguars.png" alt = "NFL team">Jaguars</td>
+					<td>9  -  6</td>
+				</tr>
+				<tr>
+					<th scope="row">9</th>
+					<td><img src ="../static/images/bengals.png" alt = "NFL team">Bengals</td>
+					<td><img src ="../static/images/panthers.png" alt = "NFL team">Panthers</td>
+					<td>21  -  31</td>
+				</tr>
+				<tr>
+					<th scope="row">10</th>
+					<td><img src ="../static/images/broncos.png" alt = "NFL team">Broncos</td>
+					<td><img src ="../static/images/ravens.png" alt = "NFL team">Ravens</td>
+					<td>14  -  27</td>
+				</tr>
+				<tr>
+					<th scope="row">11</th>
+					<td><img src ="../static/images/saints.png" alt = "NFL team">Saints</td>
+					<td><img src ="../static/images/falcons.png" alt = "NFL team">Falcons</td>
+					<td>43  -  37</td>
+				</tr>
+				<tr>
+					<th scope="row">12</th>
+					<td><img src ="../static/images/chargers.png" alt = "NFL team">Chargers</td>
+					<td><img src ="../static/images/rams.png" alt = "NFL team">Rams</td>
+					<td>23  -  35</td>
+				</tr>
+				<tr>
+					<th scope="row">13</th>
+					<td><img src ="../static/images/bears.png" alt = "NFL team">Bears</td>
+					<td><img src ="../static/images/cardinals.png" alt = "NFL team">Cardinals</td>
+					<td>16  -  14</td>
+				</tr>
+				<tr>
+					<th scope="row">14</th>
+					<td><img src ="../static/images/cowboys.png" alt = "NFL team">Cowboys</td>
+					<td><img src ="../static/images/seahawks.png" alt = "NFL team">Seahawks</td>
+					<td>13  -  24</td>
+				</tr>
+				<tr>
+					<th scope="row">15</th>
+					<td><img src ="../static/images/steelers.png" alt = "NFL team">Steelers</td>
+					<td><img src ="../static/images/buccaneers.png" alt = "NFL team">Buccaneers</td>
+					<td>30  -  27</td>
+				</tr>
+				<tr>
+					<th scope="row">16</th>
+					<td><img src ="../static/images/patriots.png" alt = "NFL team">Patriots</td>
+					<td><img src ="../static/images/lions.png" alt = "NFL team">Lions</td>
+					<td>10  -  26</td>
+				</tr>
+			</tbody>
+		</table>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
