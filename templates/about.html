@@ -50,6 +50,7 @@
         <a class="nav-link" href="{{url_for('players')}}">Players</a>
 
       </li>
+
 	  <li class="nav-item pr-2">
 
         <a class="nav-link" href="{{url_for('about')}}">About</a>
@@ -72,7 +73,6 @@
         <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
 
         </ol>
 
@@ -80,7 +80,11 @@
 
           <div class="carousel-item active">
 
-            <img class="first-slide mx-auto d-block" src="../static/images/logo.png" alt="Jerry" style="transform:rotate(270deg)">
+            <img class="mx-auto d-block" src="../static/images/jerry.jpg" alt="Jerry" width="300" style="transform:rotate(270deg)">
+          </div>
+          <div class="carousel-item active">
+
+            <img class="mx-auto d-block" src="../static/images/amber.jpg" alt="Amber" width="300" style="transform:rotate(90deg)">
           </div>
         </div>
       </div>
@@ -107,17 +111,31 @@
     </div>
   </div><br>
   <div class="row">
-    <div class="col-sm-12">
-      <h3 class="text-center pt-1">Project Information</h3>
-    </div>
-    <div class="col-sm-12 justify-center">
+    <div class="col-sm-4 justify-center">
+      <h3 class="text-center pt-1">Stats</h3>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
-        <li class="list-group-item"></li>
+        <li class="list-group-item">Commits:</li>
+        <li class="list-group-item">Issues:</li>
+        <li class="list-group-item">Unit Tests:</li>
+        <li class="list-group-item"><a href="https://gitlab.com/jayh511/cs329e-idb/issues">Gitlab Issue Tracker</a></li>
         <li class="list-group-item"><a href="https://gitlab.com/jayh511/cs329e-idb.git">GitLab Repo</a></li>
-        <li class="list-group-item"></li>
+        <li class="list-group-item"><a href="https://gitlab.com/jayh511/cs329e-idb/wikis/home">Gitlab Wiki</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center pt-1">Data Sources</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">NFL</li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <h3 class="text-center pt-1">Tools</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">GCP</li>
+        <li class="list-group-item">Bootstrap</li>
+        <li class="list-group-item">Flask</li>
+        <li class="list-group-item">Slack</li>
+        <li class="list-group-item">Gitlab</li>
       </ul>
     </div>
   </div>
