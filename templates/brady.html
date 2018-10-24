@@ -19,8 +19,8 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="{{url_for('players')}}">
-    <img src="../static/images/logo.png" alt="logo" width="80px">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -61,7 +61,7 @@
       <table class="table" width="100%">
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Team</th>
-          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1"><a href="#" style="text-decoration:none; color:black">Patriots</a></td>
+          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1"><a href="{{url_for('patriots')}}" style="text-decoration:none; color:black">Patriots</a></td>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Position</th>
           <td>QB</td>
