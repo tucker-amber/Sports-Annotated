@@ -37,6 +37,11 @@ def barner():
 def teams():
   return render_template('teams.html')
  
+# Navigates to Patriots page
+@app.route('/patriots')
+def patriots():
+  return render_template('patriots.html')
+
 @app.route('/about')
 def about():
   return render_template('about.html')
