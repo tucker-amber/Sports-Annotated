@@ -48,6 +48,11 @@ def patriots():
 def cowboys():
   return render_template('cowboys.html')
 
+# Navigates to Cowboys page
+@app.route('/packers')
+def packers():
+  return render_template('packers.html')
+
 @app.route('/about')
 def about():
   return render_template('about.html')
