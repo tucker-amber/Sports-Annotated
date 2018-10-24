@@ -5,6 +5,7 @@
 from flask import Flask, render_template
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
   return render_template('splash.html')
@@ -42,12 +43,26 @@ def teams():
 def patriots():
   return render_template('patriots.html')
 
+# Navigates to Cowboys page
+@app.route('/cowboys')
+def cowboys():
+  return render_template('cowboys.html')
+
 @app.route('/about')
 def about():
   return render_template('about.html')
 
+
+# Navigates to Home/Splash page
+@app.route('/splash')
+def splash():
+  return render_template('splash.html')
+
 if __name__ == "__main__":
  app.run()
+
+ # This part is for Amber to use to connect to CS server :)
+# app.run(host="128.83.144.118")
 #----------------------------------------
 # end of main2.py
 #-----------------------------------------
