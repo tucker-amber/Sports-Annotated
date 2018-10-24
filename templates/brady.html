@@ -1,26 +1,31 @@
-<!--TO DO: LINK TEAM AND LAST GAME TO PAGES -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tom Brady</title>
+  <title>Sports (football for now)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-</head>
-<style>
-  th, td {
-    width: 20%;
+  <style>
+  body {
+      position: relative;
   }
-</style>
-<body>
-
+  ul.nav-pills {
+      top: 20px;
+      position: fixed;
+  }
+  div.col-8 div {
+      height: 500px;
+  }
+  </style>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+<!-- Using Nav class to to help get to different url pages-->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="{{url_for('/')}}">
-    <img src="logo.png" alt="logo" width="80px">
+  <a class="navbar-brand" href="#">
+    <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -37,55 +42,342 @@
       <li class="nav-item pr-2">
         <a class="nav-link" href="{{url_for('players')}}">Players</a>
       </li>
-      <li class="nav-item pr-2">
+	  <li class="nav-item pr-2">
         <a class="nav-link" href="{{url_for('about')}}">About</a>
       </li>
     </ul>
   </div>  
 </nav>
-<br>
-
-<div class="container">
-
+<div class="container-fluid">
+  <div class ="text-center"><h1>The weeks of NFL games played</h1></div>
   <div class="row">
-    <div class="col-sm-12">
-      <h1 class="text-center">Tom Brady</h1>
-    </div><br><br>
+    <ul class="nav nav-tabs" id="myScrollspy">
+		<li class="nav-items">
+			<a class="nav-link" href="#New England Patriots">New England Patriots</a>
+		</li>
+		<li class="nav-items">
+			<a class="nav-link" href="#Green Bay Packers">Green Bay Packers</a>
+		</li>
+		<li class="nav-items">
+			<a class="nav-link" href="#Dallas Cowboys">Dallas Cowboys</a>
+		</li>
+    <li class="nav-items">
+			<a class="nav-link" href="#Arizone Cardinals">Arizona Cardinals</a>
+		</li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Atlanta Falcons">Atlanta Falcons</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Baltimore Ravens">Baltimore Ravens</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Buffalo Bills">Buffalo Bills</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Carolina Panthers">Carolina Panthers</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Chicago Bears">Chicago Bears</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Cincinnati Bengals">Cincinnati Bengals</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Cleveland Browns">Cleveland Browns</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Denver Broncos">Denver Broncos</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Detroit Lions">Detroit Lions</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Houston Texans">Houston Texans</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Indianapolis Colts">Indianapolis Colts</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Jacksonville Jaguars">Jacksonville Jaguars</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Kansas City Chiefs">Kansas City Chiefs</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Miami Dolphins">Miami Dolphins</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Minnesota Vikings">Minnesota Vikings</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#New Orleans Saints">New Orleans Saints</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#New York Giants">New York Giants</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#New York Jets">New York Jets</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Oakland Raiders">Oakland Raiders</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Philadelphia Eagles">Philadelphia Eagles</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Pittsburgh Steelers">Pittsburgh Steelers</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Los Angeles Rams">Los Angeles Rams</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Los Angeles Chargers">Los Angeles Chargers</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#San Francisco 49ers">San Francisco 49ers</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Seattle Seahawks">Seattle Seahawks</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Tampa Bay Buccaneers">Tampa Bay Buccaneers</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Tennessee Titans">Tennessee Titans</a>
+    </li>
+    <li class="nav-items">
+      <a class="nav-link" href="#Washington Redskins">Washington Redskins</a>
+    </li>
+    </nav>
   </div>
-
   <div class="row">
-    <div class="col-sm-6 mt-2">
-      <image class="img-fluid" src="../static/images/brady.jpg" alt="Tom Brady" width="500px">
+    <div class="col-sm-9 col-8">
+      <div id="New England Patriots">
+        <h3>New England Patriots</h3>
+        <p>Foxborough, MA</p>
+        <p>Gilette Stadium</p>
+		<img src ="../static/images/gs.jpg" alt = "stadium" width="300" height="300">
+        <p></p>
+      </div>
+      <div id="Green Bay Packers">
+        <h3>Green Bay Packers</h3>
+        <p>Green Bay, WI</p>
+        <p>Lambeau Field</p>
+        <p>Green Bay Packers, Inc.</p>
+		<img src ="../static/images/lf.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Dallas Cowboys">
+        <h3>Dallas Cowboys</h3>
+        <p>Arlington, TX</p>
+        <p>AT&amp;T Stadium</p>
+        <p>Jerry Jones</p>
+		<img src ="../static/images/att.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Arizona Cardinals">
+        <h3>Arizona Cardinals</h3>
+        <p>Glendale, Arizona</p>
+        <p>State Farm Stadium</p>
+        <p>Bill Bidwill</p>
+		<img src ="../static/images/sf.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Atlanta Falcons">
+        <h3>Atlanta Falcons</h3>
+        <p>Atlanta, GA</p>
+        <p>Mercedes-Benz Stadium</p>
+        <p>Arthur Blank</p>
+		<img src ="../static/images/mb.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Baltimore Ravens">
+        <h3>Baltimore Ravens</h3>
+        <p>Baltimore, MD</p>
+        <p>M&amp;T Bank Stadium</p>
+        <p>Steven Bisciotti</p>
+		<img src ="../static/images/mt.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Buffalo Bills">
+        <h3>Buffalo Bills</h3>
+        <p>Orchard Park, NY</p>
+        <p>New Era Field</p>
+        <p>Kim Pegula, Terry Pegula</p>
+		<img src ="../static/images/ne.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Carolina Panthers">
+        <h3>Carolina Panthers</h3>
+        <p>Charlotte, NC</p>
+        <p>Bank of America Stadium</p>
+        <p>David Tepper</p>
+		<img src ="../static/images/ba.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Chicago Bears">
+        <h3>Chicago Bears</h3>
+        <p>Chicago, Illinois</p>
+        <p>Solder Field</p>
+        <p>Virginia Halas McCaskey</p>
+		<img src ="../static/images/sfb.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Cincinnati Bengals">
+        <h3>Cincinnati Bengals</h3>
+        <p>Cincinnati, OH</p>
+        <p>Paul Brown Stadium</p>
+        <p>Mike Brown</p>
+		<img src ="../static/images/pb.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Cleveland Browns">
+        <h3>Cleveland Browns</h3>
+        <p>Cleveland, OH</p>
+        <p>FirstEnergy Stadium</p>
+        <p>Jimmy Haslam</p>
+		<img src ="../static/images/fe.jpeg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Denver Broncos">
+        <h3>Denver Broncos</h3>
+        <p>Denver, CO</p>
+        <p>Broncos Stadium at Mile High</p>
+        <p>Pat Bowlen</p>
+		<img src ="../static/images/bs.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Detroit Lions">
+        <h3>Detroit Lions</h3>
+        <p>Detroit, MI</p>
+        <p>Ford Field</p>
+        <p>Martha Ford</p>
+		<img src ="../static/images/ff.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Houston Texans">
+        <h3>Houston Texans</h3>
+        <p>Houston, TX</p>
+        <p>NRG Stadium</p>
+        <p>Robert C. McNair</p>
+		<img src ="../static/images/nrg.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Indianapolis Colts">
+        <h3>Indianapolis Colts</h3>
+        <p>Indianapolis, IN</p>
+        <p>Lucas Oil Stadium</p>
+        <p>Jim Irsay</p>
+		<img src ="../static/images/lo.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Jacksonville Jaguars">
+        <h3>Jacksonville Jaguars</h3>
+        <p>Jacksonville, Florida</p>
+        <p>TIAA Bank Field</p>
+        <p>Shahid Khan</p>
+		<img src ="../static/images/tiaa.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Kansas City Chiefs">
+        <h3>Kansas City Chiefs</h3>
+        <p>Kansas City, MO</p>
+        <p>Arrowhead Stadium</p>
+        <p>Clark Hunt &amp; siblings</p>
+		<img src ="../static/images/ah.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Miami Dolphins">
+        <h3>Miami Dolphins</h3>
+        <p>Miami, FL</p>
+        <p>Hard Rock Stadium</p>
+        <p>Stephen M. Ross</p>
+		<img src ="../static/images/hr.png" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Minnesota Vikings">
+        <h3>Minnesota Vikings</h3>
+        <p>Minneapolis, MN</p>
+        <p>U.S. Bank Stadium</p>
+        <p>Sygi Wilf</p>
+		<img src ="../static/images/us.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="New Orleans Saints">
+        <h3>New Orleans Saints</h3>
+        <p>New Orleans, LA</p>
+        <p>Mercedes-Benz Superdome</p>
+        <p>Gayle Benson</p>
+		<img src ="../static/images/mbs.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="New York Giants">
+        <h3>New York Giants</h3>
+        <p>East Rutherford, NJ</p>
+        <p>MetLife Stadium</p>
+        <p>John Mara, Steve Tisch</p>
+		<img src ="../static/images/ml.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="New York Jets">
+        <h3>New York Jets</h3>
+        <p>East Rutherford, NJ</p>
+        <p>MetLife Stadium</p>
+        <p>Rober Wood, Christopher Wold Johnson</p>
+		<img src ="../static/images/ml.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Oakland Raiders">
+        <h3>Oakland Raiders</h3>
+        <p>Oakland, CA</p>
+        <p>Oakland-Alameda County Coliseum</p>
+        <p>Carol Davis, Mark Davis</p>
+		<img src ="../static/images/oa.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Philadelphia Eagles">
+        <h3>Philadelphia Eagles</h3>
+        <p>Philadelphia, PA</p>
+        <p>Lincoln Financial Field</p>
+        <p>Jeffrey Lurie, Christina Weiss Luries</p>
+		<img src ="../static/images/lff.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Pittsburgh Steelers">
+        <h3>Pittsburgh Steelers</h3>
+        <p>Pittsburg, Pennsylvania</p>
+        <p>Heinz Field</p>
+        <p>Art Rooney II &amp; family</p>
+		<img src ="../static/images/hf.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Los Angeles Rams">
+        <h3>Los Angeles Rams</h3>
+        <p>Los Angeles, CA</p>
+        <p>Los Angeles Memorial Coliseum</p>
+		<img src ="../static/images/lamc.jpg" alt = "stadium" width="300" height="300">
+        <p></p>
+      </div>
+      <div id="Los Angeles Chargers">
+        <h3>Los Angeles Chargers</h3>
+        <p>Carson, CA</p>
+        <p>StubHub Center</p>
+		<img src ="../static/images/sh.jpg" alt = "stadium" width="300" height="300">
+        <p></p>
+      </div>
+      <div id="San Francisco 49ers">
+        <h3>San Francisco 49ers</h3>
+        <p>Santa Clara, CA</p>
+        <p>Levi's Stadium</p>
+        <p>Jed York</p>
+		<img src ="../static/images/ls.jpg" alt = "stadium" width="300" height="300">
+      </div>
+      <div id="Seattle Seahawks">
+        <h3>Seattle Seahawks</h3>
+        <p>Seattle, WA</p>
+        <p>CenturyLink Field</p>
+		<img src ="../static/images/cl.jpg" alt = "stadium" width="300" height="300">
+        <p></p>
+      </div>
+      <div id="Tampa Bay Buccaneers">
+        <h3>Tampa Bay Buccaneers</h3>
+        <p>Tampa, FL</p>
+        <p>Raymond James Stadium</p>
+		<img src ="../static/images/rj.jpg" alt = "stadium" width="300" height="300">
+        <p></p>
+      </div>
+      <div id="Tennessee Titans">
+        <h3>Tennessee Titans</h3>
+        <p>Nashville, TN</p>
+        <p>Nissan Stadium</p>
+		<img src ="../static/images/ns.jpg" alt = "stadium" width="300" height="300">
+        <p></p>
+      </div>
+      <div id="Washington Redskins">
+        <h3>Washington Redskins</h3>
+        <p>Landover, MD</p>
+        <p>FedExField</p>
+		<img src ="../static/images/fed.jpg" alt = "stadium" width="300" height="300">
+        <p></p>
+      </div>
     </div>
-    <div class="col-sm-5 ml-2 mt-2 bg-light">
-      <table class="table" width="100%">
-        <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Team</th>
-          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1"><a href="#" style="text-decoration:none; color:black">Patriots</a></td>
-        <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Position</th>
-          <td>QB</td>
-        </tr>
-        <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Number</th>
-          <td>12</td>
-        </tr>
-        <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Age</th>
-          <td>41</td>
-        </tr>
-        <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stats</th>
-          <td>STATS</td>
-        </tr>
-        <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">Last Game</th>
-          <td><a href="#" style="text-decoration:none; color:black">v Bears</a></td>
-        </tr>
-      </table>
-    </div>
-  </div> <br>
-</div>
-
+  </div>
+  </div>
 </body>
 </html>
