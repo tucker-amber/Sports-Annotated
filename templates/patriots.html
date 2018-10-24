@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Brian Hoyer</title>
+  <title>Patriots</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -19,8 +19,8 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">
-    <img src="logo.png" alt="logo" width="80px">
+  <a class="navbar-brand" href="{{url_for('splash')}}">
+    <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -49,38 +49,38 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="text-center">Brian Hoyer</h1>
+      <h1 class="text-center">Patriots</h1>
     </div><br><br>
   </div>
 
   <div class="row">
-    <div class="col-sm-6 mt-2">
-      <image class="img-fluid" src="../static/images/hoyer.jpg" alt="Tom Brady" width="500px">
+    <div class="col-sm-6 mt-2  justify-content-md-center">
+      <image class="img-fluid" src="../static/images/gs.jpg" alt = "Gillete Stadium" width="500px">
     </div>
     <div class="col-sm-5 ml-2 mt-2 bg-light">
       <table class="table" width="100%">
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Team</th>
-          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1"><a href="{{url_for('patriots')}}" style="text-decoration:none; color:black">Patriots</a></td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Location</th>
+          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1">New England</td>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Position</th>
-          <td>QB</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stadium</th>
+          <td>Gilette Stadium</td>
         </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Number</th>
-          <td>2</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stadium Location</th>
+          <td>Foxbourough, MA</td>
         </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Age</th>
-          <td>AGE</td>
-        </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stats</th>
-          <td>STATS</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Owner</th>
+          <td>Robert Kraft</td>
         </tr>
-        <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">Last Game</th>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Last Game</th>
           <td><a href="#" style="text-decoration:none; color:black">v Bears</a></td>
+        </tr>
+        <tr>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">QB</th>
+          <td><a href="{{url_for('brady')}}" style="text-decoration:none; color:black">Tom Brady</a></td>
         </tr>
       </table>
     </div>
