@@ -17,7 +17,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="{{url_for('splash')}}">
     <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
@@ -59,11 +59,11 @@
     <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
     <div class="container-fluid bg-light">
       <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
+        <dt><h3 class="text-center"><a href="{{url_for('patriots')}}" style="text-decoration:none; color:black">New England Patriots</a></h3></dt>
           <dd>
             <table width="100%">
               <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
+            <td><a href="{{url_for('patriots')}}" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/patriots.png" alt="patriots logo" width="100px"></a></td>
             </tr>
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
             </tr>
@@ -76,11 +76,11 @@
     <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
     <div class="container-fluid bg-light">
       <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
+        <dt><h3 class="text-center"><a href="{{url_for('packers')}}" style="text-decoration:none; color:black">Green Bay Packers</a></h3></dt>
           <dd>
             <table width="100%">
               <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
+            <td><a href="{{url_for('packers')}}" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/packers.png" alt="packers logo" width="100px"></a></td>
             </tr>
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
             </tr>
@@ -92,11 +92,11 @@
     <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
     <div class="container-fluid bg-light">
       <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
+        <dt><h3 class="text-center"><a href="{{url_for('cowboys')}}" style="text-decoration:none; color:black">Dallas Cowboys</a></h3></dt>
           <dd>
             <table width="100%">
               <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
+            <td><a href="{{url_for('cowboys')}}" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/cowboys.png" alt="cowboys logo" width="100px"></a></td>
             </tr>
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
             </tr>
