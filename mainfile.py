@@ -9,7 +9,6 @@ app = Flask(__name__)
 def index():
   return render_template('splash.html')
 
-
 @app.route('/weeks')
 def weeks():
   return render_template('weeks.html') 
@@ -40,6 +39,18 @@ def teams():
 @app.route('/about')
 def about():
   return render_template('about.html')
+  
+@app.route('/game1')
+def game1():
+  return render_template('game1.html')
+  
+@app.route('/game2')
+def game2():
+  return render_template('game2.html')
+  
+@app.route('/game3')
+def game3():
+  return render_template('game3.html')
 
 if __name__ == "__main__":
  app.run()
