@@ -17,7 +17,7 @@ def index():
 @app.route('/book2/')
 def book():
 	players = db.session.query(Nfl).all()
-	return render_template('books2.html', books = books)
+	return render_template('books2.html', books = players)
 	
 if __name__ == "__main__":
 	app.run()
