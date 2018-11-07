@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "team": "Kansas City Chiefs",
+    "week": 1
+  },
+  {
+    "id": 2,
+    "team": "Dallas Cowboys",
+    "week": 1
+  },
+  {
+    "id": 3,
+    "team": "Carolina Panthers",
+    "week": 1
+  },
+  {
+    "id": 4,
+    "team": "Seattle Seahawks",
+    "week": 1
+  },
+  {
+    "id": 5,
+    "team": "St. Louis Rams",
+    "week": 1
+  },
+  {
+    "id": 6,
+    "team": "Jacksonville Jaguars",
+    "week": 1
+  },
+  {
+    "id": 7,
+    "team": "Washington Redskins",
+    "week": 1
+  },
+  {
+    "id": 8,
+    "team": "Cleveland Browns",
+    "week": 1
+  },
+  {
+    "id": 9,
+    "team": "Detroit Lions",
+    "week": 1
+  },
+  {
+    "id": 10,
+    "team": "New England Patriots",
+    "week": 1
+  },
+  {
+    "id": 11,
+    "team": "Miami Dolphins",
+    "week": 1
+  },
+  {
+    "id": 12,
+    "team": "Pittsburgh Steelers",
+    "week": 1
+  },
+  {
+    "id": 13,
+    "team": "Green Bay Packers",
+    "week": 1
+  },
+  {
+    "id": 14,
+    "team": "San Francisco 49ers",
+    "week": 1
+  },
+  {
+    "id": 15,
+    "team": "Philadelphia Eagles",
+    "week": 1
+  },
+  {
+    "id": 16,
+    "team": "Los Angeles Rams",
+    "week": 1
+  },
+  {
+    "id": 17,
+    "team": "Indianapolis Colts",
+    "week": 1
+  },
+  {
+    "id": 18,
+    "team": "Baltimore Ravens",
+    "week": 1
+  },
+  {
+    "id": 19,
+    "team": "New Orleans Saints",
+    "week": 1
+  },
+  {
+    "id": 20,
+    "team": "New York Giants",
+    "week": 1
+  },
+  {
+    "id": 21,
+    "team": "New York Jets",
+    "week": 1
+  },
+  {
+    "id": 22,
+    "team": "Buffalo Bills",
+    "week": 1
+  },
+  {
+    "id": 23,
+    "team": "Tennessee Titans",
+    "week": 1
+  },
+  {
+    "id": 24,
+    "team": "Houston Texans",
+    "week": 1
+  },
+  {
+    "id": 25,
+    "team": "Oakland Raiders",
+    "week": 1
+  },
+  {
+    "id": 26,
+    "team": "Cincinnati Bengals",
+    "week": 1
+  },
+  {
+    "id": 27,
+    "team": "San Diego Chargers",
+    "week": 1
+  },
+  {
+    "id": 28,
+    "team": "Tampa Bay Buccaneers",
+    "week": 1
+  },
+  {
+    "id": 29,
+    "team": "Chicago Bears",
+    "week": 1
+  },
+  {
+    "id": 30,
+    "team": "Denver Broncos",
+    "week": 1
+  },
+  {
+    "id": 31,
+    "team": "Los Angeles Chargers",
+    "week": 1
+  },
+  {
+    "id": 32,
+    "team": "Minnesota Vikings",
+    "week": 1
+  }
+]

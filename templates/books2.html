@@ -1,19 +1,24 @@
-<!-- Type in the following code and save it in the file "book2.html" inside the folder "templates"
--->
+<!-- Type in the following code and save it in the file "book2.html" inside the folder "templates"-->
 	<html>
 		<head> </head>
 		<body>
 			<p>This is the books page</b>
 			<a href="{{url_for('index')}}">Main Menu</a> <br/>
-			<h1>Books</h1>
-			{% if books == [] %}
-				<p>No books exist</p>
+			<h1>Players</h1>
+			{% if players == [] %}
+				<p>No players</p>
 			{% else %}
-				{% for i in books %}
+				{% for i in players %}
 					<div>
-						{{i.title}}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
 						<br/> <br/>
 					</div>
+
 				{% endfor %}
 			{% endif %}
 		</body>

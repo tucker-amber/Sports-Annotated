@@ -1,0 +1,258 @@
+[
+  {
+    "id": 1,
+    "stadium_name": "Arrowhead Stadium",
+    "games_played": 368,
+    "city": "Kansas City",
+    "team": "Kansas City Chiefs",
+    "week": 1
+  },
+  {
+    "id": 2,
+    "stadium_name": "AT&T Stadium",
+    "games_played": 80,
+    "city": "Arlington",
+    "team": "Dallas Cowboys",
+    "week": 1
+  },
+  {
+    "id": 3,
+    "stadium_name": "Bank of America Stadium",
+    "games_played": 188,
+    "city": "Charlotte",
+    "team": "Carolina Panthers",
+    "week": 1
+  },
+  {
+    "id": 4,
+    "stadium_name": "CenturyLink Field",
+    "games_played": 142,
+    "city": "Seattle",
+    "team": "Seattle Seahawks",
+    "week": 1
+  },
+  {
+    "id": 5,
+    "stadium_name": "Edward Jones Dome",
+    "games_played": 168,
+    "city": "St. Louis",
+    "team": "St. Louis Rams",
+    "week": 1
+  },
+  {
+    "id": 6,
+    "stadium_name": "EverBank Field",
+    "games_played": 188,
+    "city": "Jacksonville",
+    "team": "Jacksonville Jaguars",
+    "week": 1
+  },
+  {
+    "id": 7,
+    "stadium_name": "FedExField",
+    "games_played": 176,
+    "city": "Landover",
+    "team": "Washington Redskins",
+    "week": 1
+  },
+  {
+    "id": 8,
+    "stadium_name": "FirstEnergy Stadium",
+    "games_played": 156,
+    "city": "Cleveland",
+    "team": "Cleveland Browns",
+    "week": 1
+  },
+  {
+    "id": 9,
+    "stadium_name": "Ford Field",
+    "games_played": 135,
+    "city": "Detroit",
+    "team": "Detroit Lions",
+    "week": 1
+  },
+  {
+    "id": 10,
+    "stadium_name": "Gillette Stadium",
+    "games_played": 154,
+    "city": "Foxborough",
+    "team": "New England Patriots",
+    "week": 1
+  },
+  {
+    "id": 11,
+    "stadium_name": "Hard Rock Stadium",
+    "games_played": 262,
+    "city": "Miami Gardens",
+    "team": "Miami Dolphins",
+    "week": 1
+  },
+  {
+    "id": 12,
+    "stadium_name": "Heinz Field",
+    "games_played": 153,
+    "city": "Pittsburgh",
+    "team": "Pittsburgh Steelers",
+    "week": 1
+  },
+  {
+    "id": 13,
+    "stadium_name": "Lambeau Field",
+    "games_played": 371,
+    "city": "Green Bay",
+    "team": "Green Bay Packers",
+    "week": 1
+  },
+  {
+    "id": 14,
+    "stadium_name": "Levi's Stadium",
+    "games_played": 37,
+    "city": "Santa Clara",
+    "team": "San Francisco 49ers",
+    "week": 1
+  },
+  {
+    "id": 15,
+    "stadium_name": "Lincoln Financial Field",
+    "games_played": 133,
+    "city": "Philadelphia",
+    "team": "Philadelphia Eagles",
+    "week": 1
+  },
+  {
+    "id": 16,
+    "stadium_name": "Los Angeles Memorial Coliseum",
+    "games_played": 397,
+    "city": "Los Angeles",
+    "team": "Los Angeles Rams",
+    "week": 1
+  },
+  {
+    "id": 17,
+    "stadium_name": "Lucas Oil Stadium",
+    "games_played": 89,
+    "city": "Indianapolis",
+    "team": "Indianapolis Colts",
+    "week": 1
+  },
+  {
+    "id": 18,
+    "stadium_name": "M&T Bank Stadium",
+    "games_played": 169,
+    "city": "Baltimore",
+    "team": "Baltimore Ravens",
+    "week": 1
+  },
+  {
+    "id": 19,
+    "stadium_name": "Mercedes-Benz Superdome",
+    "games_played": 348,
+    "city": "New Orleans",
+    "team": "New Orleans Saints",
+    "week": 1
+  },
+  {
+    "id": 20,
+    "stadium_name": "MetLife Stadium",
+    "games_played": 138,
+    "city": "East Rutherford",
+    "team": "New York Giants",
+    "week": 1
+  },
+  {
+    "id": 21,
+    "stadium_name": "MetLife Stadium",
+    "games_played": 138,
+    "city": "East Rutherford",
+    "team": "New York Jets",
+    "week": 1
+  },
+  {
+    "id": 22,
+    "stadium_name": "New Era Field",
+    "games_played": 359,
+    "city": "Orchard Park",
+    "team": "Buffalo Bills",
+    "week": 1
+  },
+  {
+    "id": 23,
+    "stadium_name": "Nissan Stadium",
+    "games_played": 159,
+    "city": "Nashville",
+    "team": "Tennessee Titans",
+    "week": 1
+  },
+  {
+    "id": 24,
+    "stadium_name": "NRG Stadium",
+    "games_played": 138,
+    "city": "Houston",
+    "team": "Houston Texans",
+    "week": 1
+  },
+  {
+    "id": 25,
+    "stadium_name": "Oakland Coliseum",
+    "games_played": 316,
+    "city": "Oakland",
+    "team": "Oakland Raiders",
+    "week": 1
+  },
+  {
+    "id": 26,
+    "stadium_name": "Paul Brown Stadium",
+    "games_played": 151,
+    "city": "Cincinnati",
+    "team": "Cincinnati Bengals",
+    "week": 1
+  },
+  {
+    "id": 27,
+    "stadium_name": "Qualcomm Stadium",
+    "games_played": 398,
+    "city": "San Diego",
+    "team": "San Diego Chargers",
+    "week": 1
+  },
+  {
+    "id": 28,
+    "stadium_name": "Raymond James Stadium",
+    "games_played": 167,
+    "city": "Tampa",
+    "team": "Tampa Bay Buccaneers",
+    "week": 1
+  },
+  {
+    "id": 29,
+    "stadium_name": "Soldier Field",
+    "games_played": 415,
+    "city": "Chicago",
+    "team": "Chicago Bears",
+    "week": 1
+  },
+  {
+    "id": 30,
+    "stadium_name": "Sports Authority Field at Mile High",
+    "games_played": 150,
+    "city": "Denver",
+    "team": "Denver Broncos",
+    "week": 1
+  },
+  {
+    "id": 31,
+    "stadium_name": "StubHub Center",
+    "games_played": 11,
+    "city": "Carson",
+    "team": "Los Angeles Chargers",
+    "week": 1
+  },
+  {
+    "id": 32,
+    "stadium_name": "TCF Bank Stadium",
+    "games_played": 18,
+    "city": "Minneapolis",
+    "team": "Minnesota Vikings",
+    "week": 1
+  }
+]

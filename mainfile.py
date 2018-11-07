@@ -3,8 +3,9 @@
 # creating first flask application
 #-----------------------------------------
 from flask import Flask, render_template
-app = Flask(__name__)
-
+from models import app, db, Nfl, Nfl2, Nfl3
+from create_db import create_players
+#app = Flask(__name__)
 
 @app.route('/')
 def index():
@@ -14,9 +15,10 @@ def index():
 def weeks():
   return render_template('weeks.html') 
 
-@app.route('/players')
+@app.route('/players/')
 def players():
-  return render_template('players.html')
+  players = db.session.query(Nfl).all()
+  return render_template('players.html', players = players)
 
 # Navigates to ind player's page
 @app.route('/hoyer')

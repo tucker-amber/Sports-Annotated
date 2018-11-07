@@ -104,10 +104,32 @@
           <dd>
             <table>
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-              <td><a href="{{url_for('brady')}}" style="text-decoration:none; color:black"> Brady, Tom</a></td>
+              <td><a href="{{url_for('brady')}}" style="text-decoration:none; color:black">
+				{% for i in players %}
+					{% if i.jersey_num == 12 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</a></td>
             </tr>
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-              <td><a href="{{url_for('hoyer')}}" style="text-decoration:none; color:black">Hoyer, Brian</a></td>
+              <td><a href="{{url_for('hoyer')}}" style="text-decoration:none; color:black">
+				{% for i in players %}
+					{% if i.jersey_num == 2 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+			  </a></td>
             </tr>
            </table>
         </dd>
@@ -125,7 +147,18 @@
                 <td><a href="{{url_for('barner')}}" style="text-decoration:none; color:black">Barner, Kenjon</a></td>
               </tr>
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Burkhead, Rex</td>
+                <td> 
+				{% for i in players %}
+					{% if i.jersey_num == 34 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
         </dd>
@@ -141,10 +174,32 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Dorsett, Phillip</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 13 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Berrios, Braxton</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 14 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
         </dd>
@@ -158,10 +213,32 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Allen, Dwayne</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 83 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Gronkowski, Rob</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 87 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
         </dd>
@@ -178,10 +255,32 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Brown, Trent</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 67 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Cannon, Marcus</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 61 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
          </dd>
@@ -195,10 +294,32 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Brown, Malcom</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 90 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Butler, Adam</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 70 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
          </dd>
@@ -216,10 +337,32 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Bentley, Ja'Whaun</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 51 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Grigsby, Nicholas</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 50 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
          </dd>
@@ -233,10 +376,32 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Crossen, Keion</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 35 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Dawson, Duke</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 29 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
         </dd>
@@ -254,7 +419,18 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Gostkowski, Stephen</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 3 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
          </dd>
@@ -268,7 +444,18 @@
           <dd>
             <table width="100%">
               <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Allen, Ryan</td>
+                <td>
+				{% for i in players %}
+					{% if i.jersey_num == 6 %}
+						{{i.id}}
+						{{i.jersey_num}}
+						{{i.players}}
+						{{i.age}}
+						{{i.pos}}
+						{{i.team}}
+					{% endif %}
+				{% endfor %}
+				</td>
               </tr>
            </table>
          </dd>
