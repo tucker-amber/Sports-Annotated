@@ -25,7 +25,7 @@
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
 <!-- Using Nav class to to help get to different url pages-->
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="{{url_for('splash')}}">
+  <a class="navbar-brand" href="#">
     <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
@@ -49,43 +49,60 @@
     </ul>
   </div>  
 </nav>
-<!--Container class involving tabs to allow user to navigate to different parts of the page -->
-  <div class="container-fluid">
-    <div class ="text-center"><h1>The weeks of NFL games played</h1></div>
-    <div class="row">
-      <ul class="nav nav-tabs" id="myScrollspy">
-		  <li class="nav-items">
-		    <a class="nav-link" href="#Week One">Week One</a>
-		  </li>
-      </ul>
-	</div>
-  </div>
   <!-- Table data for results-->
   <div class="row">
     <div class="col-sm-9 col-10">
       <div id="Week One">    
-        <h3 style = "background-color: powderblue">Week One</h3>
+        <h3 style = "background-color: powderblue">Game One</h3>
 		<table class="table table-sm table-dark">
 			<thead>
 				<tr>
-					<th scope="col">Team 1</th>
-					<th scope="col">Team 2</th>
-					<th scope="col">Score</th>
+					<th scope="col">Game 1</th>
+					<th scope="col"><a href = "{{url_for('patriots')}}">Team 1</a></th>
+					<th scope="col"><a href = "#">Team 2</a</th>
+					<th scope ="col">Score</th>
 				</tr>
 			</thead>
 			<tbody>
-				{% for i in week %}
-				  {% for k in range(1) %}
-					<a href = "" alt = "games match"><tr>
-						<td><img src = "{{"../static/images/" +i[k].team + ".png" }}" alt = "NFL team"><{{i[k].team}}</td>
-						<td><img src = "{{"../static/images/" +i[k+1].team + ".png" }}" alt = "NFL team">{{i[k+1].team}}</td>
-						<td>{{i[k].score}}  -  {{i[k+1].score}}</td>
-					</tr></a>
-			      {% endfor %}
-				{% endfor %}
+				<tr>
+					<th scope="row">1</th>
+					<td><img src ="../static/images/patriots.png" alt = "NFL team">Patriots</td>
+					<td><img src ="../static/images/texans.png" alt = "NFL team">Texans</td>
+					<td>27  -  20</td>
+				</tr>
 			</tbody>
+			
 		</table>
       </div>
+	  <div id ="game info">
+	    <h3 style = "background-color: powderblue">Team Roster</h3>
 
+		<table class="table table-sm table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Game 1</th>
+					<th scope="col">Patriots roster</th>
+					<th scope="col">Texans roster</th>
+				</tr>
+				<tr>
+					<th scope="row">Quarterback</th>
+					<td><a href = "{{url_for('brady')}}">Tom Brady</a></td>
+					<td> Deshaun Watson </td>
+				</tr>
+				<tr>
+					<th scope="row">Running Back</th>
+					<td><a href = "{{url_for('barner')}}">Kenjon Barner</a></td>
+					<td> Lamar Miller</td>
+				</tr>
+				<tr>
+					<th scope="row">Back up Quarterback</th>
+					<td><a href = "{{url_for('hoyer')}}">Brian Hoyer</a></td>
+					<td> Joe Webb </td>
+				</tr>
+	  </div>
+	  
+    </div>
+  </div>
+  </div>
 </body>
 </html>

@@ -31,9 +31,7 @@ def weeks():
       newList2.append(i)
 
   return render_template('weeks.html' , week = newList) 
-
-
-  
+ 
 @app.route('/players/')
 def players():
   players = db.session.query(Player).all()
@@ -45,8 +43,6 @@ def players():
       newDict[i.pos] = [i]
   return render_template('players.html', playerss = newDict)
 
-  
-
 # Navigates to ind player's page
 @app.route('/brady/<player_id>')
 def brady(player_id):
@@ -54,50 +50,30 @@ def brady(player_id):
   # for i in players:
     # if i.name == str(name):
       # player_name = i
-  print(players)
   return render_template('brady.html', player = players)
-
-
   
 @app.route('/teams')
 def teams():
   team = db.session.query(Teams).all()
   return render_template('teams.html', team = team)
  
- 
-
 # Navigates to Patriots page
-@app.route('/patriots')
-def patriots():
-  return render_template('patriots.html')
+@app.route('/teampage/<team_name>')
+def teampage(team_name):
+  team = db.session.query(Teams).filter_by(team = team_name).first()
+  print(team)
+  return render_template('teampage.html', team = team)
 
-# Navigates to Cowboys page
-# @app.route('/cowboys')
-# def cowboys():
-  # return render_template('cowboys.html')
-
-# # Navigates to Cowboys page
-# @app.route('/packers')
-# def packers():
-  # return render_template('packers.html')
 
 @app.route('/about')
 def about():
   return render_template('about.html')
   
-@app.route('/game1')
-def game1():
-  return render_template('game1.html')
+@app.route('/game/<team_name>')
+def game(team_name):
+  week = db.session.query(Weeks).filter_by(team = team_name).first()
+  return render_template('gamepage.html')
   
-@app.route('/game2')
-def game2():
-  return render_template('game2.html')
-  
-@app.route('/game3')
-def game3():
-  return render_template('game3.html')
-
-
 # Navigates to Home/Splash page
 @app.route('/splash')
 def splash():

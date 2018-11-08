@@ -48,7 +48,7 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="text-center">Packers</h1>
+      <h1 class="text-center">{{team.name}}</h1>
     </div><br><br>
   </div>
 
@@ -59,19 +59,19 @@
     <div class="col-sm-5 ml-2 mt-2 bg-light">
       <table class="table" width="100%">
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Location</th>
-          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1">Green Bay</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">{{team.city}}</th>
+          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1">{{team.city}}</td>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stadium</th>
-          <td>Lambeau Field</td>
+          <td>{{team.stadium_name}}</td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stadium Location</th>
-          <td>Foxbourough, MA</td>
+          <td>{{team.city}}</td>
         </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Owner</th>
-          <td>Green Bay Packers, Inc.</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Games played</th>
+          <td>{{team.games_played}}</td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Last Game</th>
