@@ -49,7 +49,7 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="text-center">Tom Brdy</h1>
+      <h1 class="text-center">{{player.name}}</h1>
     </div><br><br>
   </div>
 
@@ -64,19 +64,19 @@
           <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1"><a href="{{url_for('patriots')}}" style="text-decoration:none; color:black">Patriots</a></td>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Position</th>
-          <td>{{players.pos}}</td>
+          <td>{{player.pos}}</td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Number</th>
-          <td>{{players.jersey_num}}</td>
+          <td>{{player.jersey_num}}</td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Age</th>
-          <td>{{players.age}}</td>
+          <td>{{player.age}}</td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stats</th>
-          <td>{{players.team}}</td>
+          <td>{{player.team}}</td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">Last Game</th>

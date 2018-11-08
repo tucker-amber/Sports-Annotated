@@ -48,12 +48,13 @@ def players():
   
 
 # Navigates to ind player's page
-@app.route('/brady/<integer:player_id>')
+@app.route('/brady/<player_id>')
 def brady(player_id):
-  players = db.session.query(Player).filter_by(id = player_id)
+  players = db.session.query(Player).filter_by(id = player_id).first()
   # for i in players:
     # if i.name == str(name):
       # player_name = i
+  print(players)
   return render_template('brady.html', player = players)
 
 

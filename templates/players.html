@@ -62,7 +62,7 @@
             <table>
 			{% for k in playerss[i] %}
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-              <td><a href= "{{url_for('brady/5')}}" style="text-decoration:none; color:black">
+              <td><a href= "{{url_for('brady',player_id = k.id)}}" style="text-decoration:none; color:black">
 				{{k.name}}
 			  </a></td>
             </tr>
