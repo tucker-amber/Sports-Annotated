@@ -5,11 +5,6 @@
 from flask import Flask, render_template
 from models import app, db, Nfl, Nfl2, Nfl3
 from create_db import create_players
-# app = Flask(__name__)
-
-#books = [{'title': 'Software Engineering', 'id': '1'}, \
- #{'title':'Algorithm Design', 'id':'2'}, \
- #{'title':'Python', 'id':'3'}] \
  
 @app.route('/')
 def index():

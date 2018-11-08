@@ -2,57 +2,83 @@
 # mainfile.py
 # creating first flask application
 #-----------------------------------------
-from flask import Flask, render_template
-from models import app, db, Nfl, Nfl2, Nfl3
+from flask import Flask, render_template, request
+from flask_restless import APIManager
+from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
+from models import app, db, Player, Teams, Weeks
 from create_db import create_players
+import os
+import requests
 #app = Flask(__name__)
+
 
 @app.route('/')
 def index():
   return render_template('splash.html')
 
+  
 @app.route('/weeks')
 def weeks():
-  return render_template('weeks.html') 
+  week = db.session.query(Weeks).all()
+  newList = []
+  newList2 = []
+  for i in week:
+    if len(newList2) == 2:
+      newList.append(newList2)
+      newList2 = []
+    else:
+      newList2.append(i)
 
+  return render_template('weeks.html' , week = newList) 
+
+
+  
 @app.route('/players/')
 def players():
-  players = db.session.query(Nfl).all()
-  return render_template('players.html', players = players)
+  players = db.session.query(Player).all()
+  newDict = {}
+  for i in players:
+    if i.pos in newDict:
+      newDict[i.pos].append(i)
+    else:
+      newDict[i.pos] = [i]
+  return render_template('players.html', playerss = newDict)
+
+  
 
 # Navigates to ind player's page
-@app.route('/hoyer')
-def hoyer():
-  return render_template('hoyer.html')
+@app.route('/brady/<integer:player_id>')
+def brady(player_id):
+  players = db.session.query(Player).filter_by(id = player_id)
+  # for i in players:
+    # if i.name == str(name):
+      # player_name = i
+  return render_template('brady.html', player = players)
 
-# Navigates to ind player's page
-@app.route('/brady')
-def brady():
-  return render_template('brady.html')
 
-# Navigates to ind player's page
-@app.route('/barner')
-def barner():
-  return render_template('barner.html')
-
+  
 @app.route('/teams')
 def teams():
-  return render_template('teams.html')
+  team = db.session.query(Teams).all()
+  return render_template('teams.html', team = team)
  
+ 
+
 # Navigates to Patriots page
 @app.route('/patriots')
 def patriots():
   return render_template('patriots.html')
 
 # Navigates to Cowboys page
-@app.route('/cowboys')
-def cowboys():
-  return render_template('cowboys.html')
+# @app.route('/cowboys')
+# def cowboys():
+  # return render_template('cowboys.html')
 
-# Navigates to Cowboys page
-@app.route('/packers')
-def packers():
-  return render_template('packers.html')
+# # Navigates to Cowboys page
+# @app.route('/packers')
+# def packers():
+  # return render_template('packers.html')
 
 @app.route('/about')
 def about():

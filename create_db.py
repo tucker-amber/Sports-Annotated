@@ -1,6 +1,6 @@
 # beginning of create_db.py
 import json
-from models import db, Nfl, Nfl2, Nfl3
+from models import db, Player, Teams, Weeks
 
 def load_json(filename):
 	with open(filename) as file:
@@ -14,10 +14,10 @@ def create_players():
 		team = onePlayer['team']
 		pos = onePlayer['pos']
 		age = onePlayer['age']
-		players_ = onePlayer['player']
+		name = onePlayer['player']
 		jersey_num = onePlayer['jersey_num']
 		id = onePlayer['id']
-		newBook = Nfl(id = id, jersey_num = jersey_num, players = players_, age = age, pos = pos,team = team)
+		newBook = Player(id = id, jersey_num = jersey_num, name = name, age = age, pos = pos,team = team)
 		# After I create the book, I can then add it to my session.
 		db.session.add(newBook)
 		# commit the session to my DB.
@@ -31,7 +31,7 @@ def create_teams():
 		games_played = oneTeam['games_played']
 		stadium_name = oneTeam['stadium_name']
 		id = oneTeam['id']
-		newTeam = Nfl2(id = id, stadium_name = stadium_name, games_played = games_played, city = city, team = team, week= week)
+		newTeam = Teams(id = id, stadium_name = stadium_name, games_played = games_played, city = city, team = team, week= week)
 		# After I create the book, I can then add it to my session.
 		db.session.add(newTeam)
 		# commit the session to my DB.
@@ -40,10 +40,11 @@ def create_teams():
 def create_weeks():
 	week = load_json('weeks.json')
 	for oneWeek in week:
+		score = oneWeek['score']
 		week = oneWeek['week']
 		team = oneWeek['team']
 		id = oneWeek['id']
-		newWeek = Nfl3(id = id, team = team, week = week)
+		newWeek = Weeks(id = id, team = team, week = week, score = score)
 		# After I create the book, I can then add it to my session.
 		db.session.add(newWeek)
 		# commit the session to my DB.
