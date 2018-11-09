@@ -20,7 +20,7 @@ env_variables:
 # Replace project and instance with the values obtained  when configuring your
 # Cloud SQL instance.
 beta_settings:
-    cloud_sql_instances: cs329e-idb-212120:us-central1:database-1
+    cloud_sql_instances: cs329e-idb-220319:us-central1:database-1
 
 # This sample incurs costs to run on the App Engine flexible environment. 
 # The settings below are to reduce costs during testing and are not appropriate
