@@ -29,7 +29,6 @@ def weeks():
       newList2 = []
     else:
       newList2.append(i)
-
   return render_template('weeks.html' , week = newList) 
  
 @app.route('/players/')
@@ -71,8 +70,22 @@ def about():
   
 @app.route('/game/<team_name>')
 def game(team_name):
-  week = db.session.query(Weeks).filter_by(team = team_name).first()
-  return render_template('gamepage.html')
+  game = db.session.query(Weeks).all()
+  newList = []
+  newList2 = []
+  for i in game:
+    if len(newList2) == 2:
+      newList.append(newList2)
+      newList2 = []
+    else:
+      newList2.append(i)
+  a = 1
+  for k in newList:
+    if (k[0].team == team_name) or (k[0].team == team_name):
+      a = k
+	  
+  print(a[0].team)
+  return render_template('gamepage.html', game = a)
   
 # Navigates to Home/Splash page
 @app.route('/splash')

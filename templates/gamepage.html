@@ -49,6 +49,7 @@
     </ul>
   </div>  
 </nav>
+
   <!-- Table data for results-->
   <div class="row">
     <div class="col-sm-9 col-10">
@@ -58,17 +59,17 @@
 			<thead>
 				<tr>
 					<th scope="col">Game 1</th>
-					<th scope="col"><a href = "{{url_for('patriots')}}">Team 1</a></th>
+					<th scope="col"><a href = "#">Team 1</a></th>
 					<th scope="col"><a href = "#">Team 2</a</th>
 					<th scope ="col">Score</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody>	
 				<tr>
 					<th scope="row">1</th>
-					<td><img src ="../static/images/patriots.png" alt = "NFL team">Patriots</td>
-					<td><img src ="../static/images/texans.png" alt = "NFL team">Texans</td>
-					<td>27  -  20</td>
+					<td><img src ="{{"../static/images/" +game[0].team + ".png" }}"" alt = "NFL team">{{game[0].team}}</td>
+					<td><img src ="{{"../static/images/" +game[1].team + ".png" }}""alt = "NFL team">{{game[1].team}}</td>
+					<td>{{game[0].score}} -  {{game[1].score}}</td>
 				</tr>
 			</tbody>
 			
@@ -86,21 +87,20 @@
 				</tr>
 				<tr>
 					<th scope="row">Quarterback</th>
-					<td><a href = "{{url_for('brady')}}">Tom Brady</a></td>
+					<td><a href = "#">Tom Brady</a></td>
 					<td> Deshaun Watson </td>
 				</tr>
 				<tr>
 					<th scope="row">Running Back</th>
-					<td><a href = "{{url_for('barner')}}">Kenjon Barner</a></td>
+					<td><a href = "#">Kenjon Barner</a></td>
 					<td> Lamar Miller</td>
 				</tr>
 				<tr>
 					<th scope="row">Back up Quarterback</th>
-					<td><a href = "{{url_for('hoyer')}}">Brian Hoyer</a></td>
+					<td><a href = "#">Brian Hoyer</a></td>
 					<td> Joe Webb </td>
 				</tr>
-	  </div>
-	  
+	  </div>  
     </div>
   </div>
   </div>
