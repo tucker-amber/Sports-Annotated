@@ -2,8 +2,7 @@
 # mainfile.py
 # creating first flask application
 #-----------------------------------------
-from flask import Flask, render_template, request, Blueprint
-from flask_paginate import Pagination, get_page_parameter
+from flask import Flask, render_template, request, redirect
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
@@ -18,7 +17,6 @@ import requests
 def index():
   return render_template('splash.html')
 
-  
 @app.route('/weeks')
 def weeks():
   week = db.session.query(Weeks).all()
@@ -49,6 +47,7 @@ def players():
   return render_template('players.html', playerss = newDict)
 
 # Navigates to ind player's page
+
 @app.route('/brady/<player_id>')
 def brady(player_id):
   players_ = db.session.query(Player).filter_by(id = player_id).first()
@@ -56,27 +55,36 @@ def brady(player_id):
     # if i.name == str(name):
       # player_name = i
   return render_template('brady.html', player = players_)
-  
+# per_page = 8
+# @app.route('/teams/', defaults = {'page':1})
+
+#@app.route('/teams/page/<int:page>')
 @app.route('/teams')
 def teams():
-  team = db.session.query(Teams).all().paginate(page, 4, False)
+  team = db.session.query(Teams).all()
+  # count = 3
+  # pages = get_pages_for_page(page, per_page, count)
+  # if not pages and page != 1:
+    # abort(404)
+  # pagination = Pagination(page, per_page, count)
   # Gets Current Page
-  page = request.args.get('page', 1, type=int)
+#  page = request.args.get('page', 1, type=int)
   # Gets Pagination Object With 4 Team items
 #  team = team.paginate(page, 4, False)
   # Sets page number for the next page if present
-  if (page.has_next):
-    next_page = url_for('teams', page = page.next_num) 
-  else:
-    next_page =  None
-  if (page.has_prev):
-    prev_page = url_for('teams', page = page.prev_num)
-  else:
-    prev_page =  None
+#  if (page.has_next):
+#    next_page = url_for('teams', page = page.next_num) 
+#  else:
+#    next_page =  None
+#  if (page.has_prev):
+#    prev_page = url_for('teams', page = page.prev_num)
+#  else:
+#    prev_page =  None
   # displays teams.html with 4 teams per page`
-  return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
-#  return render_template('teams.html', team = team)
- 
+#  return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
+  # return render_template('teams.html', team = team, pagination=pagination, pages=pages)
+  return render_template('teams.html', team = team)
+
 # Navigates to Patriots page
 @app.route('/teampage/<team_name>')
 def teampage(team_name):
@@ -113,8 +121,10 @@ def game(team_name):
 def splash():
   return render_template('splash.html')
 
+
+
 if __name__ == "__main__":
- app.run()
+ app.run(debug = True)
 
  # This part is for Amber to use to connect to CS server :)
 # app.run(host="128.83.144.118")
