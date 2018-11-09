@@ -47,7 +47,7 @@ class Weeks(db.Model):
 	
 # player_week_id = db.Column(
 	
-db.drop_all()
+#db.drop_all()
 db.create_all()
 
 manager.create_api(Player, methods=['GET'], url_prefix = None)

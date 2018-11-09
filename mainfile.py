@@ -33,9 +33,9 @@ def weeks():
  
 @app.route('/players/')
 def players():
-  players = db.session.query(Player).all()
+  players_ = db.session.query(Player).all()
   newDict = {}
-  for i in players:
+  for i in players_:
     if i.pos in newDict:
       newDict[i.pos].append(i)
     else:
