@@ -15,7 +15,7 @@ CORS(app)
 manager = APIManager(app, flask_sqlalchemy_db = db)
 
 class Player(db.Model):
-	__tablename__ = 'players'
+	__tablename__ = 'player'
 	id = db.Column(db.Integer, primary_key = True)
 	jersey_num = db.Column(db.Integer, nullable = False)
 	name = db.Column(db.String(80), nullable = False)
