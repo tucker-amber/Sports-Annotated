@@ -65,9 +65,9 @@ def teams():
   team = team.paginate(page, 4, False)
   # Sets page number for the next page if present
   next_page = ('teams', page = posts.next_num) \
-    if posts.has_next else None
+    if team.has_next else None
   prev_page = ('teams', page = posts.prev_num \
-    if posts.has_prev else None
+    if team.has_prev else None
   # displays teams.html with 4 teams per page`
   return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
 #  return render_template('teams.html', team = team)
