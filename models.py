@@ -27,6 +27,7 @@ class Teams(db.Model):
 	__tablename__ = "teams"
 	id = db.Column(db.Integer, primary_key = True)
 	stadium_name = db.Column(db.String(80), nullable = False)
+	stadium_init = db.Column(db.String(80), nullable = False)
 	games_played = db.Column(db.Integer, nullable = False)
 	city = db.Column(db.String(80), nullable = False)
 	week = db.Column(db.Integer, nullable = False)
@@ -38,6 +39,8 @@ class Weeks(db.Model):
 	week = db.Column(db.Integer, nullable = False)
 	team = db.Column(db.String(80), nullable = False)
 	score = db.Column(db.Integer, nullable = False)
+	overtime = db.Column(db.String(80), nullable = False)
+	injuries = db.Column(db.Integer, nullable = False)
 
 # class Player_Week(db.Model):
 # __tablename__ = "player/Weeks"

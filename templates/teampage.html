@@ -48,18 +48,18 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="text-center">{{team.name}}</h1>
+      <h1 class="text-center">{{team.team}}</h1>
     </div><br><br>
   </div>
 
   <div class="row">
     <div class="col-sm-6 mt-2  justify-content-md-center">
-      <image class="img-fluid" src="../static/images/lf.jpg" alt = "Gillete Stadium" width="500px">
+      <image class="img-fluid" src="{{"../static/images/" + team.stadium_init + ".jpg" }}"" alt = "Team Stadium" width="500px">
     </div>
     <div class="col-sm-5 ml-2 mt-2 bg-light">
       <table class="table" width="100%">
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">{{team.city}}</th>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">City</th>
           <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1">{{team.city}}</td>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stadium</th>
@@ -75,11 +75,11 @@
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Last Game</th>
-          <td><a href="#" style="text-decoration:none; color:black">ENTER LAST GAME AND LINK</a></td>
+          <td><a href="{{url_for('game',team_name = team.team)}}" style="text-decoration:none; color:black">LINK</a></td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">QB</th>
-          <td><a href="#" style="text-decoration:none; color:black">Aaron Rodgers</a></td>
+          <td><a href="{{url_for('brady',player_id = qb.id)}}" style="text-decoration:none; color:black">{{qb.name}}</a></td>
         </tr>
       </table>
     </div>

@@ -29,9 +29,10 @@ def create_teams():
 		team = oneTeam['team']
 		city = oneTeam['city']
 		games_played = oneTeam['games_played']
+		stadium_init = oneTeam['stadium_init']
 		stadium_name = oneTeam['stadium_name']
 		id = oneTeam['id']
-		newTeam = Teams(id = id, stadium_name = stadium_name, games_played = games_played, city = city, team = team, week= week)
+		newTeam = Teams(id = id, stadium_name = stadium_name, stadium_init = stadium_init, games_played = games_played, city = city, team = team, week= week)
 		# After I create the book, I can then add it to my session.
 		db.session.add(newTeam)
 		# commit the session to my DB.
@@ -44,7 +45,9 @@ def create_weeks():
 		week = oneWeek['week']
 		team = oneWeek['team']
 		id = oneWeek['id']
-		newWeek = Weeks(id = id, team = team, week = week, score = score)
+		overtime = oneWeek['overtime']
+		injuries = oneWeek['injuries']
+		newWeek = Weeks(id = id, team = team, week = week, score = score, overtime = overtime, injuries = injuries)
 		# After I create the book, I can then add it to my session.
 		db.session.add(newWeek)
 		# commit the session to my DB.

@@ -77,8 +77,8 @@
 				{% for i in week %}
 				  {% for k in range(1) %}		
 						<tr class = 'clickable-row' data-href="{{url_for('game', team_name = i[k].team)}}">
-							<td><img src = "{{"../static/images/" +i[k].team + ".png" }}" alt = "NFL team">{{i[k].team}}</td>
-							<td><img src = "{{"../static/images/" +i[k+1].team + ".png" }}" alt = "NFL team">{{i[k+1].team}}</td>
+							<td><img src = "{{"../static/images/" +i[k].team + ".png" }}"" alt = "NFL team">{{i[k].team}}</td>
+							<td><img src = "{{"../static/images/" +i[k+1].team + ".png" }}"" alt = "NFL team">{{i[k+1].team}}</td>
 							<td>{{i[k].score}}  -  {{i[k+1].score}}</td>
 						</tr>
 			      {% endfor %}

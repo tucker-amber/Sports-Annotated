@@ -60,8 +60,8 @@ def teams():
 @app.route('/teampage/<team_name>')
 def teampage(team_name):
   team = db.session.query(Teams).filter_by(team = team_name).first()
-  print(team)
-  return render_template('teampage.html', team = team)
+  qb = db.session.query(Player).filter_by(pos = "QB").first()
+  return render_template('teampage.html', team = team, qb = qb)
 
 
 @app.route('/about')
@@ -79,12 +79,9 @@ def game(team_name):
       newList2 = []
     else:
       newList2.append(i)
-  a = 1
   for k in newList:
-    if (k[0].team == team_name) or (k[0].team == team_name):
+    if (k[0].team == team_name) or (k[1].team == team_name):
       a = k
-	  
-  print(a[0].team)
   return render_template('gamepage.html', game = a)
   
 # Navigates to Home/Splash page
