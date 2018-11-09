@@ -75,5 +75,12 @@
   </div>
 {% endfor %}
 
+{% if prev_page %}
+<a href="{{prev_page}}">Previous Page</a>
+{% endif %}
+{% if next_page %}
+<a href="{{next_page}}">Next Page</a>
+{% endif %}
+
 </body>
 </html>

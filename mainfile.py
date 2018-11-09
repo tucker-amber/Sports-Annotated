@@ -59,7 +59,18 @@ def brady(player_id):
 @app.route('/teams')
 def teams():
   team = db.session.query(Teams).all()
-  return render_template('teams.html', team = team)
+  # Gets Current Page
+  page = request.args.get('page', 1, type=int)
+  # Gets Pagination Object With 4 Team items
+  team = team.paginate(page, 4, False)
+  # Sets page number for the next page if present
+  next_page = ('teams', page = posts.next_num) \
+    if posts.has_next else None
+  prev_page = ('teams', page = posts.prev_num \
+    if posts.has_prev else None
+  # displays teams.html with 4 teams per page`
+  return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
+#  return render_template('teams.html', team = team)
  
 # Navigates to Patriots page
 @app.route('/teampage/<team_name>')
