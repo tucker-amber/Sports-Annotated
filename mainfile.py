@@ -2,7 +2,8 @@
 # mainfile.py
 # creating first flask application
 #-----------------------------------------
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Blueprint
+from flask_paginate import Pagination, get_page_parameter
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
@@ -58,11 +59,11 @@ def brady(player_id):
   
 @app.route('/teams')
 def teams():
-  team = db.session.query(Teams).all()
+  team = db.session.query(Teams).all().paginate(page, 4, False)
   # Gets Current Page
   page = request.args.get('page', 1, type=int)
   # Gets Pagination Object With 4 Team items
-  team = team.paginate(page, 4, False)
+#  team = team.paginate(page, 4, False)
   # Sets page number for the next page if present
   if (page.has_next):
     next_page = url_for('teams', page = page.next_num) 
