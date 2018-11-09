@@ -65,11 +65,11 @@ def teams():
   team = team.paginate(page, 4, False)
   # Sets page number for the next page if present
   if (page.has_next):
-    next_page = ('teams', page = page.next_num) 
+    next_page = url_for('teams', page = page.next_num) 
   else:
     next_page =  None
   if (page.has_prev):
-    prev_page = ('teams', page = page.prev_num)
+    prev_page = url_for('teams', page = page.prev_num)
   else:
     prev_page =  None
   # displays teams.html with 4 teams per page`
