@@ -23,12 +23,17 @@ def weeks():
   week = db.session.query(Weeks).all()
   newList = []
   newList2 = []
-  for i in week:
+  for i in range(0,(len(week)+1)):
+    if i == len(week):
+      break
     if len(newList2) == 2:
       newList.append(newList2)
       newList2 = []
-    else:
-      newList2.append(i)
+    if len(newList2) < 2:
+      newList2.append(week[i])
+  newList2.append(week[-2])
+  newList2.append(week[-1])
+  newList.append(newList2)
   return render_template('weeks.html' , week = newList) 
  
 @app.route('/players/')
@@ -77,8 +82,11 @@ def game(team_name):
     if len(newList2) == 2:
       newList.append(newList2)
       newList2 = []
-    else:
+    if len(newList2) <= 2:
       newList2.append(i)
+  newList2.append(game[-2])
+  newList2.append(game[-1])
+  newList.append(newList2)
   for k in newList:
     if (k[0].team == team_name) or (k[1].team == team_name):
       a = k
@@ -90,7 +98,7 @@ def splash():
   return render_template('splash.html')
 
 if __name__ == "__main__":
- app.run()
+ app.run(debug = True)
 
  # This part is for Amber to use to connect to CS server :)
 # app.run(host="128.83.144.118")
