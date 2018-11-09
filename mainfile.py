@@ -64,10 +64,14 @@ def teams():
   # Gets Pagination Object With 4 Team items
   team = team.paginate(page, 4, False)
   # Sets page number for the next page if present
-  next_page = ('teams', page = page.next_num) \
-    if page.has_next else None
-  prev_page = ('teams', page = page.prev_num \
-    if page.has_prev else None
+  if (page.has_next):
+    next_page = ('teams', page = page.next_num) 
+  else:
+    next_page =  None
+  if (page.has_prev):
+    prev_page = ('teams', page = page.prev_num)
+  else:
+    prev_page =  None
   # displays teams.html with 4 teams per page`
   return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
 #  return render_template('teams.html', team = team)
