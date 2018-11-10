@@ -124,7 +124,7 @@ def splash():
 
 
 if __name__ == "__main__":
- app.run(debug = True)
+ app.run()
 
  # This part is for Amber to use to connect to CS server :)
 # app.run(host="128.83.144.118")
