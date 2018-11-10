@@ -17,7 +17,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="{{url_for('splash')}}">
     <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
@@ -62,7 +62,11 @@
             <table>
 			{% for k in playerss[i] %}
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
+<<<<<<< HEAD
               <td><a href= "{{url_for('brady',player_id = k.id)}}" style="text-decoration:none; color:black">
+=======
+              <td><a href= "{{url_for('brady',player_id = k.id)}}"" "style="text-decoration:none; color:black">
+>>>>>>> bd1afbdb3ab01dab835b42909e4d836a7a5e9059
 				{{k.name}}
 			  </a></td>
             </tr>

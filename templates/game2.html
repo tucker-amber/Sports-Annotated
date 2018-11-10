@@ -49,46 +49,58 @@
     </ul>
   </div>  
 </nav>
-
   <!-- Table data for results-->
   <div class="row">
     <div class="col-sm-9 col-10">
       <div id="Week One">    
-        <h3 style = "background-color: powderblue">Game One</h3>
-		<table class="table table-md table-dark">
+        <h3 style = "background-color: powderblue">Game Two</h3>
+		<table class="table table-sm table-dark">
 			<thead>
 				<tr>
-<<<<<<< HEAD:templates/gamepage.html
-					<th scope="col"><a href = "{{url_for('teampage',team_name = game[0].team)}}">Team 1</a></th>
-					<th scope="col"><a href = "{{url_for('teampage',team_name = game[1].team)}}">Team 2</a</th>
-=======
-<<<<<<< HEAD:templates/game1.html
 					<th scope="col">Game 1</th>
 					<th scope="col"><a href = "{{url_for('patriots')}}">Team 1</a></th>
 					<th scope="col"><a href = "{{url_for('teams')}}">Team 2</a</th>
-=======
-					<th scope="col"><a href = "{{url_for('teampage',team_name = game[0].team)}}">Team 1</a></th>
-					<th scope="col"><a href = "{{url_for('teampage',team_name = game[1].team)}}">Team 2</a</th>
->>>>>>> dev:templates/gamepage.html
->>>>>>> bd1afbdb3ab01dab835b42909e4d836a7a5e9059:templates/gamepage.html
 					<th scope ="col">Score</th>
-					<th scope ="col">Overtime?</th>
-					<th scope ="col">Injuries</th>
 				</tr>
 			</thead>
-			<tbody>	
+			<tbody>
 				<tr>
-					<td><img src ="{{"../static/images/" +game[0].team + ".png" }}"" alt = "NFL team">{{game[0].team}}</td>
-					<td><img src ="{{"../static/images/" +game[1].team + ".png" }}""alt = "NFL team">{{game[1].team}}</td>
-					<td>{{game[0].score}} - {{game[1].score}}</td>
-					<td>{{game[0].overtime}}</td>
-					<td>{{game[0].injuries}}</td>
+					<th scope="row">1</th>
+					<td><img src ="../static/images/patriots.png" alt = "NFL team">Patriots</td>
+					<td><img src ="../static/images/jaguars.png" alt = "NFL team">Jaguars</td>
+					<td>20  -  31</td>
 				</tr>
 			</tbody>
 			
 		</table>
       </div>
- 
+	  <div id ="game info">
+	    <h3 style = "background-color: powderblue">Team Roster</h3>
+
+		<table class="table table-sm table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Game 1</th>
+					<th scope="col">Patriots roster</th>
+					<th scope="col">Jaguars roster</th>
+				</tr>
+				<tr>
+					<th scope="row">Quarterback</th>
+					<td><a href = "{{url_for('brady')}}">Tom Brady</a></td>
+					<td> Blake Bortles </td>
+				</tr>
+				<tr>
+					<th scope="row">Running Back</th>
+					<td><a href = "{{url_for('barner')}}">Kenjon Barner</a></td>
+					<td> T.J. Yeldon</td>
+				</tr>
+				<tr>
+					<th scope="row">Back up Quarterback</th>
+					<td><a href = "{{url_for('hoyer')}}">Brian Hoyer</a></td>
+					<td> Cody Kessler </td>
+				</tr>
+	  </div>
+	  
     </div>
   </div>
   </div>
