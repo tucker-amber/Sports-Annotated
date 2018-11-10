@@ -13,14 +13,14 @@ env_variables:
     # Replace user, password, database, and instance connection name with the values obtained
     # when configuring your Cloud SQL instance.
     DB_STRING: >-
-      postgresql+psycopg2://postgres:Hello!123@/cs329e-idb-220319:us-central1:database-1/nfl
+      postgresql+psycopg2://postgres:Hello!123@/cs329e-idb-220319:us-central1:database-1
 #[END env]
 
 #[START cloudsql_settings]
 # Replace project and instance with the values obtained  when configuring your
 # Cloud SQL instance.
 beta_settings:
-    cloud_sql_instances: cs329e-idb-220319:us-central1:database-1/nfl
+    cloud_sql_instances: cs329e-idb-220319:us-central1:database-1
 
 # This sample incurs costs to run on the App Engine flexible environment. 
 # The settings below are to reduce costs during testing and are not appropriate
