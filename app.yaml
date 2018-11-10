@@ -13,7 +13,7 @@ env_variables:
     # Replace user, password, database, and instance connection name with the values obtained
     # when configuring your Cloud SQL instance.
     DB_STRING: >-
-      postgresql+psycopg2://nfl:Hello!123@/nfl?host=/cloudsql/cs329e-idb-220319:us-central1:nfl_db
+      postgresql+psycopg2://nfl:Hello!123@/nfl?host=/cloudsql/cs329e-idb-220319:us-central1:nfl
 #[END env]
 
 #[START cloudsql_settings]
