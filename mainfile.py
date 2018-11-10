@@ -2,8 +2,15 @@
 # mainfile.py
 # creating first flask application
 #-----------------------------------------
-from flask import Flask, render_template
-app = Flask(__name__)
+from flask import Flask, render_template, request, redirect
+from flask_restless import APIManager
+from flask_sqlalchemy import SQLAlchemy
+from flask_cors import CORS, cross_origin
+from models import app, db, Player, Teams, Weeks
+from create_db import create_players
+import os
+import requests
+#app = Flask(__name__)
 
 
 @app.route('/')
@@ -12,67 +19,109 @@ def index():
 
 @app.route('/weeks')
 def weeks():
-  return render_template('weeks.html') 
-
-@app.route('/players')
+  week = db.session.query(Weeks).all()
+  newList = []
+  newList2 = []
+  for i in range(0,(len(week)+1)):
+    if i == len(week):
+      break
+    if len(newList2) == 2:
+      newList.append(newList2)
+      newList2 = []
+    if len(newList2) < 2:
+      newList2.append(week[i])
+  newList2.append(week[-2])
+  newList2.append(week[-1])
+  newList.append(newList2)
+  return render_template('weeks.html' , week = newList) 
+ 
+@app.route('/players/')
 def players():
-  return render_template('players.html')
+  players_ = db.session.query(Player).all()
+  newDict = {}
+  for i in players_:
+    if i.pos in newDict:
+      newDict[i.pos].append(i)
+    else:
+      newDict[i.pos] = [i]
+  return render_template('players.html', playerss = newDict)
 
 # Navigates to ind player's page
-@app.route('/hoyer')
-def hoyer():
-  return render_template('hoyer.html')
 
-# Navigates to ind player's page
-@app.route('/brady')
-def brady():
-  return render_template('brady.html')
+@app.route('/brady/<player_id>')
+def brady(player_id):
+  players_ = db.session.query(Player).filter_by(id = player_id).first()
+  # for i in players:
+    # if i.name == str(name):
+      # player_name = i
+  return render_template('brady.html', player = players_)
+# per_page = 8
+# @app.route('/teams/', defaults = {'page':1})
 
-# Navigates to ind player's page
-@app.route('/barner')
-def barner():
-  return render_template('barner.html')
-
+#@app.route('/teams/page/<int:page>')
 @app.route('/teams')
 def teams():
-  return render_template('teams.html')
- 
+  team = db.session.query(Teams).all()
+  # count = 3
+  # pages = get_pages_for_page(page, per_page, count)
+  # if not pages and page != 1:
+    # abort(404)
+  # pagination = Pagination(page, per_page, count)
+  # Gets Current Page
+#  page = request.args.get('page', 1, type=int)
+  # Gets Pagination Object With 4 Team items
+#  team = team.paginate(page, 4, False)
+  # Sets page number for the next page if present
+#  if (page.has_next):
+#    next_page = url_for('teams', page = page.next_num) 
+#  else:
+#    next_page =  None
+#  if (page.has_prev):
+#    prev_page = url_for('teams', page = page.prev_num)
+#  else:
+#    prev_page =  None
+  # displays teams.html with 4 teams per page`
+#  return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
+  # return render_template('teams.html', team = team, pagination=pagination, pages=pages)
+  return render_template('teams.html', team = team)
+
 # Navigates to Patriots page
-@app.route('/patriots')
-def patriots():
-  return render_template('patriots.html')
+@app.route('/teampage/<team_name>')
+def teampage(team_name):
+  team = db.session.query(Teams).filter_by(team = team_name).first()
+  qb = db.session.query(Player).filter_by(pos = "QB").first()
+  return render_template('teampage.html', team = team, qb = qb)
 
-# Navigates to Cowboys page
-@app.route('/cowboys')
-def cowboys():
-  return render_template('cowboys.html')
-
-# Navigates to Cowboys page
-@app.route('/packers')
-def packers():
-  return render_template('packers.html')
 
 @app.route('/about')
 def about():
   return render_template('about.html')
   
-@app.route('/game1')
-def game1():
-  return render_template('game1.html')
+@app.route('/game/<team_name>')
+def game(team_name):
+  game = db.session.query(Weeks).all()
+  newList = []
+  newList2 = []
+  for i in game:
+    if len(newList2) == 2:
+      newList.append(newList2)
+      newList2 = []
+    if len(newList2) <= 2:
+      newList2.append(i)
+  newList2.append(game[-2])
+  newList2.append(game[-1])
+  newList.append(newList2)
+  for k in newList:
+    if (k[0].team == team_name) or (k[1].team == team_name):
+      a = k
+  return render_template('gamepage.html', game = a)
   
-@app.route('/game2')
-def game2():
-  return render_template('game2.html')
-  
-@app.route('/game3')
-def game3():
-  return render_template('game3.html')
-
-
 # Navigates to Home/Splash page
 @app.route('/splash')
 def splash():
   return render_template('splash.html')
+
+
 
 if __name__ == "__main__":
  app.run()

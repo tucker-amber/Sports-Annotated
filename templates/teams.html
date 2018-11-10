@@ -17,7 +17,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="{{url_for('splash')}}">
+  <a class="navbar-brand" href="/splash">
     <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
@@ -27,16 +27,16 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item pr-2">
-        <a class="nav-link" href="{{url_for('teams')}}">Teams</a>
+        <a class="nav-link" href="/teams">Teams</a>
       </li>
       <li class="nav-item pr-2">
-        <a class="nav-link" href="{{url_for('weeks')}}">Match History</a>
+        <a class="nav-link" href="/weeks">Match History</a>
       </li>
       <li class="nav-item pr-2">
-        <a class="nav-link" href="{{url_for('players')}}">Players</a>
+        <a class="nav-link" href="/players">Players</a>
       </li>
 	  <li class="nav-item pr-2">
-        <a class="nav-link" href="{{url_for('about')}}">About</a>
+        <a class="nav-link" href="/about">About</a>
       </li>
     </ul>
   </div>  
@@ -54,49 +54,18 @@
     </div><br>
   </div> <br>
 
+{% for i in team %}
 
+  
   <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
+    <div class="col-sm-4 ml-2 mr-2 mb-3 bg-light">
     <div class="container-fluid bg-light">
       <dl>
-        <dt><h3 class="text-center"><a href="{{url_for('patriots')}}" style="text-decoration:none; color:black">New England Patriots</a></h3></dt>
+        <dt><h3 class="text-center"><a href="{{url_for('teampage',team_name = i.team)}}" style="text-decoration:none; color:black">{{i.team}}</a></h3></dt>
           <dd>
             <table width="100%">
               <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="{{url_for('patriots')}}" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/patriots.png" alt="patriots logo" width="100px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="{{url_for('packers')}}" style="text-decoration:none; color:black">Green Bay Packers</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="{{url_for('packers')}}" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/packers.png" alt="packers logo" width="100px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="{{url_for('cowboys')}}" style="text-decoration:none; color:black">Dallas Cowboys</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="{{url_for('cowboys')}}" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/cowboys.png" alt="cowboys logo" width="100px"></a></td>
+            <td><a href="{{url_for('teampage',team_name = i.team)}}" style="text-decoration:none color:black"><image class="img-fluid" src= "{{"../static/images/" +i.team + ".png" }}" alt="team logo" width="100px"></a></td>
             </tr>
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
             </tr>
@@ -106,477 +75,33 @@
     </div>
     </div>
   </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
+{% macro render_pagination(pagination) %}
+  <div class=pagination>
+  {%- for page in pagination.iter_pages() %}
+    {% if page %}
+      {% if page != pagination.page %}
+        <a href="{{ url_for_other_page(page) }}">{{ page }}</a>
+      {% else %}
+        <strong>{{ page }}</strong>
+      {% endif %}
+    {% else %}
+      <span class=ellipsis>…</span>
+    {% endif %}
+  {%- endfor %}
+  {% if pagination.has_next %}
+    <a href="{{ url_for_other_page(pagination.page + 1)
+      }}">Next &raquo;</a>
+  {% endif %}
   </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-3 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="#" style="text-decoration:none; color:black">Team Name</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="#" style="text-decoration:none color:black"><image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-
-  <br><br>
-</div>
+{% endmacro %}
+{% endfor %}
+<!--
+{% if prev_page %}
+<a href="{{prev_page}}">Previous Page</a>
+{% endif %}
+{% if next_page %}
+<a href="{{next_page}}">Next Page</a>
+{% endif %}
+-->
 </body>
 </html>

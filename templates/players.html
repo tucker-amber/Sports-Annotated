@@ -43,50 +43,6 @@
 </nav>
 <br>
 
-<div class="container">
-  <div data-spy="scroll" data-target=".navbar" data-offset="50">
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-bottom">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>  
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section1">Quarterback</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section2">Running back</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section3">Wide receiver</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section4">Tight end</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section5">Offensive line</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section6">Defensive line</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section7">Line backer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section8">Defensive backer</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section9">Kicker</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link border-right" href="#section10">Punter</a>
-        </li>
-      </ul>
-      </div>
-    </nav>
-  </div>
-
-
   <div class="row bg-light">
     <div class="col-sm-3">
       <image class="img-fluid" src="../static/images/footballOnField.jpg" alt="placeholder image" width="500px">
@@ -97,188 +53,28 @@
   </div> <br>
 
   <div class="row justify-content-md-center">
-    <div class="col-sm-5 ml-2 mr-2 mb-3 bg-light">
-    <div id="section1" class="container-fluid bg-light">
+    <div class="col-sm-5 ml-2 mr-2 mb-3">
       <dl>
-        <dt><h3>Quarterback</h3></dt>
+	  {% for i in playerss %}
+        <dt><h3>{{i}}</h3></dt>
           <dd>
+		   <div class = "mb-2 bg-light">
             <table>
+			{% for k in playerss[i] %}
             <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-              <td><a href="{{url_for('brady')}}" style="text-decoration:none; color:black"> Brady, Tom</a></td>
+              <td><a href= "{{url_for('brady',player_id = k.id)}}"" "style="text-decoration:none; color:black">
+				{{k.name}}
+			  </a></td>
             </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-              <td><a href="{{url_for('hoyer')}}" style="text-decoration:none; color:black">Hoyer, Brian</a></td>
-            </tr>
+			{% endfor %}
            </table>
+		   </div>
         </dd>
+		{% endfor %}
       </dl>
     </div>
     </div>
 
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section2" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Running Back</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td><a href="{{url_for('barner')}}" style="text-decoration:none; color:black">Barner, Kenjon</a></td>
-              </tr>
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Burkhead, Rex</td>
-              </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div><br>
-  <div class="row justify-content-md-center">
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section3" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Wide Receiver</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Dorsett, Phillip</td>
-              </tr>
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Berrios, Braxton</td>
-              </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section4" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Tight End</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Allen, Dwayne</td>
-              </tr>
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Gronkowski, Rob</td>
-              </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section5" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Offensive Line</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Brown, Trent</td>
-              </tr>
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Cannon, Marcus</td>
-              </tr>
-           </table>
-         </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section6" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Defensive Line</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Brown, Malcom</td>
-              </tr>
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Butler, Adam</td>
-              </tr>
-           </table>
-         </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section7" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Line Backer</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Bentley, Ja'Whaun</td>
-              </tr>
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Grigsby, Nicholas</td>
-              </tr>
-           </table>
-         </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section8" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Defensive Backer</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td> Crossen, Keion</td>
-              </tr>
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Dawson, Duke</td>
-              </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-
-  <div class="row justify-content-md-center">
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section9" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Kicker</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Gostkowski, Stephen</td>
-              </tr>
-           </table>
-         </dd>
-      </dl>
-    </div>
-    </div>
-    <div class="col-sm-5 ml-2 mr-2 bg-light mb-3">
-    <div id="section10" class="container-fluid bg-light">
-      <dl>
-        <dt><h3>Punter</h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-                <td>Allen, Ryan</td>
-              </tr>
-           </table>
-         </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-<br><br>
-</div>
-</div>
 
 </body>
 </html>

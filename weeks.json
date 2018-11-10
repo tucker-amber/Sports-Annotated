@@ -1,0 +1,258 @@
+[
+  {
+    "id": 1,
+    "team": "chiefs",
+    "week": 1,
+    "score": 38,
+    "overtime": "No",
+    "injuries": 1
+  },
+  {
+    "id": 2,
+    "team": "cowboys",
+    "week": 1,
+    "score": 8,
+    "overtime": "No",
+    "injuries": 3
+  },
+  {
+    "id": 3,
+    "team": "panthers",
+    "week": 1,
+    "score": 16,
+    "overtime": "No",
+    "injuries": 5
+  },
+  {
+    "id": 4,
+    "team": "seahawks",
+    "week": 1,
+    "score": 24,
+    "overtime": "No",
+    "injuries": 7
+  },
+  {
+    "id": 5,
+    "team": "rams",
+    "week": 1,
+    "score": 20,
+    "overtime": "No",
+    "injuries": 6
+  },
+  {
+    "id": 6,
+    "team": "jaguars",
+    "week": 1,
+    "score": 24,
+    "overtime": "No",
+    "injuries": 4
+  },
+  {
+    "id": 7,
+    "team": "redskins",
+    "week": 1,
+    "score": 21,
+    "overtime": "No",
+    "injuries": 2
+  },
+  {
+    "id": 8,
+    "team": "browns",
+    "week": 1,
+    "score": 17,
+    "overtime": "No",
+    "injuries": 12
+  },
+  {
+    "id": 9,
+    "team": "lions",
+    "week": 1,
+    "score": 27,
+    "overtime": "No",
+    "injuries": 3
+  },
+  {
+    "id": 10,
+    "team": "patriots",
+    "week": 1,
+    "score": 27,
+    "overtime": "No",
+    "injuries": 7
+  },
+  {
+    "id": 11,
+    "team": "dolphins",
+    "week": 1,
+    "score": 21,
+    "overtime": "No",
+    "injuries": 12
+  },
+  {
+    "id": 12,
+    "team": "steelers",
+    "week": 1,
+    "score": 24,
+    "overtime": "No",
+    "injuries": 5
+  },
+  {
+    "id": 13,
+    "team": "packers",
+    "week": 1,
+    "score": 16,
+    "overtime": "No",
+    "injuries": 10
+  },
+  {
+    "id": 14,
+    "team": "49ers",
+    "week": 1,
+    "score": 18,
+    "overtime": "No",
+    "injuries": 9
+  },
+  {
+    "id": 15,
+    "team": "eagles",
+    "week": 1,
+    "score": 33,
+    "overtime": "No",
+    "injuries": 7
+  },
+  {
+    "id": 16,
+    "team": "rams",
+    "week": 1,
+    "score": 23,
+    "overtime": "No",
+    "injuries": 4
+  },
+  {
+    "id": 17,
+    "team": "colts",
+    "week": 1,
+    "score": 27,
+    "overtime": "No",
+    "injuries": 2
+  },
+  {
+    "id": 18,
+    "team": "ravens",
+    "week": 1,
+    "score": 40,
+    "overtime": "No",
+    "injuries": 8
+  },
+  {
+    "id": 19,
+    "team": "saints",
+    "week": 1,
+    "score": 15,
+    "overtime": "No",
+    "injuries": 9
+  },
+  {
+    "id": 20,
+    "team": "giants",
+    "week": 1,
+    "score": 48,
+    "overtime": "No",
+    "injuries": 4
+  },
+  {
+    "id": 21,
+    "team": "jets",
+    "week": 1,
+    "score": 3,
+    "overtime": "No",
+    "injuries": 7
+  },
+  {
+    "id": 22,
+    "team": "bills",
+    "week": 1,
+    "score": 20,
+    "overtime": "No",
+    "injuries": 6
+  },
+  {
+    "id": 23,
+    "team": "titans",
+    "week": 1,
+    "score": 20,
+    "overtime": "No",
+    "injuries": 10
+  },
+  {
+    "id": 24,
+    "team": "texans",
+    "week": 1,
+    "score": 13,
+    "overtime": "No",
+    "injuries": 13
+  },
+  {
+    "id": 25,
+    "team": "raiders",
+    "week": 1,
+    "score": 34,
+    "overtime": "No",
+    "injuries": 2
+  },
+  {
+    "id": 26,
+    "team": "bengals",
+    "week": 1,
+    "score": 48,
+    "overtime": "No",
+    "injuries": 5
+  },
+  {
+    "id": 27,
+    "team": "chargers",
+    "week": 1,
+    "score": 23,
+    "overtime": "No",
+    "injuries": 12
+  },
+  {
+    "id": 28,
+    "team": "buccaneers",
+    "week": 1,
+    "score": 27,
+    "overtime": "No",
+    "injuries": 1
+  },
+  {
+    "id": 29,
+    "team": "bears",
+    "week": 1,
+    "score": 28,
+    "overtime": "No",
+    "injuries": 0
+  },
+  {
+    "id": 30,
+    "team": "broncos",
+    "week": 1,
+    "score": 24,
+    "overtime": "No",
+    "injuries": 0
+  },
+  {
+    "id": 31,
+    "team": "cardinals",
+    "week": 1,
+    "score": 12,
+    "overtime": "No",
+    "injuries": 0
+  },
+  {
+    "id": 32,
+    "team": "vikings",
+    "week": 1,
+    "score": 6,
+    "overtime": "No",
+    "injuries": 3
+  }
+]

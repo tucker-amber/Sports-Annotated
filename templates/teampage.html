@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tom Brady</title>
+  <title>Nfl Team</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -44,48 +44,47 @@
   </div>  
 </nav>
 <br>
-
 <div class="container">
 
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="text-center">{{player.name}}</h1>
+      <h1 class="text-center">{{team.team}}</h1>
     </div><br><br>
   </div>
 
   <div class="row">
-    <div class="col-sm-6 mt-2">
-      <image class="img-fluid" src="../static/images/brady.jpg" alt="Tom Brady" width="500px">
+    <div class="col-sm-6 mt-2  justify-content-md-center">
+      <image class="img-fluid" src="{{"../static/images/" + team.stadium_init + ".jpg" }}"" alt = "Team Stadium" width="500px">
     </div>
     <div class="col-sm-5 ml-2 mt-2 bg-light">
       <table class="table" width="100%">
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Team</th>
-          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1"><a href="{{url_for('teampage',team_name = player.team)}}" style="text-decoration:none; color:black">Patriots</a></td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">City</th>
+          <td class="border border-top-0 border-right-0 border-left-0 border-bottom-1">{{team.city}}</td>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Position</th>
-          <td>{{player.pos}}</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stadium</th>
+          <td>{{team.stadium_name}}</td>
         </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Number</th>
-          <td>{{player.jersey_num}}</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stadium Location</th>
+          <td>{{team.city}}</td>
         </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Age</th>
-          <td>{{player.age}}</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Games played</th>
+          <td>{{team.games_played}}</td>
         </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stats</th>
-          <td>{{player.team}}</td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Last Game</th>
+          <td><a href="{{url_for('game',team_name = team.team)}}" style="text-decoration:none; color:black">LINK</a></td>
         </tr>
         <tr>
-          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">Last Game</th>
-          <td><a href="{{url_for('game',team_name = player.team)}}" style="text-decoration:none; color:black">Link</a></td>
+          <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">QB</th>
+          <td><a href="{{url_for('brady',player_id = qb.id)}}" style="text-decoration:none; color:black">{{qb.name}}</a></td>
         </tr>
       </table>
     </div>
-  </div>
-
+  </div> <br>
+</div>
 
 </body>
 </html>
