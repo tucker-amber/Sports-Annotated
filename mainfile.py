@@ -5,16 +5,14 @@
 from flask import Flask, render_template, request, redirect
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS, cross_origin
 from models import app, db, Player, Teams, Weeks
 from create_db import create_players
-#from forms import Nfl_Search_Form
 import flask_whooshalchemy as wa
 import os
 import requests
 
 wa.whoosh_index(app, Player)
-######
+
 @app.route('/')
 def index():
   return render_template('splash.html')
@@ -105,5 +103,5 @@ def splash():
 
 
 if __name__ == "__main__":
- app.run(debug = True)
+ app.run()
 
