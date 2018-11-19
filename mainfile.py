@@ -8,17 +8,25 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
 from models import app, db, Player, Teams, Weeks
 from create_db import create_players
+#from forms import Nfl_Search_Form
+import flask_whooshalchemy as wa
 import os
 import requests
-#app = Flask(__name__)
 
-
+wa.whoosh_index(app, Player)
+######
 @app.route('/')
 def index():
   return render_template('splash.html')
-
+#
+@app.route('/search')
+def search():
+  searches = Player.query.whoosh_search(request.args.get('query')).all()
+  return render_template('search.html', searches=searches)
+  
 @app.route('/weeks')
 def weeks():
+#hi
   week = db.session.query(Weeks).all()
   newList = []
   newList2 = []
@@ -51,38 +59,11 @@ def players():
 @app.route('/brady/<player_id>')
 def brady(player_id):
   players_ = db.session.query(Player).filter_by(id = player_id).first()
-  # for i in players:
-    # if i.name == str(name):
-      # player_name = i
   return render_template('brady.html', player = players_)
-# per_page = 8
-# @app.route('/teams/', defaults = {'page':1})
 
-#@app.route('/teams/page/<int:page>')
 @app.route('/teams')
 def teams():
   team = db.session.query(Teams).all()
-  # count = 3
-  # pages = get_pages_for_page(page, per_page, count)
-  # if not pages and page != 1:
-    # abort(404)
-  # pagination = Pagination(page, per_page, count)
-  # Gets Current Page
-#  page = request.args.get('page', 1, type=int)
-  # Gets Pagination Object With 4 Team items
-#  team = team.paginate(page, 4, False)
-  # Sets page number for the next page if present
-#  if (page.has_next):
-#    next_page = url_for('teams', page = page.next_num) 
-#  else:
-#    next_page =  None
-#  if (page.has_prev):
-#    prev_page = url_for('teams', page = page.prev_num)
-#  else:
-#    prev_page =  None
-  # displays teams.html with 4 teams per page`
-#  return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
-  # return render_template('teams.html', team = team, pagination=pagination, pages=pages)
   return render_template('teams.html', team = team)
 
 # Navigates to Patriots page
@@ -124,10 +105,5 @@ def splash():
 
 
 if __name__ == "__main__":
- app.run()
+ app.run(debug = True)
 
- # This part is for Amber to use to connect to CS server :)
-# app.run(host="128.83.144.118")
-#----------------------------------------
-# end of main2.py
-#-----------------------------------------

@@ -39,6 +39,14 @@
         <a class="nav-link" href="/about">About</a>
       </li>
     </ul>
+	<a class="navbar-brand"></a>
+	<form class="form-inline" method="GET" action="search">
+		<div class="form-group">
+			<label for="query">Search</label>
+			<input type = "text" class="form-control" name="query" id="query">
+		<button type="submit" class="btn btn-primary">Search</button>
+		</div>
+	</form>
   </div>  
 </nav>
 <br>
@@ -75,6 +83,7 @@
     </div>
     </div>
   </div>
+<!--
 {% macro render_pagination(pagination) %}
   <div class=pagination>
   {%- for page in pagination.iter_pages() %}
@@ -93,8 +102,9 @@
       }}">Next &raquo;</a>
   {% endif %}
   </div>
-{% endmacro %}
+{% endmacro %}--> 
 {% endfor %}
+
 <!--
 {% if prev_page %}
 <a href="{{prev_page}}">Previous Page</a>

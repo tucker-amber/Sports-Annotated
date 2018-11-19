@@ -33,11 +33,22 @@
 	  <li class="nav-item pr-2">
         <a class="nav-link" href="{{url_for('about')}}">About</a>
       </li>
-
     </ul>
-
+	<a class="navbar-brand"></a>
+		<!-- <form class="form-inline" method = "GET" action = "/search">
+			<input class="form-control" type="text" name = "query" id = "query">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form> -->
+	<form class="form-inline" method="GET" action="search">
+		<div class="form-group">
+			<label for="query">Search</label>
+			<input type = "text" class="form-control" name="query" id="query">
+		<button type="submit" class="btn btn-primary">Search</button>
+		</div>
+	</form>
   </div>  
 </nav>
+
 <br>
 
 <div class="container bg-light">
@@ -76,6 +87,8 @@
 
 </div>
 </div>
+<div>
+	
 
 </body>
 </html>

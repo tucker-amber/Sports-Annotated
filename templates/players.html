@@ -17,7 +17,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="{{url_for('splash')}}">
     <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
@@ -39,6 +39,14 @@
         <a class="nav-link" href="{{url_for('about')}}">About</a>
       </li>
     </ul>
+	<a class="navbar-brand"></a>
+	<form class="form-inline" method="GET" action="search">
+		<div class="form-group">
+			<label for="query">Search</label>
+			<input type = "text" class="form-control" name="query" id="query">
+		<button type="submit" class="btn btn-primary">Search</button>
+		</div>
+	</form>
   </div>  
 </nav>
 <br>
