@@ -14,8 +14,6 @@ import flask
 from flask import Flask, render_template, request
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS, cross_origin
-#import flask.ext.sqlalchemy as flask_sqlalchemy
 import flask_whooshalchemy as wa
 import os
 import requests
@@ -27,8 +25,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['WHOOSH_BASE'] = 'whoosh'
 
 db = SQLAlchemy(app)
-CORS(app)
-manager = APIManager(app, flask_sqlalchemy_db = db)
 #----------------
 #Class Player
 #----------------
@@ -58,7 +54,6 @@ class Teams(db.Model):
 	team to their own data
 	"""
 	__tablename__ = "teams"
-	#__searchable__ = ['teams']
 	id = db.Column(db.Integer, primary_key = True)
 	stadium_name = db.Column(db.String(80), nullable = False)
 	stadium_init = db.Column(db.String(80), nullable = False)
@@ -77,7 +72,6 @@ class Weeks(db.Model):
 	assign id, week, team, score, overtime, injuries to their own data
 	"""
 	__tablename__ = "weeks"
-	#__searchable__ = ['weeks']
 	id = db.Column(db.Integer, primary_key = True)
 	week = db.Column(db.Integer, nullable = False)
 	team = db.Column(db.String(80), nullable = False)
@@ -90,15 +84,11 @@ class Weeks(db.Model):
 #Creates table
 #--------------
 wa.whoosh_index(app, Player)
-#wa.whoosh_index(app, Teams)
-#wa.whoosh_index(app, Weeks)
 db.drop_all()
 db.create_all()
 
 #---------------------
 #creating API objects
 #---------------------
-# manager.create_api(Player, methods=['GET'], url_prefix = None)
-# manager.create_api(Teams, methods=['GET'], url_prefix = None)
-# manager.create_api(Weeks, methods=['GET'], url_prefix = None)
+
 # End of models.py
