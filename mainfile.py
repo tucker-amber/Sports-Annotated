@@ -106,15 +106,17 @@ def splash():
 # Navigates to unit test page
 @app.route('/test/')
 def test():
-  process = subprocess.Popen(["coverage", "run", "--branch", "test.py"],
+  process = subprocess.Popen(["python3", "-m", "coverage", "run", "--branch", "test.py"],
                               stdout=subprocess.PIPE,
 							  stderr=subprocess.PIPE,
 							  stdin=subprocess.PIPE)
   out, err = process.communicate()
+  print("out: ", out)
+  print("err: ", err)
   output=err+out
   output = output.decode("utf-8")
-  
-  return render_template('test.html', output = "".join(output.split("\n")))
+  print("output: ", output)
+  return render_template('test.html', output = "\n".join(output.split("\n")))
 
 if __name__ == "__main__":
  app.run()
