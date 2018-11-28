@@ -17,10 +17,14 @@ wa.whoosh_index(app, Player)
 @app.route('/')
 def index():
   return render_template('splash.html')
+  
 # search function
 @app.route('/search/')
 def search():
   searches = Player.query.whoosh_search(request.args.get('query')).all()
+  print(searches)
+  if not searches:
+    searches = None
   return render_template('search.html', searches=searches)
   
 # Navigates to weeks page
@@ -117,5 +121,5 @@ def test():
   return render_template('test.html', output = "".join(output.split("\n")))
 
 if __name__ == "__main__":
- app.run()
+ app.run(debug = True)
 

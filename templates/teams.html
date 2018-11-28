@@ -61,7 +61,7 @@
       <h1 class="text-center">Teams</h1>
     </div><br>
   </div> <br>
-
+<!--
 {% for i in team %}
 
   
@@ -83,28 +83,38 @@
     </div>
     </div>
   </div>
-<!--
-{% macro render_pagination(pagination) %}
-  <div class=pagination>
-  {%- for page in pagination.iter_pages() %}
-    {% if page %}
-      {% if page != pagination.page %}
-        <a href="{{ url_for_other_page(page) }}">{{ page }}</a>
-      {% else %}
-        <strong>{{ page }}</strong>
-      {% endif %}
-    {% else %}
-      <span class=ellipsis>…</span>
-    {% endif %}
-  {%- endfor %}
-  {% if pagination.has_next %}
-    <a href="{{ url_for_other_page(pagination.page + 1)
-      }}">Next &raquo;</a>
-  {% endif %}
+
+{% endfor %}
+-->
+{% from macros import render_pagination %}
+
+{% block content %}
+{% for i in team %}
+
+  
+  <div class="row justify-content-md-center">
+    <div class="col-sm-4 ml-2 mr-2 mb-3 bg-light">
+    <div class="container-fluid bg-light">
+      <dl>
+        <dt><h3 class="text-center"><a href="{{url_for('teampage',team_name = i.team)}}" style="text-decoration:none; color:black">{{i.team}}</a></h3></dt>
+          <dd>
+            <table width="100%">
+              <tr class="border  border-right-0 border-left-0 border-bottom-1">
+            <td><a href="{{url_for('teampage',team_name = i.team)}}" style="text-decoration:none color:black"><image class="img-fluid" src= "{{"../static/images/" +i.team + ".png" }}" alt="team logo" width="100px"></a></td>
+            </tr>
+            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
+            </tr>
+           </table>
+        </dd>
+      </dl>
+    </div>
+    </div>
   </div>
-{% endmacro %}--> 
+
 {% endfor %}
 
+  {{ render_pagination(pagination) }}
+{% endblock %}
 <!--
 {% if prev_page %}
 <a href="{{prev_page}}">Previous Page</a>
