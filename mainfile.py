@@ -6,7 +6,6 @@ from flask import Flask, render_template, request, redirect
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
 from models import app, db, Player, Teams, Weeks
-from create_db import create_players
 import flask_whooshalchemy as wa
 import os
 import requests

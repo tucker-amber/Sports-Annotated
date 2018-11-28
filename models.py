@@ -14,13 +14,13 @@ import flask
 from flask import Flask, render_template, request
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
-import flask_whooshalchemy as wa
 import os
 import requests
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
+print(os.environ.get("DB_STRING",'postgres://postgres:Hello!123@/postgres?host=35.226.209.166'))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['WHOOSH_BASE'] = 'whoosh'
 
@@ -83,17 +83,8 @@ class Weeks(db.Model):
 	overtime = db.Column(db.String(80), nullable = False)
 	injuries = db.Column(db.Integer, nullable = False)
 
-#--------------
-#drops table
-#Creates table
-#--------------
-	"""
-   Creates a whoosh index that can be called on to seaerch
-   through the db
-	"""
-wa.whoosh_index(app, Player)
-db.drop_all()
-db.create_all()
+# db.drop_all()
+# db.create_all()
 
 
 # End of models.py
