@@ -9,9 +9,9 @@
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>models</strong></big></big></font></td
 ><td align=right valign=bottom
 ><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjayh5%5Cdesktop%5Ccs329e%5Ccs329e-idb%5Cmodels.py">c:\users\jayh5\desktop\cs329e\cs329e-idb\models.py</a></font></td></tr></table>
-    <p><tt>#&nbsp;note&nbsp;that&nbsp;at&nbsp;this&nbsp;point&nbsp;you&nbsp;should&nbsp;have&nbsp;created&nbsp;"bookdb"&nbsp;database&nbsp;(see&nbsp;install_postgres.txt).<br>
+    <p><tt>#&nbsp;note&nbsp;that&nbsp;at&nbsp;this&nbsp;point&nbsp;you&nbsp;should&nbsp;have&nbsp;created&nbsp;nfl&nbsp;database&nbsp;(see&nbsp;install_postgres.txt).<br>
 #-----------------------------------------------------------------------------------------------<br>
-#Projects/IDB2/models.py<br>
+#Projects/IDB3/models.py<br>
 #CopyRight&nbsp;(C)&nbsp;2016<br>
 #Jerry&nbsp;Han<br>
 #-----------------------------------------------------------------------------------------------</tt></p>
@@ -25,7 +25,8 @@
 <td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="flask.html">flask</a><br>
 </td><td width="25%" valign=top><a href="os.html">os</a><br>
 </td><td width="25%" valign=top><a href="requests.html">requests</a><br>
-</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+</td><td width="25%" valign=top><a href="flask_whooshalchemy.html">flask_whooshalchemy</a><br>
+</td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ee77aa">
 <td colspan=3 valign=bottom>&nbsp;<br>
@@ -33,7 +34,7 @@
     
 <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl>
-<dt><font face="helvetica, arial">sqlalchemy.ext.declarative.api.Model(<a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>)
+<dt><font face="helvetica, arial">flask_sqlalchemy.Model(<a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a>)
 </font></dt><dd>
 <dl>
 <dt><font face="helvetica, arial"><a href="models.html#Player">Player</a>
@@ -46,17 +47,20 @@
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Player">class <strong>Player</strong></a>(sqlalchemy.ext.declarative.api.Model)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="Player">class <strong>Player</strong></a>(flask_sqlalchemy.Model)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>reads&nbsp;in&nbsp;a&nbsp;database&nbsp;as&nbsp;an&nbsp;argument.&nbsp;Note&nbsp;this&nbsp;is&nbsp;a&nbsp;class<br>
 access&nbsp;the&nbsp;db&nbsp;by&nbsp;calling&nbsp;on&nbsp;a&nbsp;specific&nbsp;table:&nbsp;players<br>
-assign&nbsp;id,&nbsp;jersey_num,&nbsp;name,&nbsp;age,&nbsp;pos,&nbsp;team&nbsp;to&nbsp;their&nbsp;own&nbsp;data<br>&nbsp;</tt></td></tr>
+assign&nbsp;id,&nbsp;jersey_num,&nbsp;name,&nbsp;age,&nbsp;pos,&nbsp;team&nbsp;to&nbsp;their&nbsp;own&nbsp;data<br>
+&nbsp;<br>
+The&nbsp;__searchable__&nbsp;uses&nbsp;whoosh_alchemy&nbsp;to&nbsp;be&nbsp;able&nbsp;to&nbsp;search<br>
+the&nbsp;db&nbsp;on&nbsp;certain&nbsp;columns&nbsp;listed&nbsp;in&nbsp;its&nbsp;list&nbsp;data&nbsp;structure<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%"><dl><dt>Method resolution order:</dt>
 <dd><a href="models.html#Player">Player</a></dd>
-<dd>sqlalchemy.ext.declarative.api.Model</dd>
-<dd><a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a></dd>
+<dd>flask_sqlalchemy.Model</dd>
+<dd><a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a></dd>
 <dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
 <hr>
@@ -86,41 +90,40 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x28aaa5605f8; Player&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x23567233748; Player&gt;</dl>
+
+<dl><dt><strong>__searchable__</strong> = ['id', 'name', 'pos', 'team']</dl>
 
 <dl><dt><strong>__table__</strong> = Table('players', MetaData(bind=None), Column('id...), table=&lt;players&gt;, nullable=False), schema=None)</dl>
 
 <dl><dt><strong>__tablename__</strong> = 'players'</dl>
 
+<dl><dt><strong>pure_whoosh</strong> = &lt;flask_whooshalchemy._Searcher object&gt;<dd><tt>Assigned&nbsp;to&nbsp;a&nbsp;Model&nbsp;class&nbsp;as&nbsp;``pure_search``,&nbsp;which&nbsp;enables<br>
+text-querying&nbsp;to&nbsp;whoosh&nbsp;hit&nbsp;list.&nbsp;Also&nbsp;used&nbsp;by&nbsp;``query.whoosh_search``</tt></dl>
+
+<dl><dt><strong>query_class</strong> = &lt;class 'flask_whooshalchemy._QueryProxy'&gt;</dl>
+
+<dl><dt><strong>whoosh_primary_key</strong> = 'id'</dl>
+
 <hr>
-Data and other attributes inherited from sqlalchemy.ext.declarative.api.Model:<br>
+Data and other attributes inherited from flask_sqlalchemy.Model:<br>
 <dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
 
-<dl><dt><strong>query</strong> = &lt;flask_sqlalchemy.BaseQuery object&gt;</dl>
-
-<dl><dt><strong>query_class</strong> = &lt;class 'flask_sqlalchemy.BaseQuery'&gt;<dd><tt>SQLAlchemy&nbsp;:class:`~sqlalchemy.orm.query.Query`&nbsp;subclass&nbsp;with&nbsp;convenience&nbsp;methods&nbsp;for&nbsp;querying&nbsp;in&nbsp;a&nbsp;web&nbsp;application.<br>
-&nbsp;<br>
-This&nbsp;is&nbsp;the&nbsp;default&nbsp;:attr:`~Model.query`&nbsp;object&nbsp;used&nbsp;for&nbsp;models,&nbsp;and&nbsp;exposed&nbsp;as&nbsp;:attr:`~SQLAlchemy.Query`.<br>
-Override&nbsp;the&nbsp;query&nbsp;class&nbsp;for&nbsp;an&nbsp;individual&nbsp;model&nbsp;by&nbsp;subclassing&nbsp;this&nbsp;and&nbsp;setting&nbsp;:attr:`~Model.query_class`.</tt></dl>
+<dl><dt><strong>query</strong> = &lt;flask_whooshalchemy._QueryProxy object&gt;</dl>
 
 <hr>
-Methods inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
-<dl><dt><a name="Player-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
-
-<hr>
-Data descriptors inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
+Data descriptors inherited from <a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a>:<br>
 <dl><dt><strong>__dict__</strong></dt>
 <dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
 </dl>
-<hr>
-Data and other attributes inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
-<dl><dt><strong>__weakref__</strong> = &lt;weakref at 0x0000028AAA559AE8; to 'DefaultMeta' at 0x0000028AA9861E08 (Player)&gt;</dl>
-
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
 </td></tr></table> <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Teams">class <strong>Teams</strong></a>(sqlalchemy.ext.declarative.api.Model)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="Teams">class <strong>Teams</strong></a>(flask_sqlalchemy.Model)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>reads&nbsp;in&nbsp;a&nbsp;database&nbsp;as&nbsp;an&nbsp;argument.&nbsp;Note&nbsp;this&nbsp;is&nbsp;a&nbsp;class<br>
@@ -130,8 +133,8 @@ team&nbsp;to&nbsp;their&nbsp;own&nbsp;data<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%"><dl><dt>Method resolution order:</dt>
 <dd><a href="models.html#Teams">Teams</a></dd>
-<dd>sqlalchemy.ext.declarative.api.Model</dd>
-<dd><a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a></dd>
+<dd>flask_sqlalchemy.Model</dd>
+<dd><a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a></dd>
 <dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
 <hr>
@@ -163,41 +166,40 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x28aaa5557b8; Teams&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x23567233ba8; Teams&gt;</dl>
 
 <dl><dt><strong>__table__</strong> = Table('teams', MetaData(bind=None), Column('id',...80), table=&lt;teams&gt;, nullable=False), schema=None)</dl>
 
 <dl><dt><strong>__tablename__</strong> = 'teams'</dl>
 
 <hr>
-Data and other attributes inherited from sqlalchemy.ext.declarative.api.Model:<br>
+Data and other attributes inherited from flask_sqlalchemy.Model:<br>
 <dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
 
 <dl><dt><strong>query</strong> = &lt;flask_sqlalchemy.BaseQuery object&gt;</dl>
 
-<dl><dt><strong>query_class</strong> = &lt;class 'flask_sqlalchemy.BaseQuery'&gt;<dd><tt>SQLAlchemy&nbsp;:class:`~sqlalchemy.orm.query.Query`&nbsp;subclass&nbsp;with&nbsp;convenience&nbsp;methods&nbsp;for&nbsp;querying&nbsp;in&nbsp;a&nbsp;web&nbsp;application.<br>
-&nbsp;<br>
-This&nbsp;is&nbsp;the&nbsp;default&nbsp;:attr:`~Model.query`&nbsp;object&nbsp;used&nbsp;for&nbsp;models,&nbsp;and&nbsp;exposed&nbsp;as&nbsp;:attr:`~SQLAlchemy.Query`.<br>
-Override&nbsp;the&nbsp;query&nbsp;class&nbsp;for&nbsp;an&nbsp;individual&nbsp;model&nbsp;by&nbsp;subclassing&nbsp;this&nbsp;and&nbsp;setting&nbsp;:attr:`~Model.query_class`.</tt></dl>
-
 <hr>
-Methods inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
-<dl><dt><a name="Teams-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
-
-<hr>
-Data descriptors inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
+Data descriptors inherited from <a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a>:<br>
 <dl><dt><strong>__dict__</strong></dt>
 <dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
 </dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
 <hr>
-Data and other attributes inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
-<dl><dt><strong>__weakref__</strong> = &lt;weakref at 0x0000028AAA5834A8; to 'DefaultMeta' at 0x0000028AA9864698 (Teams)&gt;</dl>
+Data and other attributes inherited from <a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a>:<br>
+<dl><dt><strong>query_class</strong> = &lt;class 'flask_sqlalchemy.BaseQuery'&gt;<dd><tt>The&nbsp;default&nbsp;query&nbsp;object&nbsp;used&nbsp;for&nbsp;models,&nbsp;and&nbsp;exposed&nbsp;as<br>
+:attr:`~SQLAlchemy.Query`.&nbsp;This&nbsp;can&nbsp;be&nbsp;subclassed&nbsp;and<br>
+replaced&nbsp;for&nbsp;individual&nbsp;models&nbsp;by&nbsp;setting&nbsp;the&nbsp;:attr:`~Model.query_class`<br>
+attribute.&nbsp;&nbsp;This&nbsp;is&nbsp;a&nbsp;subclass&nbsp;of&nbsp;a&nbsp;standard&nbsp;SQLAlchemy<br>
+:class:`~sqlalchemy.orm.query.Query`&nbsp;class&nbsp;and&nbsp;has&nbsp;all&nbsp;the&nbsp;methods&nbsp;of&nbsp;a<br>
+standard&nbsp;query&nbsp;as&nbsp;well.</tt></dl>
 
 </td></tr></table> <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Weeks">class <strong>Weeks</strong></a>(sqlalchemy.ext.declarative.api.Model)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="Weeks">class <strong>Weeks</strong></a>(flask_sqlalchemy.Model)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt>reads&nbsp;in&nbsp;a&nbsp;database&nbsp;as&nbsp;an&nbsp;argument.&nbsp;Note&nbsp;this&nbsp;is&nbsp;a&nbsp;class<br>
@@ -206,8 +208,8 @@ assign&nbsp;id,&nbsp;week,&nbsp;team,&nbsp;score,&nbsp;overtime,&nbsp;injuries&n
 <tr><td>&nbsp;</td>
 <td width="100%"><dl><dt>Method resolution order:</dt>
 <dd><a href="models.html#Weeks">Weeks</a></dd>
-<dd>sqlalchemy.ext.declarative.api.Model</dd>
-<dd><a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a></dd>
+<dd>flask_sqlalchemy.Model</dd>
+<dd><a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a></dd>
 <dd><a href="builtins.html#object">builtins.object</a></dd>
 </dl>
 <hr>
@@ -237,35 +239,34 @@ Data descriptors defined here:<br>
 </dl>
 <hr>
 Data and other attributes defined here:<br>
-<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x28aaa560908; Weeks&gt;</dl>
+<dl><dt><strong>__mapper__</strong> = &lt;Mapper at 0x23567233f98; Weeks&gt;</dl>
 
 <dl><dt><strong>__table__</strong> = Table('weeks', MetaData(bind=None), Column('id',...r(), table=&lt;weeks&gt;, nullable=False), schema=None)</dl>
 
 <dl><dt><strong>__tablename__</strong> = 'weeks'</dl>
 
 <hr>
-Data and other attributes inherited from sqlalchemy.ext.declarative.api.Model:<br>
+Data and other attributes inherited from flask_sqlalchemy.Model:<br>
 <dl><dt><strong>metadata</strong> = MetaData(bind=None)</dl>
 
 <dl><dt><strong>query</strong> = &lt;flask_sqlalchemy.BaseQuery object&gt;</dl>
 
-<dl><dt><strong>query_class</strong> = &lt;class 'flask_sqlalchemy.BaseQuery'&gt;<dd><tt>SQLAlchemy&nbsp;:class:`~sqlalchemy.orm.query.Query`&nbsp;subclass&nbsp;with&nbsp;convenience&nbsp;methods&nbsp;for&nbsp;querying&nbsp;in&nbsp;a&nbsp;web&nbsp;application.<br>
-&nbsp;<br>
-This&nbsp;is&nbsp;the&nbsp;default&nbsp;:attr:`~Model.query`&nbsp;object&nbsp;used&nbsp;for&nbsp;models,&nbsp;and&nbsp;exposed&nbsp;as&nbsp;:attr:`~SQLAlchemy.Query`.<br>
-Override&nbsp;the&nbsp;query&nbsp;class&nbsp;for&nbsp;an&nbsp;individual&nbsp;model&nbsp;by&nbsp;subclassing&nbsp;this&nbsp;and&nbsp;setting&nbsp;:attr:`~Model.query_class`.</tt></dl>
-
 <hr>
-Methods inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
-<dl><dt><a name="Weeks-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
-
-<hr>
-Data descriptors inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
+Data descriptors inherited from <a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a>:<br>
 <dl><dt><strong>__dict__</strong></dt>
 <dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
 </dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
 <hr>
-Data and other attributes inherited from <a href="flask_sqlalchemy.model.html#Model">flask_sqlalchemy.model.Model</a>:<br>
-<dl><dt><strong>__weakref__</strong> = &lt;weakref at 0x0000028AAA5837C8; to 'DefaultMeta' at 0x0000028AA985CCE8 (Weeks)&gt;</dl>
+Data and other attributes inherited from <a href="flask_sqlalchemy.html#Model">flask_sqlalchemy.Model</a>:<br>
+<dl><dt><strong>query_class</strong> = &lt;class 'flask_sqlalchemy.BaseQuery'&gt;<dd><tt>The&nbsp;default&nbsp;query&nbsp;object&nbsp;used&nbsp;for&nbsp;models,&nbsp;and&nbsp;exposed&nbsp;as<br>
+:attr:`~SQLAlchemy.Query`.&nbsp;This&nbsp;can&nbsp;be&nbsp;subclassed&nbsp;and<br>
+replaced&nbsp;for&nbsp;individual&nbsp;models&nbsp;by&nbsp;setting&nbsp;the&nbsp;:attr:`~Model.query_class`<br>
+attribute.&nbsp;&nbsp;This&nbsp;is&nbsp;a&nbsp;subclass&nbsp;of&nbsp;a&nbsp;standard&nbsp;SQLAlchemy<br>
+:class:`~sqlalchemy.orm.query.Query`&nbsp;class&nbsp;and&nbsp;has&nbsp;all&nbsp;the&nbsp;methods&nbsp;of&nbsp;a<br>
+standard&nbsp;query&nbsp;as&nbsp;well.</tt></dl>
 
 </td></tr></table></td></tr></table><p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -275,7 +276,6 @@ Data and other attributes inherited from <a href="flask_sqlalchemy.model.html#Mo
     
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>app</strong> = &lt;Flask 'models'&gt;<br>
-<strong>db</strong> = &lt;SQLAlchemy engine=postgres://postgres:***@/postgres?host=35.226.209.166&gt;<br>
-<strong>manager</strong> = &lt;flask_restless.manager.APIManager object&gt;<br>
+<strong>db</strong> = &lt;SQLAlchemy engine='postgres://postgres:Hello!123@/postgres?host=35.226.209.166'&gt;<br>
 <strong>request</strong> = &lt;LocalProxy unbound&gt;</td></tr></table>
 </body></html>

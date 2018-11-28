@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# note that at this point you should have created "bookdb" database (see install_postgres.txt).
+# note that at this point you should have created nfl database (see install_postgres.txt).
 #-----------------------------------------------------------------------------------------------
-#Projects/IDB2/models.py
+#Projects/IDB3/models.py
 #CopyRight (C) 2016
 #Jerry Han
 #-----------------------------------------------------------------------------------------------
@@ -33,7 +33,11 @@ class Player(db.Model):
 	reads in a database as an argument. Note this is a class
 	access the db by calling on a specific table: players
 	assign id, jersey_num, name, age, pos, team to their own data
+	
+	The __searchable__ uses whoosh_alchemy to be able to search
+	the db on certain columns listed in its list data structure
 	"""
+	
 	__tablename__ = 'players'
 	__searchable__ = ['id','name', 'pos', 'team']
 	id = db.Column(db.Integer, primary_key = True)
@@ -83,12 +87,13 @@ class Weeks(db.Model):
 #drops table
 #Creates table
 #--------------
+	"""
+   Creates a whoosh index that can be called on to seaerch
+   through the db
+	"""
 wa.whoosh_index(app, Player)
 db.drop_all()
 db.create_all()
 
-#---------------------
-#creating API objects
-#---------------------
 
 # End of models.py

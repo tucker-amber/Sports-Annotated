@@ -10,21 +10,22 @@ from create_db import create_players
 import flask_whooshalchemy as wa
 import os
 import requests
+import subprocess
 
 wa.whoosh_index(app, Player)
 
 @app.route('/')
 def index():
   return render_template('splash.html')
-#
-@app.route('/search')
+# search function
+@app.route('/search/')
 def search():
   searches = Player.query.whoosh_search(request.args.get('query')).all()
   return render_template('search.html', searches=searches)
   
-@app.route('/weeks')
+# Navigates to weeks page
+@app.route('/weeks/')
 def weeks():
-#hi
   week = db.session.query(Weeks).all()
   newList = []
   newList2 = []
@@ -41,6 +42,7 @@ def weeks():
   newList.append(newList2)
   return render_template('weeks.html' , week = newList) 
  
+# Navigates to players page
 @app.route('/players/')
 def players():
   players_ = db.session.query(Player).all()
@@ -53,13 +55,13 @@ def players():
   return render_template('players.html', playerss = newDict)
 
 # Navigates to ind player's page
-
 @app.route('/brady/<player_id>')
 def brady(player_id):
   players_ = db.session.query(Player).filter_by(id = player_id).first()
   return render_template('brady.html', player = players_)
 
-@app.route('/teams')
+# Navigates to teams page
+@app.route('/teams/')
 def teams():
   team = db.session.query(Teams).all()
   return render_template('teams.html', team = team)
@@ -71,11 +73,12 @@ def teampage(team_name):
   qb = db.session.query(Player).filter_by(pos = "QB").first()
   return render_template('teampage.html', team = team, qb = qb)
 
-
-@app.route('/about')
+#Navigates to about page
+@app.route('/about/')
 def about():
   return render_template('about.html')
   
+# Navigates to game page
 @app.route('/game/<team_name>')
 def game(team_name):
   game = db.session.query(Weeks).all()
@@ -92,15 +95,26 @@ def game(team_name):
   newList.append(newList2)
   for k in newList:
     if (k[0].team == team_name) or (k[1].team == team_name):
-      a = k
-  return render_template('gamepage.html', game = a)
+      game = k
+  return render_template('gamepage.html', game = game)
   
 # Navigates to Home/Splash page
-@app.route('/splash')
+@app.route('/splash/')
 def splash():
   return render_template('splash.html')
-
-
+  
+# Navigates to unit test page
+@app.route('/test/')
+def test():
+  process = subprocess.Popen(["coverage", "run", "--branch", "test.py"],
+                              stdout=subprocess.PIPE,
+							  stderr=subprocess.PIPE,
+							  stdin=subprocess.PIPE)
+  out, err = process.communicate()
+  output=err+out
+  output = output.decode("utf-8")
+  
+  return render_template('test.html', output = "".join(output.split("\n")))
 
 if __name__ == "__main__":
  app.run()

@@ -37,7 +37,7 @@
 	<a class="navbar-brand"></a>
 	<form class="form-inline" method="GET" action="search">
 		<div class="form-group">
-			<label for="query">Search</label>
+			<label for="query"></label>
 			<input type = "text" class="form-control" name="query" id="query">
 		<button type="submit" class="btn btn-primary">Search</button>
 		</div>
@@ -55,7 +55,7 @@
 		<div class="container bg-light">
 			<p><a href="{{url_for('brady',player_id = i.id)}}" style="text-decoration:none; color:black"> {{ i.name }}</a></p>
 			<p> {{ i.pos }} </p>
-			<p> {{ i.team }} </p>
+			<p><a href="{{url_for('teampage',team_name = i.team)}}" style="text-decoration:none; color:black"> {{ i.team }}</a></p>
 
 		</div>
 	{% endfor %}

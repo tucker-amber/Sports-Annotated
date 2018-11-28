@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Match History</title>
-  <!-- Setting initial meta data-->
+  <title>Test</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      position: relative;
-  }
-  ul.nav-pills {
-      top: 20px;
-      position: fixed;
-  }
-  div.col-8 div {
-      height: 500px;
-  }
-  </style>
 </head>
-<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
-<!-- Using Nav class to to help get to different url pages-->
+<style>
+  th, td {
+    width: 20%;
+  }
+</style>
+<body>
+
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="{{url_for('splash')}}">
     <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
@@ -43,7 +35,7 @@
       <li class="nav-item pr-2">
         <a class="nav-link" href="{{url_for('players')}}">Players</a>
       </li>
-   	  <li class="nav-item pr-2">
+	  <li class="nav-item pr-2">
         <a class="nav-link" href="{{url_for('about')}}">About</a>
       </li>
     </ul>
@@ -57,37 +49,9 @@
 	</form>
   </div>  
 </nav>
+<br>
+<p> This is the Unit test page </p>
+<pre><code> {{ output }}</code></pre>
 
-  <!-- Table data for results-->
-  <div class="row">
-    <div class="col-sm-9 col-10">
-      <div id="Week One">    
-        <h3 style = "background-color: powderblue">Game One</h3>
-		<table class="table table-md table-dark">
-			<thead>
-				<tr>
-					<th scope="col"><a href = "{{url_for('teampage',team_name = game[0].team)}}">Team 1</a></th>
-					<th scope="col"><a href = "{{url_for('teampage',team_name = game[1].team)}}">Team 2</a</th>
-					<th scope ="col">Score</th>
-					<th scope ="col">Overtime?</th>
-					<th scope ="col">Injuries</th>
-				</tr>
-			</thead>
-			<tbody>	
-				<tr>
-					<td><img src ="{{"../static/images/" +game[0].team + ".png" }}"" alt = "NFL team">{{game[0].team}}</td>
-					<td><img src ="{{"../static/images/" +game[1].team + ".png" }}""alt = "NFL team">{{game[1].team}}</td>
-					<td>{{game[0].score}} - {{game[1].score}}</td>
-					<td>{{game[0].overtime}}</td>
-					<td>{{game[0].injuries}}</td>
-				</tr>
-			</tbody>
-			
-		</table>
-      </div>
- 
-    </div>
-  </div>
-  </div>
 </body>
 </html>

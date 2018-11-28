@@ -46,7 +46,7 @@
 	<a class="navbar-brand"></a>
 	<form class="form-inline" method="GET" action="search">
 		<div class="form-group">
-			<label for="query">Search</label>
+			<label for="query"></label>
 			<input type = "text" class="form-control" name="query" id="query">
 		<button type="submit" class="btn btn-primary">Search</button>
 		</div>
@@ -125,6 +125,10 @@
         <li class="list-group-item">Flask</li>
         <li class="list-group-item">Slack</li>
         <li class="list-group-item">Gitlab</li>
+        <li class="list-group-item">
+			<a class="nav-link" href="{{url_for('test')}}">Unit Test</a>
+		</li>
+
       </ul>
     </div>
   </div>
