@@ -35,7 +35,7 @@
       </li>
     </ul>
 	<a class="navbar-brand"></a>
-	<form class="form-inline" method="GET" action="search">
+	<form class="form-inline" method="GET" action="">
 		<div class="form-group">
 			<label for="query"></label>
 			<input type = "text" class="form-control" name="query" id="query">
@@ -46,7 +46,7 @@
 </nav>
 
 <br>
-{% if searches == [] %}
+{% if not searches %}
 	<div class="container bg-light">
 	<p> Can't Find that one</p>
 	</div>

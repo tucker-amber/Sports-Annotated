@@ -1,3 +1,23 @@
+commit 4d1b9e933616dfaba91b4e2a4d6e9bf831d78792
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 00:09:48 2018 -0600
+
+    changes to requirements.txt:
+
+ requirements.txt |  1 +
+ test.py          | 18 +++++++++---------
+ 2 files changed, 10 insertions(+), 9 deletions(-)
+
+commit 63cf52d52be67667c009db17df608d1394faa752
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Tue Nov 27 23:36:36 2018 -0600
+
+    removed IDB2.log
+
+ IDB2.log |  576 ----------------------
+ IDB3.log | 1643 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 1643 insertions(+), 576 deletions(-)
+
 commit 6a575301aab2cee98d0410faee5b240038420449
 Merge: bcc9401 4713a91
 Author: Jerry Han <jayh511ster@gmail.com>
