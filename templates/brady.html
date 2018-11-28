@@ -41,6 +41,14 @@
         <a class="nav-link" href="{{url_for('about')}}">About</a>
       </li>
     </ul>
+	<a class="navbar-brand"></a>
+	<form class="form-inline" method="GET" action="search">
+		<div class="form-group">
+			<label for="query"></label>
+			<input type = "text" class="form-control" name="query" id="query">
+		<button type="submit" class="btn btn-primary">Search</button>
+		</div>
+	</form>
   </div>  
 </nav>
 <br>
@@ -55,7 +63,7 @@
 
   <div class="row">
     <div class="col-sm-6 mt-2">
-      <image class="img-fluid" src="../static/images/brady.jpg" alt="Tom Brady" width="500px">
+      <image class="img-fluid" src="{{"../static/images/" + player.name + ".png" }}"" alt="Tom Brady" width="500px">
     </div>
     <div class="col-sm-5 ml-2 mt-2 bg-light">
       <table class="table" width="100%">
@@ -76,7 +84,7 @@
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-1">Stats</th>
-          <td>{{player.team}}</td>
+          <td>Currently Unavailable</td>
         </tr>
         <tr>
           <th class="border border-top-0 border-right-1 border-left-0 border-bottom-0">Last Game</th>

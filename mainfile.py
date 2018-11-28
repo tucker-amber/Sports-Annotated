@@ -5,19 +5,26 @@
 from flask import Flask, render_template, request, redirect
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS, cross_origin
 from models import app, db, Player, Teams, Weeks
 from create_db import create_players
+import flask_whooshalchemy as wa
 import os
 import requests
-#app = Flask(__name__)
+import subprocess
 
+wa.whoosh_index(app, Player)
 
 @app.route('/')
 def index():
   return render_template('splash.html')
-
-@app.route('/weeks')
+# search function
+@app.route('/search/')
+def search():
+  searches = Player.query.whoosh_search(request.args.get('query')).all()
+  return render_template('search.html', searches=searches)
+  
+# Navigates to weeks page
+@app.route('/weeks/')
 def weeks():
   week = db.session.query(Weeks).all()
   newList = []
@@ -35,6 +42,7 @@ def weeks():
   newList.append(newList2)
   return render_template('weeks.html' , week = newList) 
  
+# Navigates to players page
 @app.route('/players/')
 def players():
   players_ = db.session.query(Player).all()
@@ -47,42 +55,15 @@ def players():
   return render_template('players.html', playerss = newDict)
 
 # Navigates to ind player's page
-
 @app.route('/brady/<player_id>')
 def brady(player_id):
   players_ = db.session.query(Player).filter_by(id = player_id).first()
-  # for i in players:
-    # if i.name == str(name):
-      # player_name = i
   return render_template('brady.html', player = players_)
-# per_page = 8
-# @app.route('/teams/', defaults = {'page':1})
 
-#@app.route('/teams/page/<int:page>')
-@app.route('/teams')
+# Navigates to teams page
+@app.route('/teams/')
 def teams():
   team = db.session.query(Teams).all()
-  # count = 3
-  # pages = get_pages_for_page(page, per_page, count)
-  # if not pages and page != 1:
-    # abort(404)
-  # pagination = Pagination(page, per_page, count)
-  # Gets Current Page
-#  page = request.args.get('page', 1, type=int)
-  # Gets Pagination Object With 4 Team items
-#  team = team.paginate(page, 4, False)
-  # Sets page number for the next page if present
-#  if (page.has_next):
-#    next_page = url_for('teams', page = page.next_num) 
-#  else:
-#    next_page =  None
-#  if (page.has_prev):
-#    prev_page = url_for('teams', page = page.prev_num)
-#  else:
-#    prev_page =  None
-  # displays teams.html with 4 teams per page`
-#  return render_template('teams.html', team=teams.items, next_page = next_page,prev_page = prev_page) 
-  # return render_template('teams.html', team = team, pagination=pagination, pages=pages)
   return render_template('teams.html', team = team)
 
 # Navigates to Patriots page
@@ -92,11 +73,12 @@ def teampage(team_name):
   qb = db.session.query(Player).filter_by(pos = "QB").first()
   return render_template('teampage.html', team = team, qb = qb)
 
-
-@app.route('/about')
+#Navigates to about page
+@app.route('/about/')
 def about():
   return render_template('about.html')
   
+# Navigates to game page
 @app.route('/game/<team_name>')
 def game(team_name):
   game = db.session.query(Weeks).all()
@@ -113,21 +95,27 @@ def game(team_name):
   newList.append(newList2)
   for k in newList:
     if (k[0].team == team_name) or (k[1].team == team_name):
-      a = k
-  return render_template('gamepage.html', game = a)
+      game = k
+  return render_template('gamepage.html', game = game)
   
 # Navigates to Home/Splash page
-@app.route('/splash')
+@app.route('/splash/')
 def splash():
   return render_template('splash.html')
-
-
+  
+# Navigates to unit test page
+@app.route('/test/')
+def test():
+  process = subprocess.Popen(["coverage", "run", "--branch", "test.py"],
+                              stdout=subprocess.PIPE,
+							  stderr=subprocess.PIPE,
+							  stdin=subprocess.PIPE)
+  out, err = process.communicate()
+  output=err+out
+  output = output.decode("utf-8")
+  
+  return render_template('test.html', output = "".join(output.split("\n")))
 
 if __name__ == "__main__":
  app.run()
 
- # This part is for Amber to use to connect to CS server :)
-# app.run(host="128.83.144.118")
-#----------------------------------------
-# end of main2.py
-#-----------------------------------------

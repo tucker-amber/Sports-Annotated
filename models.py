@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-# note that at this point you should have created "bookdb" database (see install_postgres.txt).
+# note that at this point you should have created nfl database (see install_postgres.txt).
 #-----------------------------------------------------------------------------------------------
-#Projects/IDB2/models.py
+#Projects/IDB3/models.py
 #CopyRight (C) 2016
 #Jerry Han
 #-----------------------------------------------------------------------------------------------
@@ -14,17 +14,17 @@ import flask
 from flask import Flask, render_template, request
 from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
-from flask_cors import CORS, cross_origin
+import flask_whooshalchemy as wa
 import os
 import requests
 
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['WHOOSH_BASE'] = 'whoosh'
+
 db = SQLAlchemy(app)
-CORS(app)
-manager = APIManager(app, flask_sqlalchemy_db = db)
 #----------------
 #Class Player
 #----------------
@@ -33,8 +33,13 @@ class Player(db.Model):
 	reads in a database as an argument. Note this is a class
 	access the db by calling on a specific table: players
 	assign id, jersey_num, name, age, pos, team to their own data
+	
+	The __searchable__ uses whoosh_alchemy to be able to search
+	the db on certain columns listed in its list data structure
 	"""
+	
 	__tablename__ = 'players'
+	__searchable__ = ['id','name', 'pos', 'team']
 	id = db.Column(db.Integer, primary_key = True)
 	jersey_num = db.Column(db.Integer, nullable = False)
 	name = db.Column(db.String(80), nullable = False)
@@ -82,14 +87,13 @@ class Weeks(db.Model):
 #drops table
 #Creates table
 #--------------
-	
+	"""
+   Creates a whoosh index that can be called on to seaerch
+   through the db
+	"""
+wa.whoosh_index(app, Player)
 db.drop_all()
 db.create_all()
 
-#---------------------
-#creating API objects
-#---------------------
-manager.create_api(Player, methods=['GET'], url_prefix = None)
-manager.create_api(Teams, methods=['GET'], url_prefix = None)
-manager.create_api(Weeks, methods=['GET'], url_prefix = None)
+
 # End of models.py
