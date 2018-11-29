@@ -2,6 +2,7 @@ import os
 import sys
 import unittest
 from models import app, db, Player, Teams, Weeks
+from create_db import create_players, create_teams, create_weeks
 
 class DBTestCases(unittest.TestCase):
 	def setUp(self):
@@ -11,7 +12,11 @@ class DBTestCases(unittest.TestCase):
 		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
 		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
 		self.app = app.test_client()
-	
+		
+	def setUp(self):
+		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
+		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
+		self.app = app.test_client()
 	def test_player_source_insert_1(self):
 		s = Player(id ='100', jersey_num = 830, name = "Dwayne Allen 0", age = 28, pos = "TE", team = 'patriots')
 		db.session.add(s)
@@ -94,20 +99,11 @@ class DBTestCases(unittest.TestCase):
 
 		db.session.query(Weeks).filter_by(id = '300').delete()
 		db.session.commit()
-	def teatDown(self):
-		pass
-		
+
 	## Complete test for db
 	
 	## Testing the page methods on mainfile.py
-class BasicTests(unittest.TestCase):
-	def setUp(self):
-		app.config['Testing'] = True
-		app.config['WTF_CSRF_ENABLED'] = False
-		app.config['DEBUG'] = False
-		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
-		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
-		self.app = app.test_client()
+	
 	def test_index_page(self):
 		response = self.app.get('/', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
@@ -152,7 +148,9 @@ class BasicTests(unittest.TestCase):
 		response = self.app.get('/test/', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 	
-	def teatDown(self):
+	def tearDown(self):
 		pass
 if __name__ == '__main__':
- unittest.main()
+	unittest.main()
+
+ 
