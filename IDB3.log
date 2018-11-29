@@ -1,22 +1,149 @@
+commit f66c46c22f7c12d95d7c01af4701e1c20e5eb1f2
+Merge: f198d60 18025d4
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Thu Nov 29 15:48:08 2018 -0600
+
+    Merge branch 'master' of https://gitlab.com/jayh511/cs329e-idb
+
+commit f198d60d4e588e3aeab5ca3d040374b888396c70
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Thu Nov 29 15:47:40 2018 -0600
+
+    rm newScript.py
+
+commit 18025d4a6bd3413a21a80942b1685bd450eec4b4
+Merge: d6fd993 84974e7
+Author: jayh511 <jayhan@utexas.edu>
+Date:   Thu Nov 29 15:38:05 2018 -0600
+
+    changes
+
+commit d6fd993540950a43bf02808e413fe45ac08738e4
+Author: jayh511 <jayhan@utexas.edu>
+Date:   Thu Nov 29 15:28:15 2018 -0600
+
+    change to commit
+
+commit 84974e76dc0aa3cc078dcc23f909394bfa68e82b
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Thu Nov 29 14:27:53 2018 -0600
+
+    changes to test.py abdc .gitlab.yml
+
+commit 27cd2670776f4c488088552f40602a7d05bfe0a3
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 22:13:39 2018 -0600
+
+    test.py
+
+commit 0283ffcb4c304ccd2f6eae7f694a39b4023601e9
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 22:10:52 2018 -0600
+
+    test.py
+
+commit 2da22495dcc06669efb7ce85ea2abd369d84b6d5
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 21:07:50 2018 -0600
+
+    test.py
+
+commit 41a3e50ef93c50d3e943534806247002f463a7cf
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 21:02:36 2018 -0600
+
+    test.py
+
+commit ad882217bc523b2ad345106887faf76778cb6ed3
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 20:57:34 2018 -0600
+
+    test.py
+
+commit c7d059059d11841c5b0dbc8179ac7151ace554d4
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 20:53:34 2018 -0600
+
+    changes to test.py
+
+commit 43e96a94ba45ad6a3b36f5f671ba19c96e86cf38
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 20:26:01 2018 -0600
+
+    changes to test.py
+
+commit 0fab1a5adfa96fd8b1b17d20d12b642387ab9545
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 20:21:17 2018 -0600
+
+    changes to test.py
+
+commit 77a39bd95158ded5b09868169e1e4ff40ea6a15a
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 20:13:27 2018 -0600
+
+    changes to about page and requirments.txt:
+
+commit 0d25d61f4ce1730ac0a99b66b3e1a9e0dd29488e
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 20:11:07 2018 -0600
+
+    changes to about page
+
+commit e31eb2be57128554a2391ec4e7004ffd3ad14027
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 20:01:31 2018 -0600
+
+    changes to templates
+
+commit 66844ed22b516fe6657f052106fb72ef4cdac381
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 19:58:58 2018 -0600
+
+    changes to mainfile.py
+
+commit a1fc41df43aba0f73a7fac3e7d43ce7c1775234f
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 19:56:31 2018 -0600
+
+    changes to templates, mainfile, create_db, and test
+
+commit bd2367a4d7f002d06219eb8a07f4193eef66f2da
+Author: jayh511 <jayhan@utexas.edu>
+Date:   Wed Nov 28 16:46:28 2018 -0600
+
+    changes to newscript.py
+
+commit 98df1757e240c0e02e0674da07a2f90a57aa9c5f
+Merge: 7dfa124 532bc37
+Author: jayh511 <jayhan@utexas.edu>
+Date:   Wed Nov 28 16:21:30 2018 -0600
+
+    Merge branch 'master' of https://gitlab.com/jayh511/cs329e-idb
+
+commit 7dfa1248ee548c71718fae27f028387d9e6d0f76
+Author: jayh511 <jayhan@utexas.edu>
+Date:   Wed Nov 28 16:19:46 2018 -0600
+
+    changes to mainfile.py
+
+commit 532bc37aa5ed2191cd281f141ec0f19c4afcdb77
+Author: Jerry Han <jayh511ster@gmail.com>
+Date:   Wed Nov 28 16:16:25 2018 -0600
+
+    adding newscript
+
 commit 4d1b9e933616dfaba91b4e2a4d6e9bf831d78792
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Wed Nov 28 00:09:48 2018 -0600
 
     changes to requirements.txt:
 
- requirements.txt |  1 +
- test.py          | 18 +++++++++---------
- 2 files changed, 10 insertions(+), 9 deletions(-)
-
 commit 63cf52d52be67667c009db17df608d1394faa752
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Tue Nov 27 23:36:36 2018 -0600
 
     removed IDB2.log
-
- IDB2.log |  576 ----------------------
- IDB3.log | 1643 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 1643 insertions(+), 576 deletions(-)
 
 commit 6a575301aab2cee98d0410faee5b240038420449
 Merge: bcc9401 4713a91
@@ -31,105 +158,11 @@ Date:   Tue Nov 27 23:29:55 2018 -0600
 
     delete report.docx
 
- ~$report.docx | Bin 162 -> 0 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
-
 commit 74a97dd732f6af27ed40ad8408224ddede2bcdf2
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Tue Nov 27 23:18:42 2018 -0600
 
     changes to mainfile and report
-
- .coverage                               |   1 +
- __pycache__/models.cpython-35.pyc       | Bin 2790 -> 2919 bytes
- mainfile.py                             |  40 +++++++----
- models.html                             | 120 ++++++++++++++++----------------
- models.py                               |  15 ++--
- report.docx                             | Bin 22614 -> 22739 bytes
- requirements.txt                        |   1 +
- static/images/Geneo Grissom.png         | Bin 0 -> 131800 bytes
- templates/about.html                    |   6 +-
- templates/brady.html                    |   4 +-
- templates/gamepage.html                 |   2 +-
- templates/patriots.html                 |   2 +-
- templates/players.html                  |   2 +-
- templates/search.html                   |   4 +-
- templates/splash.html                   |   8 +--
- templates/teampage.html                 |   2 +-
- templates/teams.html                    |   2 +-
- templates/test.html                     |  57 +++++++++++++++
- templates/weeks.html                    |   2 +-
- test.py                                 |  18 ++---
- whoosh/Player/MAIN_3eoeswgjhra1cbvo.seg | Bin 0 -> 7952 bytes
- whoosh/Player/MAIN_418z0wgz36lvelb0.seg | Bin 5615 -> 0 bytes
- whoosh/Player/MAIN_4d65bc0yktkm3jea.seg | Bin 35471 -> 0 bytes
- whoosh/Player/MAIN_4g8njz5e35c3ymm4.seg | Bin 35464 -> 0 bytes
- whoosh/Player/MAIN_66g3968coruzx3jn.seg | Bin 0 -> 4369 bytes
- whoosh/Player/MAIN_6amu9xf15cordz7h.seg | Bin 4371 -> 0 bytes
- whoosh/Player/MAIN_6nw7ykd0tqwsa4ye.seg | Bin 10181 -> 0 bytes
- whoosh/Player/MAIN_8ei81zg27v9gavns.seg | Bin 4371 -> 0 bytes
- whoosh/Player/MAIN_8hu9tznu6bghgyxg.seg | Bin 6861 -> 0 bytes
- whoosh/Player/MAIN_8nlwgp1kc3e90c6c.seg | Bin 0 -> 5651 bytes
- whoosh/Player/MAIN_bw11c76v336u2m9x.seg | Bin 0 -> 6709 bytes
- whoosh/Player/MAIN_d50kcg2yp11qqowf.seg | Bin 0 -> 4841 bytes
- whoosh/Player/MAIN_jaxnm8bpagjodt7j.seg | Bin 0 -> 5321 bytes
- whoosh/Player/MAIN_jovthbzca6zbuqku.seg | Bin 0 -> 9821 bytes
- whoosh/Player/MAIN_mavjdy1r0w9rhox5.seg | Bin 0 -> 4373 bytes
- whoosh/Player/MAIN_mie0e3wmgrt1ml0c.seg | Bin 0 -> 9674 bytes
- whoosh/Player/MAIN_n492nl6352jyc27f.seg | Bin 0 -> 5466 bytes
- whoosh/Player/MAIN_nevwn8299qxewatx.seg | Bin 7482 -> 0 bytes
- whoosh/Player/MAIN_nruoxx1n2h3ymxfk.seg | Bin 0 -> 10917 bytes
- whoosh/Player/MAIN_nu70cv1h10mu0eam.seg | Bin 0 -> 8575 bytes
- whoosh/Player/MAIN_oiq0dvshccrfncq3.seg | Bin 16126 -> 0 bytes
- whoosh/Player/MAIN_ot3b3yq9c1znu243.seg | Bin 5141 -> 0 bytes
- whoosh/Player/MAIN_p575uy8l9d1vq7q4.seg | Bin 0 -> 7480 bytes
- whoosh/Player/MAIN_pgu17xhnrnurg3hx.seg | Bin 0 -> 4153 bytes
- whoosh/Player/MAIN_qbcg8la4uw3iuf4w.seg | Bin 15982 -> 0 bytes
- whoosh/Player/MAIN_rtzcsu1s4r49ldtb.seg | Bin 0 -> 7520 bytes
- whoosh/Player/MAIN_s237j7odsxukglme.seg | Bin 0 -> 8146 bytes
- whoosh/Player/MAIN_s3ppnpw0ezfdb0n2.seg | Bin 7344 -> 0 bytes
- whoosh/Player/MAIN_ss6lzaiemxrwpudj.seg | Bin 6868 -> 0 bytes
- whoosh/Player/MAIN_tjer4uohbwkbeq4j.seg | Bin 0 -> 4374 bytes
- whoosh/Player/MAIN_tmeh2agogt8xzxd2.seg | Bin 0 -> 6089 bytes
- whoosh/Player/MAIN_u2nquahcsd2sa2x9.seg | Bin 0 -> 15814 bytes
- whoosh/Player/MAIN_u6kn3hg0yo4o0s49.seg | Bin 0 -> 35467 bytes
- whoosh/Player/MAIN_uhwnfpbd95pj7v50.seg | Bin 8441 -> 0 bytes
- whoosh/Player/MAIN_um86x1272n137ub0.seg | Bin 6239 -> 0 bytes
- whoosh/Player/MAIN_vof6q1msdfw0t82e.seg | Bin 0 -> 4845 bytes
- whoosh/Player/MAIN_wd58nh31jktyteur.seg | Bin 0 -> 6899 bytes
- whoosh/Player/MAIN_wljpkpieqnr92he5.seg | Bin 7817 -> 0 bytes
- whoosh/Player/MAIN_znafuyewl7ggzwma.seg | Bin 0 -> 6271 bytes
- whoosh/Player/_MAIN_2240.toc            | Bin 1908 -> 0 bytes
- whoosh/Player/_MAIN_3227.toc            | Bin 0 -> 1913 bytes
- whoosh/Teams/MAIN_056wexazlw17v5aa.seg  | Bin 0 -> 9397 bytes
- whoosh/Teams/MAIN_05pibuxgc7jjqlkg.seg  | Bin 0 -> 9996 bytes
- whoosh/Teams/MAIN_1hkwiz4duoevg0qq.seg  | Bin 0 -> 4396 bytes
- whoosh/Teams/MAIN_24jh9hrccta26vjx.seg  | Bin 0 -> 4399 bytes
- whoosh/Teams/MAIN_38sv5zmltie01qjq.seg  | Bin 0 -> 8278 bytes
- whoosh/Teams/MAIN_3xqf2csnhvohamua.seg  | Bin 0 -> 8770 bytes
- whoosh/Teams/MAIN_4hbm1iuyug6e10ft.seg  | Bin 0 -> 4550 bytes
- whoosh/Teams/MAIN_5fisn5fnaumbomhg.seg  | Bin 0 -> 13299 bytes
- whoosh/Teams/MAIN_62pdal40qk4pdz81.seg  | Bin 0 -> 6117 bytes
- whoosh/Teams/MAIN_8i1iffrhuef4lph1.seg  | Bin 0 -> 8911 bytes
- whoosh/Teams/MAIN_WRITELOCK             |   0
- whoosh/Teams/MAIN_bjfcr9sxs2tkozyh.seg  | Bin 0 -> 10184 bytes
- whoosh/Teams/MAIN_em8rtk5j9viyet0p.seg  | Bin 0 -> 6899 bytes
- whoosh/Teams/MAIN_gh1e8173lg19jsui.seg  | Bin 0 -> 4546 bytes
- whoosh/Teams/MAIN_go2vwdsif0xq5ofz.seg  | Bin 0 -> 12404 bytes
- whoosh/Teams/MAIN_ke4iceciw2zd3efu.seg  | Bin 0 -> 6262 bytes
- whoosh/Teams/MAIN_mlrbq8puthvdcwso.seg  | Bin 0 -> 10841 bytes
- whoosh/Teams/MAIN_mwfmtfnoa2c28chn.seg  | Bin 0 -> 4391 bytes
- whoosh/Teams/MAIN_npwcejy3l16h5bfh.seg  | Bin 0 -> 5470 bytes
- whoosh/Teams/MAIN_nqnqllckut8itjd1.seg  | Bin 0 -> 7496 bytes
- whoosh/Teams/MAIN_qhoeh2v5p0o8vc2y.seg  | Bin 0 -> 9578 bytes
- whoosh/Teams/MAIN_sfqiz54npxpac99l.seg  | Bin 0 -> 4702 bytes
- whoosh/Teams/MAIN_uuyvp20auojkzy2k.seg  | Bin 0 -> 5331 bytes
- whoosh/Teams/MAIN_vxaxjb9q3ir5ex8w.seg  | Bin 0 -> 12048 bytes
- whoosh/Teams/MAIN_xycsgu7dodkxt2xz.seg  | Bin 0 -> 7675 bytes
- whoosh/Teams/MAIN_ypfqguvh5wq46ebs.seg  | Bin 0 -> 10782 bytes
- whoosh/Teams/_MAIN_32.toc               | Bin 0 -> 1743 bytes
- ~$report.docx                           | Bin 0 -> 162 bytes
- 89 files changed, 182 insertions(+), 104 deletions(-)
 
 commit acd51a8b0ab779a309ce985248f711989b243a04
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -137,151 +170,11 @@ Date:   Mon Nov 26 04:25:19 2018 -0600
 
     adding patriots photos
 
- static/images/Adam Butler.png                         | Bin 0 -> 137392 bytes
- static/images/Adrian Clayborn.png                     | Bin 0 -> 125655 bytes
- static/images/Albert McClellan.png                    | Bin 0 -> 143247 bytes
- static/images/Brandon King.png                        | Bin 0 -> 127154 bytes
- static/images/Braxton Berrios.png                     | Bin 0 -> 129717 bytes
- static/images/Brian Hoyer.png                         | Bin 0 -> 136959 bytes
- static/images/Brian Schwenke.png                      | Bin 0 -> 131504 bytes
- static/images/Chris Hogan.png                         | Bin 0 -> 126016 bytes
- static/images/Christian Sam.png                       | Bin 0 -> 128642 bytes
- static/images/Cordarrelle Patterson.png               | Bin 0 -> 136716 bytes
- static/images/Danny Shelton.png                       | Bin 0 -> 176538 bytes
- static/images/David Andrews.png                       | Bin 0 -> 151646 bytes
- static/images/Deatrich Wise.png                       | Bin 0 -> 140668 bytes
- static/images/Derek Rivers.png                        | Bin 0 -> 134092 bytes
- static/images/Devin McCourty.png                      | Bin 0 -> 120971 bytes
- static/images/Dont'a Hightower.png                    | Bin 0 -> 153591 bytes
- static/images/Duke Dawson.png                         | Bin 0 -> 142943 bytes
- static/images/Duron Harmon.png                        | Bin 0 -> 136616 bytes
- static/images/Dwayne Allen.png                        | Bin 0 -> 124976 bytes
- static/images/Elandon Roberts.png                     | Bin 0 -> 135455 bytes
- static/images/Eric Rowe.png                           | Bin 0 -> 132913 bytes
- static/images/Isaiah Wynn.png                         | Bin 0 -> 144242 bytes
- static/images/J.C. Jackson.png                        | Bin 0 -> 139222 bytes
- static/images/Ja'Whaun Bentley.png                    | Bin 0 -> 129758 bytes
- static/images/Jacob Hollister.png                     | Bin 0 -> 125516 bytes
- static/images/James Develin.png                       | Bin 0 -> 145219 bytes
- static/images/James Ferentz.png                       | Bin 0 -> 151431 bytes
- static/images/James White.png                         | Bin 0 -> 123440 bytes
- static/images/Jason McCourty.png                      | Bin 0 -> 120602 bytes
- static/images/Jeremy Hill.png                         | Bin 0 -> 134297 bytes
- static/images/Joe Cardona.png                         | Bin 0 -> 134999 bytes
- static/images/Joe Thuney.png                          | Bin 0 -> 129872 bytes
- static/images/John Simon.png                          | Bin 0 -> 120835 bytes
- static/images/Jonathan Jones.png                      | Bin 0 -> 150406 bytes
- static/images/Josh Gordon.png                         | Bin 0 -> 97473 bytes
- static/images/Julian Edelman.png                      | Bin 0 -> 151938 bytes
- static/images/Keion Crossen.png                       | Bin 0 -> 130592 bytes
- static/images/Keionta Davis.png                       | Bin 0 -> 138622 bytes
- static/images/Kyle Van Noy.png                        | Bin 0 -> 129571 bytes
- static/images/LaAdrian Waddle.png                     | Bin 0 -> 142740 bytes
- static/images/Lawrence Guy.png                        | Bin 0 -> 139194 bytes
- static/images/Malcolm Brown.png                       | Bin 0 -> 141629 bytes
- static/images/Marcus Cannon.png                       | Bin 0 -> 148799 bytes
- static/images/Matt Tobin.png                          | Bin 0 -> 150520 bytes
- static/images/Matthew Slater.png                      | Bin 0 -> 126861 bytes
- static/images/Nate Ebner.png                          | Bin 0 -> 134843 bytes
- static/images/Patrick Chung.png                       | Bin 0 -> 138872 bytes
- static/images/Phillip Dorsett.png                     | Bin 0 -> 122006 bytes
- static/images/Rex Burkhead.png                        | Bin 0 -> 135032 bytes
- static/images/Rob Gronkowski.png                      | Bin 0 -> 150972 bytes
- static/images/Ryan Allen.png                          | Bin 0 -> 151130 bytes
- static/images/Ryan Izzo.png                           | Bin 0 -> 134813 bytes
- static/images/Shaq Mason.png                          | Bin 0 -> 134537 bytes
- static/images/Sony Michel.png                         | Bin 0 -> 112971 bytes
- static/images/Stephen Gostkowski.png                  | Bin 0 -> 125234 bytes
- static/images/Stephon Gilmore.png                     | Bin 0 -> 138995 bytes
- static/images/Ted Karras.png                          | Bin 0 -> 148664 bytes
- static/images/Trent Brown.png                         | Bin 0 -> 146475 bytes
- static/images/Trey Flowers.png                        | Bin 0 -> 145692 bytes
- static/images/Ulrick John.png                         | Bin 0 -> 145944 bytes
- templates/brady.html                                  |   2 +-
- whoosh/Player/MAIN_05jfmejgus3f84bf.seg               | Bin 35465 -> 0 bytes
- whoosh/Player/MAIN_08pxxb3xo6ncbx3p.seg               | Bin 7997 -> 0 bytes
- whoosh/Player/MAIN_0vlj06omptg0gwng.seg               | Bin 4845 -> 0 bytes
- whoosh/Player/MAIN_2axxppptcai2g41n.seg               | Bin 5466 -> 0 bytes
- whoosh/Player/MAIN_30fqizjem73806wh.seg               | Bin 35468 -> 0 bytes
- whoosh/Player/MAIN_3kaj18ai2ftepyjz.seg               | Bin 5466 -> 0 bytes
- whoosh/Player/MAIN_418z0wgz36lvelb0.seg               | Bin 0 -> 5615 bytes
- whoosh/Player/MAIN_4d65bc0yktkm3jea.seg               | Bin 0 -> 35471 bytes
- whoosh/Player/MAIN_4g8njz5e35c3ymm4.seg               | Bin 0 -> 35464 bytes
- whoosh/Player/MAIN_680x7847hb0x69cc.seg               | Bin 6420 -> 0 bytes
- whoosh/Player/MAIN_6amu9xf15cordz7h.seg               | Bin 0 -> 4371 bytes
- whoosh/Player/MAIN_6cob95kxjhxllahi.seg               | Bin 7332 -> 0 bytes
- whoosh/Player/MAIN_6nw7ykd0tqwsa4ye.seg               | Bin 0 -> 10181 bytes
- whoosh/Player/MAIN_779epopewkxtftgw.seg               | Bin 10917 -> 0 bytes
- whoosh/Player/MAIN_7rpwj92sffot9s02.seg               | Bin 6709 -> 0 bytes
- whoosh/Player/MAIN_8791cey72vjly7d5.seg               | Bin 4153 -> 0 bytes
- ...8kl0yec0g2kx61nk.seg => MAIN_8ei81zg27v9gavns.seg} | Bin 4371 -> 4371 bytes
- whoosh/Player/MAIN_8hu9tznu6bghgyxg.seg               | Bin 0 -> 6861 bytes
- whoosh/Player/MAIN_8y6a028fklfpzlav.seg               | Bin 7952 -> 0 bytes
- whoosh/Player/MAIN_925mt425aexc3s7x.seg               | Bin 35467 -> 0 bytes
- whoosh/Player/MAIN_98oeor556tnodcdz.seg               | Bin 9677 -> 0 bytes
- whoosh/Player/MAIN_9ddwdk1536zjdaae.seg               | Bin 9819 -> 0 bytes
- whoosh/Player/MAIN_ah51s6y3xfb591kj.seg               | Bin 4992 -> 0 bytes
- whoosh/Player/MAIN_c199450v4vubq9pi.seg               | Bin 15980 -> 0 bytes
- whoosh/Player/MAIN_cnffm48m82cc3rwy.seg               | Bin 5616 -> 0 bytes
- whoosh/Player/MAIN_cx6ywngkbfavf0tl.seg               | Bin 4374 -> 0 bytes
- whoosh/Player/MAIN_dpv1fcr45jznicz3.seg               | Bin 6749 -> 0 bytes
- whoosh/Player/MAIN_dwil1s5p98momsa4.seg               | Bin 4374 -> 0 bytes
- whoosh/Player/MAIN_egqemb41bek10cju.seg               | Bin 15822 -> 0 bytes
- whoosh/Player/MAIN_f0hvmnyz0kvhtuw5.seg               | Bin 6094 -> 0 bytes
- whoosh/Player/MAIN_g4j8d6q9e6scx31z.seg               | Bin 9674 -> 0 bytes
- whoosh/Player/MAIN_gfh5r5xwygskzzve.seg               | Bin 10771 -> 0 bytes
- whoosh/Player/MAIN_gg4r5w0ltdzvu8a2.seg               | Bin 7190 -> 0 bytes
- whoosh/Player/MAIN_gxj1kr6zebuijcbm.seg               | Bin 4372 -> 0 bytes
- whoosh/Player/MAIN_hfm2narnqmovi34j.seg               | Bin 4996 -> 0 bytes
- whoosh/Player/MAIN_imsjpsto0fklbeeg.seg               | Bin 10783 -> 0 bytes
- whoosh/Player/MAIN_j4x973ra2g3ph4bg.seg               | Bin 4154 -> 0 bytes
- whoosh/Player/MAIN_j8g843vsgwkq4ceu.seg               | Bin 35466 -> 0 bytes
- whoosh/Player/MAIN_kbk49ffka4ne434q.seg               | Bin 8724 -> 0 bytes
- whoosh/Player/MAIN_m4vcykw51ndwn1o2.seg               | Bin 4369 -> 0 bytes
- whoosh/Player/MAIN_nevwn8299qxewatx.seg               | Bin 0 -> 7482 bytes
- whoosh/Player/MAIN_or69gioyfiv2kj7f.seg               | Bin 7663 -> 0 bytes
- whoosh/Player/MAIN_ot3b3yq9c1znu243.seg               | Bin 0 -> 5141 bytes
- whoosh/Player/MAIN_phg7ng6229pxy15k.seg               | Bin 10917 -> 0 bytes
- whoosh/Player/MAIN_pv4yze7s0mz94uxk.seg               | Bin 7369 -> 0 bytes
- whoosh/Player/MAIN_q1jo34pv2tz480jc.seg               | Bin 35465 -> 0 bytes
- whoosh/Player/MAIN_qbcg8la4uw3iuf4w.seg               | Bin 0 -> 15982 bytes
- whoosh/Player/MAIN_qbm16uz7mcxo8rog.seg               | Bin 8146 -> 0 bytes
- whoosh/Player/MAIN_r3j2qluo8gxox86j.seg               | Bin 4994 -> 0 bytes
- whoosh/Player/MAIN_rg80eg6ui43j89xz.seg               | Bin 4154 -> 0 bytes
- whoosh/Player/MAIN_s3ppnpw0ezfdb0n2.seg               | Bin 0 -> 7344 bytes
- whoosh/Player/MAIN_shxj3bq4pvmcvet4.seg               | Bin 8575 -> 0 bytes
- whoosh/Player/MAIN_ss6lzaiemxrwpudj.seg               | Bin 0 -> 6868 bytes
- whoosh/Player/MAIN_u4k1xlbsw2lgkyd9.seg               | Bin 7480 -> 0 bytes
- whoosh/Player/MAIN_u8pqqczrny8jcarn.seg               | Bin 6711 -> 0 bytes
- whoosh/Player/MAIN_u946y5wtnlkiukz0.seg               | Bin 15533 -> 0 bytes
- whoosh/Player/MAIN_uhwnfpbd95pj7v50.seg               | Bin 0 -> 8441 bytes
- whoosh/Player/MAIN_um86x1272n137ub0.seg               | Bin 0 -> 6239 bytes
- whoosh/Player/MAIN_vkct66apjxxl1cut.seg               | Bin 8286 -> 0 bytes
- whoosh/Player/MAIN_w5ddcm08fzqbyiex.seg               | Bin 6567 -> 0 bytes
- whoosh/Player/MAIN_wiwcw1qh16ptjiq8.seg               | Bin 5469 -> 0 bytes
- whoosh/Player/MAIN_wlit5wyl31ah6ura.seg               | Bin 5941 -> 0 bytes
- whoosh/Player/MAIN_wljpkpieqnr92he5.seg               | Bin 0 -> 7817 bytes
- whoosh/Player/MAIN_wouhwndarinkkg2z.seg               | Bin 4374 -> 0 bytes
- whoosh/Player/MAIN_wybk3aj3xgnqq82y.seg               | Bin 6092 -> 0 bytes
- whoosh/Player/MAIN_y3k6nmbsf8kramrx.seg               | Bin 10923 -> 0 bytes
- whoosh/Player/MAIN_yhwrj7q8ttrxzk8r.seg               | Bin 6089 -> 0 bytes
- whoosh/Player/MAIN_ytbg3zvnvfdk47dt.seg               | Bin 7952 -> 0 bytes
- whoosh/Player/MAIN_z8fssuis7t6ufms5.seg               | Bin 4372 -> 0 bytes
- whoosh/Player/_MAIN_2048.toc                          | Bin 2076 -> 0 bytes
- whoosh/Player/_MAIN_2112.toc                          | Bin 1916 -> 0 bytes
- whoosh/Player/_MAIN_2240.toc                          | Bin 0 -> 1908 bytes
- ~$report.docx                                         | Bin 162 -> 0 bytes
- 134 files changed, 1 insertion(+), 1 deletion(-)
-
 commit 7f27dd35e2ff8c1f13679d043e15f35bc1e066b7
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Mon Nov 26 03:33:39 2018 -0600
 
      delete report
-
- __pycache__/models.cpython-35.pyc | Bin 2920 -> 2790 bytes
- ~$report.docx                     | Bin 162 -> 162 bytes
- 2 files changed, 0 insertions(+), 0 deletions(-)
 
 commit b887a7d37c8602aa0bf5596d7256361c3276b77b
 Merge: 2caa749 440f0f2
@@ -296,38 +189,11 @@ Date:   Mon Nov 26 03:24:18 2018 -0600
 
     testing CI
 
- __pycache__/models.cpython-35.pyc       | Bin 2920 -> 2920 bytes
- static/images/Dwayne Allen.jpg          | Bin 0 -> 197172 bytes
- static/images/Tom Brady.png             | Bin 0 -> 103119 bytes
- whoosh/Player/MAIN_05jfmejgus3f84bf.seg | Bin 0 -> 35465 bytes
- whoosh/Player/MAIN_0vlj06omptg0gwng.seg | Bin 0 -> 4845 bytes
- whoosh/Player/MAIN_3kaj18ai2ftepyjz.seg | Bin 0 -> 5466 bytes
- whoosh/Player/MAIN_779epopewkxtftgw.seg | Bin 0 -> 10917 bytes
- whoosh/Player/MAIN_7rpwj92sffot9s02.seg | Bin 0 -> 6709 bytes
- whoosh/Player/MAIN_8791cey72vjly7d5.seg | Bin 0 -> 4153 bytes
- whoosh/Player/MAIN_8y6a028fklfpzlav.seg | Bin 0 -> 7952 bytes
- whoosh/Player/MAIN_c199450v4vubq9pi.seg | Bin 0 -> 15980 bytes
- whoosh/Player/MAIN_dwil1s5p98momsa4.seg | Bin 0 -> 4374 bytes
- whoosh/Player/MAIN_g4j8d6q9e6scx31z.seg | Bin 0 -> 9674 bytes
- whoosh/Player/MAIN_j8g843vsgwkq4ceu.seg | Bin 0 -> 35466 bytes
- whoosh/Player/MAIN_qbm16uz7mcxo8rog.seg | Bin 0 -> 8146 bytes
- whoosh/Player/MAIN_shxj3bq4pvmcvet4.seg | Bin 0 -> 8575 bytes
- whoosh/Player/MAIN_u4k1xlbsw2lgkyd9.seg | Bin 0 -> 7480 bytes
- whoosh/Player/MAIN_yhwrj7q8ttrxzk8r.seg | Bin 0 -> 6089 bytes
- whoosh/Player/_MAIN_2112.toc            | Bin 0 -> 1916 bytes
- 19 files changed, 0 insertions(+), 0 deletions(-)
-
 commit 440f0f27207c2d662678778886b92958bda22df2
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Mon Nov 19 09:08:43 2018 -0600
 
      changes to report. 3000 min met.
-
- mainfile.py   |   6 ++----
- models.py     |  12 +-----------
- report.docx   | Bin 13727 -> 22614 bytes
- ~$report.docx | Bin 0 -> 162 bytes
- 4 files changed, 3 insertions(+), 15 deletions(-)
 
 commit bb3f6b3dd4f67eebe2ade9d9c4ce66ca8e263c6a
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -335,79 +201,11 @@ Date:   Mon Nov 19 04:39:27 2018 -0600
 
     changes to requirements.txt
 
- requirements.txt | 13 +++++++------
- 1 file changed, 7 insertions(+), 6 deletions(-)
-
 commit c74c248d7ede398ae16899b7c688eb5f28ba8eab
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Mon Nov 19 04:27:27 2018 -0600
 
     Added search function to all webpages. Changes to mainfile, models.py
-
- __pycache__/create_db.cpython-35.pyc    | Bin 1786 -> 1786 bytes
- __pycache__/models.cpython-35.pyc       | Bin 2885 -> 2920 bytes
- __pycache__/test.cpython-35.pyc         | Bin 4901 -> 4901 bytes
- mainfile.py                             |  48 ++++++---------------
- models.py                               |  19 ++++++---
- requirements.txt                        |   6 ++-
- static/images/la.jpg                    | Bin 0 -> 134964 bytes
- static/images/sports.jpg                | Bin 99731 -> 147717 bytes
- templates/about.html                    |  57 +++++++++++--------------
- templates/brady.html                    |   8 ++++
- templates/gamepage.html                 |   8 ++++
- templates/pathnameofjsfile.js           |  71 --------------------------------
- templates/patriots.html                 |   8 ++++
- templates/players.html                  |  10 ++++-
- templates/search.html                   |  66 +++++++++++++++++++++++++++++
- templates/splash.html                   |  17 +++++++-
- templates/teampage.html                 |   8 ++++
- templates/teams.html                    |  12 +++++-
- templates/weeks.html                    |   8 ++++
- whoosh/Player/MAIN_08pxxb3xo6ncbx3p.seg | Bin 0 -> 7997 bytes
- whoosh/Player/MAIN_2axxppptcai2g41n.seg | Bin 0 -> 5466 bytes
- whoosh/Player/MAIN_30fqizjem73806wh.seg | Bin 0 -> 35468 bytes
- whoosh/Player/MAIN_680x7847hb0x69cc.seg | Bin 0 -> 6420 bytes
- whoosh/Player/MAIN_6cob95kxjhxllahi.seg | Bin 0 -> 7332 bytes
- whoosh/Player/MAIN_8kl0yec0g2kx61nk.seg | Bin 0 -> 4371 bytes
- whoosh/Player/MAIN_925mt425aexc3s7x.seg | Bin 0 -> 35467 bytes
- whoosh/Player/MAIN_98oeor556tnodcdz.seg | Bin 0 -> 9677 bytes
- whoosh/Player/MAIN_9ddwdk1536zjdaae.seg | Bin 0 -> 9819 bytes
- whoosh/Player/MAIN_WRITELOCK            |   0
- whoosh/Player/MAIN_ah51s6y3xfb591kj.seg | Bin 0 -> 4992 bytes
- whoosh/Player/MAIN_cnffm48m82cc3rwy.seg | Bin 0 -> 5616 bytes
- whoosh/Player/MAIN_cx6ywngkbfavf0tl.seg | Bin 0 -> 4374 bytes
- whoosh/Player/MAIN_dpv1fcr45jznicz3.seg | Bin 0 -> 6749 bytes
- whoosh/Player/MAIN_egqemb41bek10cju.seg | Bin 0 -> 15822 bytes
- whoosh/Player/MAIN_f0hvmnyz0kvhtuw5.seg | Bin 0 -> 6094 bytes
- whoosh/Player/MAIN_gfh5r5xwygskzzve.seg | Bin 0 -> 10771 bytes
- whoosh/Player/MAIN_gg4r5w0ltdzvu8a2.seg | Bin 0 -> 7190 bytes
- whoosh/Player/MAIN_gxj1kr6zebuijcbm.seg | Bin 0 -> 4372 bytes
- whoosh/Player/MAIN_hfm2narnqmovi34j.seg | Bin 0 -> 4996 bytes
- whoosh/Player/MAIN_imsjpsto0fklbeeg.seg | Bin 0 -> 10783 bytes
- whoosh/Player/MAIN_j4x973ra2g3ph4bg.seg | Bin 0 -> 4154 bytes
- whoosh/Player/MAIN_kbk49ffka4ne434q.seg | Bin 0 -> 8724 bytes
- whoosh/Player/MAIN_m4vcykw51ndwn1o2.seg | Bin 0 -> 4369 bytes
- whoosh/Player/MAIN_oiq0dvshccrfncq3.seg | Bin 0 -> 16126 bytes
- whoosh/Player/MAIN_or69gioyfiv2kj7f.seg | Bin 0 -> 7663 bytes
- whoosh/Player/MAIN_phg7ng6229pxy15k.seg | Bin 0 -> 10917 bytes
- whoosh/Player/MAIN_pv4yze7s0mz94uxk.seg | Bin 0 -> 7369 bytes
- whoosh/Player/MAIN_q1jo34pv2tz480jc.seg | Bin 0 -> 35465 bytes
- whoosh/Player/MAIN_r3j2qluo8gxox86j.seg | Bin 0 -> 4994 bytes
- whoosh/Player/MAIN_rg80eg6ui43j89xz.seg | Bin 0 -> 4154 bytes
- whoosh/Player/MAIN_u8pqqczrny8jcarn.seg | Bin 0 -> 6711 bytes
- whoosh/Player/MAIN_u946y5wtnlkiukz0.seg | Bin 0 -> 15533 bytes
- whoosh/Player/MAIN_vkct66apjxxl1cut.seg | Bin 0 -> 8286 bytes
- whoosh/Player/MAIN_w5ddcm08fzqbyiex.seg | Bin 0 -> 6567 bytes
- whoosh/Player/MAIN_wiwcw1qh16ptjiq8.seg | Bin 0 -> 5469 bytes
- whoosh/Player/MAIN_wlit5wyl31ah6ura.seg | Bin 0 -> 5941 bytes
- whoosh/Player/MAIN_wouhwndarinkkg2z.seg | Bin 0 -> 4374 bytes
- whoosh/Player/MAIN_wybk3aj3xgnqq82y.seg | Bin 0 -> 6092 bytes
- whoosh/Player/MAIN_y3k6nmbsf8kramrx.seg | Bin 0 -> 10923 bytes
- whoosh/Player/MAIN_y7lsx2jx3lpmid34.seg | Bin 0 -> 10183 bytes
- whoosh/Player/MAIN_ytbg3zvnvfdk47dt.seg | Bin 0 -> 7952 bytes
- whoosh/Player/MAIN_z8fssuis7t6ufms5.seg | Bin 0 -> 4372 bytes
- whoosh/Player/_MAIN_2048.toc            | Bin 0 -> 2076 bytes
- 63 files changed, 195 insertions(+), 151 deletions(-)
 
 commit bcc9401f5f0087415cd8a70aeb4f411907d60da8
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -415,25 +213,11 @@ Date:   Sat Nov 10 18:07:10 2018 -0600
 
     changes to app.yaml
 
- app.yaml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit f644904d3dc823c8753c205d0959ee147dd312f7
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Sat Nov 10 15:22:20 2018 -0600
 
     fixed templates
-
- templates/game2.html                               | 108 ---------------------
- templates/game3.html                               | 108 ---------------------
- templates/gamepage.html                            |  11 ---
- templates/hoyer.html                               |  91 -----------------
- templates/pathnameofjsfile.js                      |  71 --------------
- templates/patriots.html                            |   2 +-
- templates/players.html                             |   6 +-
- templates/{teampage.html~HEAD => teampage.html}    |   0
- ...e.html~bd1afbdb3ab01dab835b42909e4d836a7a5e9059 |  90 -----------------
- 9 files changed, 2 insertions(+), 485 deletions(-)
 
 commit 7fd3124063f60f06a6294012465ab968b14c1857
 Merge: ec609f1 bd1afbd
@@ -448,20 +232,11 @@ Date:   Sat Nov 10 07:01:07 2018 +0000
 
     Delete IDB1.log
 
- IDB1.log | 585 ---------------------------------------------------------------
- 1 file changed, 585 deletions(-)
-
 commit ec609f16720b94434e29af87717b4d0003eaf826
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Sat Nov 10 00:13:17 2018 -0600
 
      changed head a previous commit
-
- __pycache__/create_db.cpython-35.pyc | Bin 1786 -> 1786 bytes
- __pycache__/models.cpython-35.pyc    | Bin 2885 -> 2885 bytes
- mainfile.py                          |   2 +-
- templates/pathnameofjsfile.js        |  71 -----------------------------------
- 4 files changed, 1 insertion(+), 72 deletions(-)
 
 commit b12fd19bdb93e71dd77f677c0ca974fae8684498
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -469,41 +244,11 @@ Date:   Sat Nov 10 00:05:49 2018 -0600
 
     overwrite
 
- .gitignore                                |   7 +-
- .gitlab-ci.yml                            |  22 ++
- IDB2.log                                  | 576 ++++++++++++++++++++++++++++++
- app.yaml                                  |  18 +
- create_db.py                              |  58 +++
- mainfile.py                               | 137 ++++---
- models.html                               | 281 +++++++++++++++
- models.py                                 |  95 +++++
- players.json                              | 514 ++++++++++++++++++++++++++
- requirements.txt                          |  27 +-
- static/images/{kc.png => chiefs.png}      | Bin
- static/images/{ny.png => giants.png}      | Bin
- static/images/sports.jpg                  | Bin 119054 -> 99731 bytes
- teams.json                                | 290 +++++++++++++++
- templates/barner.html                     |  91 -----
- templates/brady.html                      |  18 +-
- templates/cowboys.html                    |  91 -----
- templates/{game1.html => gamepage.html}   |  49 +--
- templates/pathnameofjsfile.js             |  71 ++++
- templates/players.html                    | 226 +-----------
- templates/{packers.html => teampage.html} | 181 +++++-----
- templates/teams.html                      | 549 ++--------------------------
- templates/weeks.html                      | 346 +-----------------
- test.py                                   |  91 +++++
- weeks.json                                | 258 +++++++++++++
- 25 files changed, 2578 insertions(+), 1418 deletions(-)
-
 commit 4dc27a0cccf9c32338937092c21eb828cedc7bf3
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 23:54:58 2018 -0600
 
     final changes. i promise
-
- mainfile.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 42b2625d4557607f0ce201d9dbd35abedc9f7c06
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -511,22 +256,11 @@ Date:   Fri Nov 9 23:51:34 2018 -0600
 
      final changes
 
- .gitignore             | 7 ++++++-
- templates/players.html | 2 +-
- 2 files changed, 7 insertions(+), 2 deletions(-)
-
 commit fd9e4e6fe5abb4a201d90967f15dc31357bf6856
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 23:38:59 2018 -0600
 
     Created idb2.log
-
- IDB2.log                          | 576 ++++++++++++++++++++++++++++++++++++++
- __pycache__/models.cpython-35.pyc | Bin 2296 -> 2885 bytes
- __pycache__/test.cpython-35.pyc   | Bin 981 -> 4901 bytes
- models.html                       | 281 +++++++++++++++++++
- models.py                         |  50 +++-
- 5 files changed, 901 insertions(+), 6 deletions(-)
 
 commit 755ab6152c07d032e62648696758db7c22ee7a0a
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -534,19 +268,11 @@ Date:   Fri Nov 9 22:38:05 2018 -0600
 
     changes to app.yaml and models.py
 
- app.yaml  | 2 +-
- models.py | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
 commit c9ef6132fbbf8efeeb3230a2e468048b1e12f775
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 20:56:41 2018 -0600
 
     app.yaml
-
- models.py        | 2 +-
- requirements.txt | 1 +
- 2 files changed, 2 insertions(+), 1 deletion(-)
 
 commit 9e68b4910d5eea18ed4b7197887908e693d404f2
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -554,18 +280,11 @@ Date:   Fri Nov 9 20:32:41 2018 -0600
 
     change to app.yaml
 
- models.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit fedff24bfb7571c2f978d6e493de2fb608b365d6
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 20:28:43 2018 -0600
 
     change to app.yaml
-
- app.yaml  | 2 +-
- models.py | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit cb94c758eb79bcf4f602f50e9bbc16be6cc65c8e
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -573,18 +292,11 @@ Date:   Fri Nov 9 20:24:25 2018 -0600
 
     changes to app.yaml
 
- app.yaml  | 2 +-
- models.py | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
 commit f5bddf43cdbfa7d3e87613ae659504d7b1127623
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 19:58:31 2018 -0600
 
     adding
-
- models.py | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 058ff8cc6deb3ce2f173f3288725c08b9a06f228
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -592,18 +304,11 @@ Date:   Fri Nov 9 19:50:54 2018 -0600
 
      changes to models.py
 
- models.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 73beef521ff1272dbb2d0efe2bafa06991cd39d0
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 19:48:53 2018 -0600
 
      changes to models.py
-
- app.yaml  | 2 +-
- models.py | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
 
 commit fb8f1e0785d171a617a5887eb5d7020f023a1b18
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -611,18 +316,11 @@ Date:   Fri Nov 9 19:33:21 2018 -0600
 
     changes to requirements.txt
 
- requirements.txt | 1 +
- 1 file changed, 1 insertion(+)
-
 commit 55ca90068137ef36d4d7490836502c8bee485415
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 19:28:43 2018 -0600
 
     revert back to old changes
-
- app.yaml  | 4 ++--
- models.py | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
 
 commit e3a664281e2f576bcceb66e20bc450f757becc3c
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -630,19 +328,11 @@ Date:   Fri Nov 9 19:25:13 2018 -0600
 
     revert back to old changes
 
- app.yaml  | 2 +-
- models.py | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
 commit 3e3f7e7701379a6a2eaebbd13a396c2708d64981
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 19:15:10 2018 -0600
 
     revert back to old changes
-
- app.yaml  | 4 ++--
- models.py | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
 
 commit b49d35af2452ac9ef570d7673f254c7c3df0e6a9
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -650,18 +340,11 @@ Date:   Fri Nov 9 19:10:37 2018 -0600
 
     changes to model.py
 
- models.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 660678f9961e6b61645362741e191480c465028c
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 19:08:07 2018 -0600
 
     changes to app.yml
-
- app.yaml  | 4 ++--
- models.py | 2 +-
- 2 files changed, 3 insertions(+), 3 deletions(-)
 
 commit 4519067d6323a3d64f4d6adf9d0a88dc19996ffd
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -669,18 +352,11 @@ Date:   Fri Nov 9 19:06:41 2018 -0600
 
      asd
 
- app.yaml  | 2 +-
- models.py | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
 commit 7d7ffe3d5f87342c540deab68cc5b816eea5e233
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 19:01:18 2018 -0600
 
     changes to app.yml
-
- app.yaml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 757fc1c57db146e4733cb51272601f85275a2931
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -688,17 +364,11 @@ Date:   Fri Nov 9 18:53:21 2018 -0600
 
      changes to app.yaml
 
- app.yaml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 599f95d7d9e200eafc010126c8b33ec68818a6ce
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 17:46:05 2018 -0600
 
     change to app.ymal
-
- app.yaml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit f953bc4789708a3e576413a0d2c17373b258d1d5
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -706,18 +376,11 @@ Date:   Fri Nov 9 17:37:41 2018 -0600
 
     change to app.ymal
 
- app.yaml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 9ca4178135fddfd2a8ca096076195fb2f344cd5a
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 17:25:53 2018 -0600
 
     changes to models.py
-
- __pycache__/models.cpython-35.pyc | Bin 2249 -> 2296 bytes
- models.py                         |   2 +-
- 2 files changed, 1 insertion(+), 1 deletion(-)
 
 commit 9dc3c1a0e4af818d3770220fb96e4e27a865c850
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -725,17 +388,11 @@ Date:   Fri Nov 9 17:21:37 2018 -0600
 
     correct db address on app.yaml
 
- app.yaml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit f7587b724b2bed55736ffe36e7e37efcc2d590ad
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 16:46:47 2018 -0600
 
     changes to app.yaml
-
- app.yaml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
 
 commit 1fa0ecd20c1f55be302695f59cb8d39986c0885f
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -743,21 +400,11 @@ Date:   Fri Nov 9 16:44:06 2018 -0600
 
     back to past changes on mainfile.py
 
- __pycache__/models.cpython-35.pyc | Bin 2201 -> 2249 bytes
- app.yaml                          |  20 ++++++++++++++++-
- mainfile.py                       |  46 +++++++++++++++++++++++---------------
- models.py                         |   1 +
- templates/teams.html              |  25 +++++++++++++++++++--
- 5 files changed, 71 insertions(+), 21 deletions(-)
-
 commit f9fed75db1d945566f9aa157faee0821aa77d650
 Author: tuckerar <tucker.amber.r@gmail.com>
 Date:   Fri Nov 9 15:11:33 2018 -0600
 
     corrections
-
- mainfile.py | 7 ++++---
- 1 file changed, 4 insertions(+), 3 deletions(-)
 
 commit c854b21154029df7668f25a8270ce24056ace0b3
 Author: tuckerar <tucker.amber.r@gmail.com>
@@ -765,17 +412,11 @@ Date:   Fri Nov 9 14:47:47 2018 -0600
 
     code corrected
 
- mainfile.py | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
-
 commit f09987729efe141722516d5973d689a420d23f4c
 Author: tuckerar <tucker.amber.r@gmail.com>
 Date:   Fri Nov 9 14:40:16 2018 -0600
 
     code correction
-
- mainfile.py | 12 ++++++++----
- 1 file changed, 8 insertions(+), 4 deletions(-)
 
 commit 4126f84b2db4030b0d546820782b3f4cca86ef16
 Author: tuckerar <tuckera@cs.utexas.edu>
@@ -783,17 +424,11 @@ Date:   Fri Nov 9 14:35:37 2018 -0600
 
     code correction
 
- mainfile.py | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
 commit 8d8eb6c4e39f00591b8b3bbd18a840fb147de2a8
 Author: tuckerar <tuckera@cs.utexas.edu>
 Date:   Fri Nov 9 14:33:11 2018 -0600
 
     code correction
-
- mainfile.py | 4 ++--
- 1 file changed, 2 insertions(+), 2 deletions(-)
 
 commit 7f7d1f768a8a630d39a58e0255354a1b4446ae71
 Author: tuckerar <tuckera@cs.utexas.edu>
@@ -801,19 +436,11 @@ Date:   Fri Nov 9 14:31:00 2018 -0600
 
     added pagination to teams.html
 
- mainfile.py          | 13 ++++++++++++-
- templates/teams.html |  9 ++++++++-
- 2 files changed, 20 insertions(+), 2 deletions(-)
-
 commit 2f71caa407b89b88b8f4c0f6d88b53f887fb9f09
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 11:02:05 2018 -0600
 
     updates to unittest
-
- mainfile.py |  2 +-
- test.py     | 73 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 74 insertions(+), 1 deletion(-)
 
 commit c3ea1130956a5b99932d4944ea9100afdc778a97
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -821,24 +448,11 @@ Date:   Fri Nov 9 05:34:24 2018 -0600
 
     changes to unit test
 
- __pycache__/models.cpython-35.pyc | Bin 2200 -> 2201 bytes
- mainfile.py                       |  18 +++++++++++++-----
- models.py                         |   2 +-
- weeks.json                        |   2 +-
- 4 files changed, 15 insertions(+), 7 deletions(-)
-
 commit 6f7c14deadfae7865fc10877f20f7762663b0228
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 02:51:46 2018 -0600
 
     changes to unit test
-
- mainfile.py          | 4 ++--
- models.py            | 2 +-
- templates/brady.html | 2 +-
- templates/weeks.html | 2 +-
- test.py              | 2 +-
- 5 files changed, 6 insertions(+), 6 deletions(-)
 
 commit fa061bb6654300057be938770bcc8d65db1a8d4a
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -846,29 +460,11 @@ Date:   Fri Nov 9 02:48:53 2018 -0600
 
     trying to resolve typerror
 
- templates/barner.html  |  91 -----------------------------------------
- templates/books2.html  |  26 ------------
- templates/brady.html   |   2 +-
- templates/cowboys.html |  91 -----------------------------------------
- templates/game1.html   | 108 -------------------------------------------------
- templates/game2.html   | 108 -------------------------------------------------
- templates/game3.html   | 108 -------------------------------------------------
- templates/hoyer.html   |  91 -----------------------------------------
- templates/packers.html |  91 -----------------------------------------
- templates/proto.html   |  79 ------------------------------------
- templates/weeks.html   |   2 +-
- 11 files changed, 2 insertions(+), 795 deletions(-)
-
 commit 0c64cdf84b83c5dddebb050898625e78c1eb98f2
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 02:42:29 2018 -0600
 
     changes to mainfile.py
-
- __pycache__/models.cpython-35.pyc | Bin 2201 -> 2200 bytes
- mainfile.py                       |   4 ++--
- models.py                         |   2 +-
- 3 files changed, 3 insertions(+), 3 deletions(-)
 
 commit ad639768bcd97b3350446e845addf9efa7da84a8
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -876,17 +472,11 @@ Date:   Fri Nov 9 02:30:10 2018 -0600
 
     changes to models.py
 
- models.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 643a5de08481d08acd0d15cc9b99666f62745c16
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Fri Nov 9 02:26:00 2018 -0600
 
     changes to unit test
-
- test.py | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
 
 commit 5f2a11447b8b0465de37bc30a197ba8c0f773821
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -894,31 +484,11 @@ Date:   Fri Nov 9 02:20:39 2018 -0600
 
     finished back end and front end of website
 
- __pycache__/create_db.cpython-35.pyc | Bin 1683 -> 1786 bytes
- __pycache__/models.cpython-35.pyc    | Bin 2077 -> 2201 bytes
- __pycache__/test.cpython-35.pyc      | Bin 0 -> 981 bytes
- create_db.py                         |   7 +-
- main3.py                             |  20 ------
- mainfile.py                          |   9 +--
- models.py                            |   3 +
- players.json                         | 128 ++++++++++++++++-----------------
- requirements.txt                     |  13 ++--
- static/images/sports.jpg             | Bin 119054 -> 99731 bytes
- templates/brady.html                 |   4 +-
- templates/gamepage.html              |  41 +++--------
- templates/teampage.html              |  10 +--
- templates/weeks.html                 |   4 +-
- weeks.json                           | 132 ++++++++++++++++++++++++++---------
- 15 files changed, 200 insertions(+), 171 deletions(-)
-
 commit f8e4eda698155d79eed0e42344d92565eb74c6b8
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Thu Nov 8 21:33:44 2018 -0600
 
     changes to requirements.txt
-
- requirements.txt | 27 ++++++++++++++++++---------
- 1 file changed, 18 insertions(+), 9 deletions(-)
 
 commit 8e3784becc872a0c24af1187fd5abc463bba78f5
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -926,24 +496,11 @@ Date:   Thu Nov 8 21:31:39 2018 -0600
 
     changes to gamepage
 
- mainfile.py             | 19 ++++++++++++++++---
- templates/gamepage.html | 20 ++++++++++----------
- templates/teams.html    |  2 +-
- templates/weeks.html    | 20 +++++++++++++-------
- 4 files changed, 40 insertions(+), 21 deletions(-)
-
 commit e9c6cec5ff5fd313e46c6af1279ed23c23360d6d
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Thu Nov 8 16:20:16 2018 -0600
 
     changes to mainfile and related files
-
- mainfile.py             |  44 +++++---------------
- templates/gamepage.html | 108 ++++++++++++++++++++++++++++++++++++++++++++++++
- templates/teampage.html |  14 +++----
- templates/teams.html    |   2 +-
- templates/weeks.html    |   6 +--
- 5 files changed, 129 insertions(+), 45 deletions(-)
 
 commit 32fac1403716262ba205696333851a79e42db036
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -951,37 +508,11 @@ Date:   Thu Nov 8 15:31:32 2018 -0600
 
     happy
 
- mainfile.py            |  5 +++--
- templates/brady.html   | 10 +++++-----
- templates/players.html |  2 +-
- 3 files changed, 9 insertions(+), 8 deletions(-)
-
 commit 4d3fd7d62de558124448b5db3106cc7b09544c51
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Thu Nov 8 15:16:40 2018 -0600
 
     adding
-
- __pycache__/create_db.cpython-35.pyc | Bin 1656 -> 1683 bytes
- __pycache__/models.cpython-35.pyc    | Bin 1683 -> 2077 bytes
- create_db.py                         |  11 +-
- main3.py                             |   5 -
- mainfile.py                          |  74 ++-
- models.py                            |  26 +-
- static/images/{kc.png => chiefs.png} | Bin
- static/images/{ny.png => giants.png} | Bin
- teams.json                           |  96 ++--
- templates/book2.html                 |  21 -
- templates/brady.html                 |  14 +-
- templates/hello.html                 |  12 -
- templates/pathnameofjsfile.js        |  71 +++
- templates/players.html               | 411 +---------------
- templates/proto.html                 |  79 +++
- templates/teampage.html              |  90 ++++
- templates/teams.html                 | 911 +----------------------------------
- templates/weeks.html                 | 340 +------------
- weeks.json                           | 160 +++---
- 19 files changed, 515 insertions(+), 1806 deletions(-)
 
 commit 0f4ebc750c63c0dea01ad57a94926800447cbf94
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -989,27 +520,11 @@ Date:   Wed Nov 7 13:47:01 2018 -0600
 
     changes to gitlab ci
 
- .gitlab-ci.yml | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 8fa8be757e6b5f3f2dc66a1c9388ad69c3a3a5d6
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Wed Nov 7 13:38:57 2018 -0600
 
      changes made to mainfile.py and players
-
- .gitlab-ci.yml                       |   4 +-
- __pycache__/create_db.cpython-35.pyc | Bin 860 -> 1656 bytes
- __pycache__/models.cpython-35.pyc    | Bin 968 -> 1683 bytes
- create_db.py                         |  31 ++++-
- main3.py                             |  11 +-
- mainfile.py                          |  10 +-
- models.py                            |  16 ++-
- teams.json                           | 258 +++++++++++++++++++++++++++++++++++
- templates/books2.html                |  19 ++-
- templates/players.html               | 221 +++++++++++++++++++++++++++---
- weeks.json                           | 162 ++++++++++++++++++++++
- 11 files changed, 694 insertions(+), 38 deletions(-)
 
 commit 585613ed39012ef632c9461f68276f6261ad7f89
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1017,17 +532,11 @@ Date:   Wed Nov 7 03:15:24 2018 -0600
 
     changed player to players on test.py
 
- test.py | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit fb6d5bc9e465b4cc3f6ef84a5ab88cc06e11bb40
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Wed Nov 7 03:13:18 2018 -0600
 
     made changes to test.py
-
- test.py | 10 +++++-----
- 1 file changed, 5 insertions(+), 5 deletions(-)
 
 commit 555096d0c2480c5e0c93789fb7cfdad18e9774e9
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1035,18 +544,11 @@ Date:   Wed Nov 7 03:09:32 2018 -0600
 
     adding missing test.py file
 
- test.py | 18 ++++++++++++++++++
- 1 file changed, 18 insertions(+)
-
 commit 72c57cce10fd6f208650b631f71995f523daf045
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Wed Nov 7 03:03:25 2018 -0600
 
     changes made to requirements.txt
-
- main3.py         |  2 +-
- requirements.txt | 18 ++++++++++--------
- 2 files changed, 11 insertions(+), 9 deletions(-)
 
 commit d24bc381003cc1a0b1987eeae43b28d4a9a6ec41
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1054,27 +556,11 @@ Date:   Wed Nov 7 02:55:45 2018 -0600
 
     checking db on git CI
 
- .gitlab-ci.yml                       |  22 ++
- __pycache__/create_db.cpython-35.pyc | Bin 0 -> 860 bytes
- __pycache__/models.cpython-35.pyc    | Bin 0 -> 968 bytes
- create_db.py                         |  27 ++
- main3.py                             |  24 ++
- models.py                            |  23 ++
- players.json                         | 514 +++++++++++++++++++++++++++++++++++
- requirements.txt                     |  11 +-
- templates/book2.html                 |  21 ++
- templates/books2.html                |  21 ++
- templates/hello.html                 |  12 +
- 11 files changed, 673 insertions(+), 2 deletions(-)
-
 commit 96695354033e7baf296b2734a10f065cc0a2dbb5
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Wed Oct 24 20:27:32 2018 -0500
 
      adding IDB1.log
-
- IDB1.log | 585 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 585 insertions(+)
 
 commit eb726afb7e2ebecd66df51ac3be33fa927f1b79c
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1082,31 +568,17 @@ Date:   Wed Oct 24 20:20:32 2018 -0500
 
     remove report
 
- report.docx | Bin 13727 -> 0 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
-
 commit b66d433b4d7fbcaeec4c366ffbd0bf0faffadd8e
 Author: tuckerar <tuckera@cs.utexas.edu>
 Date:   Wed Oct 24 19:32:55 2018 -0500
 
     fixed broken links in hoyer.html and players.html
 
- templates/hoyer.html   | 2 +-
- templates/players.html | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
 commit 128458cbe720a5a1dd876759cb4d30a1ab5a5292
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Wed Oct 24 17:41:38 2018 -0500
 
     changes
-
- templates/game1.html    |   2 +-
- templates/game2.html    |   2 +-
- templates/game3.html    |   2 +-
- templates/patriots.html |   2 +-
- templates/teams.html    | 386 ------------------------------------------------
- 5 files changed, 4 insertions(+), 390 deletions(-)
 
 commit a06a03d76669ac40933972e08b6d2cc6a80d356e
 Merge: 95cda42 6c6c492
@@ -1128,53 +600,17 @@ Date:   Wed Oct 24 16:41:07 2018 -0500
 
     changes
 
- templates/game1.html | 4 ++--
- templates/game2.html | 4 ++--
- templates/game3.html | 4 ++--
- templates/weeks.html | 2 +-
- 4 files changed, 7 insertions(+), 7 deletions(-)
-
 commit 3e47229a87fb29d4db07926ca720daa69380d05c
 Author: tuckerar <tuckera@cs.utexas.edu>
 Date:   Wed Oct 24 15:34:45 2018 -0500
 
     link about, teams, and weeks to home page
 
- templates/about.html |  4 ++--
- templates/teams.html | 14 +++++++-------
- templates/weeks.html |  2 +-
- 3 files changed, 10 insertions(+), 10 deletions(-)
-
 commit 11d751d5899bcfe158a5fd5672225093d463be73
 Author: tuckerar <tuckera@cs.utexas.edu>
 Date:   Wed Oct 24 15:11:54 2018 -0500
 
     player pages link to home/splash page. added stadium images. updated template for teams.html added
-
- static/images/ah.jpg     | Bin 0 -> 119054 bytes
- static/images/att.jpg    | Bin 0 -> 284251 bytes
- static/images/ba.jpg     | Bin 0 -> 284251 bytes
- static/images/bs.jpg     | Bin 0 -> 620395 bytes
- static/images/cl.jpg     | Bin 0 -> 293666 bytes
- static/images/fed.jpg    | Bin 0 -> 105410 bytes
- static/images/ff.jpg     | Bin 0 -> 105410 bytes
- static/images/gs.jpg     | Bin 0 -> 317479 bytes
- static/images/hf.jpg     | Bin 0 -> 613494 bytes
- static/images/lamc.jpg   | Bin 0 -> 13015 bytes
- static/images/lo.jpg     | Bin 0 -> 613494 bytes
- static/images/ls.jpg     | Bin 0 -> 214738 bytes
- static/images/ne.jpg     | Bin 0 -> 90016 bytes
- static/images/pb.jpg     | Bin 0 -> 20092 bytes
- static/images/sfb.jpg    | Bin 0 -> 46618 bytes
- static/images/sh.jpg     | Bin 0 -> 1681105 bytes
- static/images/sports.jpg | Bin 0 -> 119054 bytes
- static/images/tiaa.jpg   | Bin 0 -> 263213 bytes
- static/images/us.jpg     | Bin 0 -> 261062 bytes
- templates/barner.html    |   6 +-
- templates/brady.html     |   6 +-
- templates/hoyer.html     |   6 +-
- templates/teams.html     | 965 ++++++++++++++++++++++++++++-------------------
- 23 files changed, 591 insertions(+), 392 deletions(-)
 
 commit 7201428f9f0347577a3d6be21bbd3690a353a4db
 Merge: 1a5e8b9 495303f
@@ -1189,20 +625,11 @@ Date:   Wed Oct 24 13:15:21 2018 -0500
 
     adding game files
 
- templates/brady.html | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
-
 commit 6c6c492eae0175e7a7f47252face75cbda218da6
 Author: tuckerar <tuckera@cs.utexas.edu>
 Date:   Wed Oct 24 12:29:26 2018 -0500
 
     added images amber, barner, brady, hoyer
-
- static/images/amber.jpg  | Bin 0 -> 819023 bytes
- static/images/barner.jpg | Bin 0 -> 26311 bytes
- static/images/brady.jpg  | Bin 0 -> 88020 bytes
- static/images/hoyer.jpg  | Bin 0 -> 30483 bytes
- 4 files changed, 0 insertions(+), 0 deletions(-)
 
 commit 495303f8a58a6193facd982cf7abd8745ea4e48a
 Author: tuckerar <tuckera@cs.utexas.edu>
@@ -1210,21 +637,11 @@ Date:   Wed Oct 24 12:25:33 2018 -0500
 
     added path to packers in mainfile.py
 
- mainfile.py | 5 +++++
- 1 file changed, 5 insertions(+)
-
 commit ff554d18433793d2e213e1c30d0a772de536e29c
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Wed Oct 24 11:33:49 2018 -0500
 
     Added team pages (cowboys, packers, patriots). Added route to home/splash page
-
- mainfile.py             | 15 ++++++++
- templates/brady.html    |  2 +-
- templates/cowboys.html  | 91 +++++++++++++++++++++++++++++++++++++++++++++++++
- templates/packers.html  | 91 +++++++++++++++++++++++++++++++++++++++++++++++++
- templates/patriots.html |  8 +++--
- 5 files changed, 204 insertions(+), 3 deletions(-)
 
 commit d508a36fd15a66f7cbeec4b683ca3328a9544904
 Author: Amber Tucker <tucker.amber.r@gmail.com>
@@ -1232,21 +649,11 @@ Date:   Wed Oct 24 16:08:32 2018 +0000
 
     Replace teams.html with Jerry's more recent version in master branch.
 
- templates/teams.html | 32 ++++++++++++++++++++++++++++++++
- 1 file changed, 32 insertions(+)
-
 commit bb79de42f570d287edfee37da59bdae8e8fea95a
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Wed Oct 24 10:37:31 2018 -0500
 
     created patriots.html, linked player pages to patriots page
-
- mainfile.py             |  5 +++
- templates/barner.html   |  2 +-
- templates/brady.html    |  2 +-
- templates/hoyer.html    |  2 +-
- templates/patriots.html | 87 +++++++++++++++++++++++++++++++++++++++++++++++++
- 5 files changed, 95 insertions(+), 3 deletions(-)
 
 commit 247096a6321acd4fb2c342f2ad1c02373d266546
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1254,24 +661,11 @@ Date:   Wed Oct 24 10:32:38 2018 -0500
 
     Adding Games1.html, game2.html, game.html3
 
- mainfile.py          |  13 ++++++-
- templates/brady.html |   4 +-
- templates/game1.html | 108 +++++++++++++++++++++++++++++++++++++++++++++++++++
- templates/game2.html | 108 +++++++++++++++++++++++++++++++++++++++++++++++++++
- templates/game3.html | 108 +++++++++++++++++++++++++++++++++++++++++++++++++++
- templates/weeks.html |   8 ++--
- 6 files changed, 342 insertions(+), 7 deletions(-)
-
 commit 87bffb60da9c0992ffd1f0ec7822f015f6e04773
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Wed Oct 24 10:21:26 2018 -0500
 
     removed broken link to splash page
-
- templates/barner.html | 4 ++--
- templates/brady.html  | 4 ++--
- templates/hoyer.html  | 4 ++--
- 3 files changed, 6 insertions(+), 6 deletions(-)
 
 commit 9beeeb52e1d470f8ec1f02b79d780fe9d79b56a9
 Author: Amber Tucker <tucker.amber.r@gmail.com>
@@ -1279,24 +673,11 @@ Date:   Wed Oct 24 14:55:07 2018 +0000
 
     Revert brady.html to previous version.
 
- templates/brady.html | 474 ++++++++++-----------------------------------------
- 1 file changed, 91 insertions(+), 383 deletions(-)
-
 commit 523f321ae7b0f6820adc8f5ef61de4a9e6080865
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Wed Oct 24 07:44:28 2018 -0500
 
     changes to report and teams.html
-
- main.py              |  34 -----
- main1.py             |  15 --
- main2.py             |  17 ---
- report.docx          | Bin 17610 -> 17970 bytes
- templates/book.html  |  12 --
- templates/brady.html | 400 ++++++++++++++++++++++++++++++++++++++++++++-------
- templates/hello.html |  10 --
- templates/weeks.html |   2 +-
- 8 files changed, 347 insertions(+), 143 deletions(-)
 
 commit 632068bffa7687bdcf2cd8801651a3d45cd069ab
 Author: Amber Tucker <tuckera@cs.utexas.edu>
@@ -1304,24 +685,11 @@ Date:   Tue Oct 23 23:04:54 2018 -0500
 
     linked players.html to player pages (brady.html, hoyer.html, barner.html) and added paths in mainfile.py
 
- mainfile.py              |  15 ++++++++
- static/images/barner.jpg | Bin 0 -> 30483 bytes
- static/images/brady.jpg  | Bin 0 -> 88020 bytes
- static/images/hoyer.jpg  | Bin 0 -> 30483 bytes
- templates/barner.html    |  91 +++++++++++++++++++++++++++++++++++++++++++++++
- templates/brady.html     |  91 +++++++++++++++++++++++++++++++++++++++++++++++
- templates/hoyer.html     |  91 +++++++++++++++++++++++++++++++++++++++++++++++
- templates/players.html   |   6 ++--
- 8 files changed, 291 insertions(+), 3 deletions(-)
-
 commit ca707a481a86b02357c746a6a032fe0e815c9765
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Tue Oct 23 20:40:52 2018 -0500
 
     Removed player stats from players.html
-
- templates/players.html | 443 +++++++++++++++++++------------------------------
- 1 file changed, 168 insertions(+), 275 deletions(-)
 
 commit 32f1c9780bcf8bce4e4b45bdd5223bcae114e123
 Merge: 3300244 bc2c9a3
@@ -1336,17 +704,11 @@ Date:   Tue Oct 23 19:17:58 2018 -0500
 
     pushed update report to dev
 
- report.docx | Bin 0 -> 17610 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
-
 commit bc2c9a36a697b8df2b496270c3cb11d910091000
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Tue Oct 23 17:41:37 2018 -0500
 
     adding app.yaml
-
- app.yaml | 17 +++++++++++++++++
- 1 file changed, 17 insertions(+)
 
 commit 02242c360e73b55584e596d22aa133f05f39fc30
 Merge: ed7d593 731da98
@@ -1361,49 +723,11 @@ Date:   Tue Oct 23 17:38:07 2018 -0500
 
     adding files: requirements.txt, .yaml
 
- requirements.txt | 2 ++
- 1 file changed, 2 insertions(+)
-
 commit cd74593b410a117361c82dd99af94c50cff1a5c1
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Tue Oct 23 17:00:35 2018 -0500
 
     changes to app.yaml
-
- app.yaml               |  18 +++++++++++++++++-
- static/images/ah.jpg   | Bin 0 -> 119054 bytes
- static/images/att.jpg  | Bin 0 -> 186564 bytes
- static/images/ba.jpg   | Bin 0 -> 284251 bytes
- static/images/bs.jpg   | Bin 0 -> 620395 bytes
- static/images/cl.jpg   | Bin 0 -> 293666 bytes
- static/images/fe.jpeg  | Bin 0 -> 71622 bytes
- static/images/fed.jpg  | Bin 0 -> 75210 bytes
- static/images/ff.jpg   | Bin 0 -> 105410 bytes
- static/images/gs.jpg   | Bin 0 -> 317479 bytes
- static/images/hf.jpg   | Bin 0 -> 613494 bytes
- static/images/hr.png   | Bin 0 -> 346764 bytes
- static/images/lamc.jpg | Bin 0 -> 13015 bytes
- static/images/lf.jpg   | Bin 0 -> 143589 bytes
- static/images/lff.jpg  | Bin 0 -> 15133 bytes
- static/images/lo.jpg   | Bin 0 -> 1625672 bytes
- static/images/ls.jpg   | Bin 0 -> 137643 bytes
- static/images/mb.jpg   | Bin 0 -> 214738 bytes
- static/images/mbs.jpg  | Bin 0 -> 39281 bytes
- static/images/ml.jpg   | Bin 0 -> 10313 bytes
- static/images/mt.jpg   | Bin 0 -> 150876 bytes
- static/images/ne.jpg   | Bin 0 -> 45904 bytes
- static/images/nrg.jpg  | Bin 0 -> 90016 bytes
- static/images/ns.jpg   | Bin 0 -> 271373 bytes
- static/images/oa.JPG   | Bin 0 -> 19267 bytes
- static/images/pb.jpg   | Bin 0 -> 880921 bytes
- static/images/rj.jpg   | Bin 0 -> 20092 bytes
- static/images/sf.jpg   | Bin 0 -> 66319 bytes
- static/images/sfb.jpg  | Bin 0 -> 46618 bytes
- static/images/sh.jpg   | Bin 0 -> 1681105 bytes
- static/images/tiaa.jpg | Bin 0 -> 263213 bytes
- static/images/us.jpg   | Bin 0 -> 261062 bytes
- templates/teams.html   |  32 ++++++++++++++++++++++++++++++++
- 33 files changed, 49 insertions(+), 1 deletion(-)
 
 commit c201a4a7169d90e32ef303b3a275bb200ad9eb28
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1411,18 +735,11 @@ Date:   Tue Oct 23 15:49:38 2018 -0500
 
     adding report
 
- report.docx | Bin 0 -> 13727 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
-
 commit 731da982253b926d5d271d16a257168afa301a93
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Tue Oct 23 15:48:19 2018 -0500
 
     altered images on about.html
-
- static/images/amber.jpg | Bin 0 -> 819023 bytes
- templates/about.html    |  42 ++++++++++++++++++++++++++++++------------
- 2 files changed, 30 insertions(+), 12 deletions(-)
 
 commit c4e436f958b9422a4d1f2d521b7481f7482e2596
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1430,17 +747,11 @@ Date:   Tue Oct 23 15:08:09 2018 -0500
 
     adding app.yaml
 
- app.yaml | 1 +
- 1 file changed, 1 insertion(+)
-
 commit 914109bd10c4b1ffefe353b65bbca93fa0bee895
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Tue Oct 23 14:49:07 2018 -0500
 
     altered about.html
-
- templates/about.html | 248 ++++++++++++++++++++++++---------------------------
- 1 file changed, 116 insertions(+), 132 deletions(-)
 
 commit 1eea9bc111dcfd41ab3b1c410def965c1578cc85
 Author: Amber Tucker <tucker.amber.r@gmail.com>
@@ -1448,17 +759,11 @@ Date:   Tue Oct 23 17:40:48 2018 +0000
 
     Delete splash.html
 
- splash.html | 86 -------------------------------------------------------------
- 1 file changed, 86 deletions(-)
-
 commit 7a3edb52b9aeb7f844488525d0c45a988e87c44a
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Mon Oct 22 16:39:09 2018 -0500
 
     about.html
-
- templates/about.html | 19 ++++++++++++-------
- 1 file changed, 12 insertions(+), 7 deletions(-)
 
 commit a144a183cec8e33be2519c930b06e1f4e2f829ed
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1466,36 +771,17 @@ Date:   Mon Oct 22 16:11:28 2018 -0500
 
     Changes to About page
 
- templates/about.html | 59 +++++++++++++++++++++++++++++++++++++++++++++++-----
- 1 file changed, 54 insertions(+), 5 deletions(-)
-
 commit aac7ba4440fd7f68294c1c118d06167dbf96ee00
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Mon Oct 22 14:17:52 2018 -0500
 
     adding about page
 
- mainfile.py             |  10 ++++--
- static/images/jerry.jpg | Bin 0 -> 1936597 bytes
- templates/about.html    |  90 ++++++++++++++++++++++++++++++++++++++++++++++++
- templates/players.html  |   3 ++
- templates/splash.html   |   3 ++
- templates/teams.html    |   3 ++
- templates/weeks.html    |   3 ++
- 7 files changed, 109 insertions(+), 3 deletions(-)
-
 commit 324825dcc1b56de996a8e6f05cc3bcfa4a79967f
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Mon Oct 22 10:31:43 2018 -0500
 
     changes
-
- mainfile.py              |  17 +----------------
- static/images/Sports.jpg | Bin 0 -> 99731 bytes
- templates/players.html   |   6 +++---
- templates/teams.html     |  26 ++++++++++++++++++++++++++
- templates/weeks.html     |   5 +++--
- 5 files changed, 33 insertions(+), 21 deletions(-)
 
 commit ee21227679a77b6bb29742636ceeba0b27d0f03b
 Merge: 8d4594a bf55808
@@ -1510,54 +796,11 @@ Date:   Mon Oct 22 03:43:31 2018 -0500
 
     adding weeks.html
 
- mainfile.py                  |  18 +-
- static/images/49ers.png      | Bin 0 -> 3219 bytes
- static/images/Falcons.png    | Bin 0 -> 3242 bytes
- static/images/bears.png      | Bin 0 -> 2723 bytes
- static/images/bengals.png    | Bin 0 -> 2272 bytes
- static/images/bills.png      | Bin 0 -> 2317 bytes
- static/images/broncos.png    | Bin 0 -> 2470 bytes
- static/images/browns.png     | Bin 0 -> 3401 bytes
- static/images/buccaneers.png | Bin 0 -> 3596 bytes
- static/images/cardinals.png  | Bin 0 -> 2902 bytes
- static/images/chargers.png   | Bin 0 -> 2259 bytes
- static/images/colts.png      | Bin 0 -> 2774 bytes
- static/images/cowboys.png    | Bin 0 -> 2271 bytes
- static/images/dolphins.png   | Bin 0 -> 2999 bytes
- static/images/eagles.png     | Bin 0 -> 3109 bytes
- static/images/jaguars.png    | Bin 0 -> 4547 bytes
- static/images/jets.png       | Bin 0 -> 2519 bytes
- static/images/kc.png         | Bin 0 -> 2550 bytes
- static/images/lions.png      | Bin 0 -> 2803 bytes
- static/images/ny.png         | Bin 0 -> 1744 bytes
- static/images/packers.png    | Bin 0 -> 2589 bytes
- static/images/panthers.png   | Bin 0 -> 2389 bytes
- static/images/patriots.png   | Bin 0 -> 1766 bytes
- static/images/raiders.png    | Bin 0 -> 3154 bytes
- static/images/rams.png       | Bin 0 -> 2737 bytes
- static/images/ravens.png     | Bin 0 -> 2468 bytes
- static/images/redskins.png   | Bin 0 -> 3888 bytes
- static/images/saints.png     | Bin 0 -> 2981 bytes
- static/images/seahawks.png   | Bin 0 -> 1683 bytes
- static/images/steelers.png   | Bin 0 -> 3710 bytes
- static/images/texans.png     | Bin 0 -> 2653 bytes
- static/images/titans.png     | Bin 0 -> 3425 bytes
- static/images/tom.png        | Bin 103119 -> 0 bytes
- static/images/vikings.png    | Bin 0 -> 3201 bytes
- templates/first_page.html    |  54 ------
- templates/splash.html        |   6 +-
- templates/weeks.html         | 407 +++++++++++++++++++++++++++++++++++++++++++
- 37 files changed, 420 insertions(+), 65 deletions(-)
-
 commit bf55808fe8a2f87c3f150209d0c009c4a8fdb3f8
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Sun Oct 21 22:03:17 2018 -0500
 
     Added players.html, updated mainfile.py
-
- mainfile.py            |  14 +-
- templates/players.html | 388 +++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 399 insertions(+), 3 deletions(-)
 
 commit a7bb6f23955b2e75456b80141bf81c5d7caa3036
 Author: Dan Tran <Dan@Dans-MacBook-Air.local>
@@ -1565,18 +808,11 @@ Date:   Sun Oct 21 21:06:24 2018 -0500
 
     add owners
 
- templates/teams.html | 50 +++++++++++++++++++++++++-------------------------
- 1 file changed, 25 insertions(+), 25 deletions(-)
-
 commit a95eb3eae82088a02791c13431646c1cb8d98859
 Author: Dan Tran <Dan@wireless-10-145-22-90.public.utexas.edu>
 Date:   Sun Oct 21 19:32:40 2018 -0500
 
     add teams page
-
- mainfile.py          |  14 +--
- templates/teams.html | 322 +++++++++++++++++++++++++++++++++++++++++++++++++++
- 2 files changed, 329 insertions(+), 7 deletions(-)
 
 commit 1890c3e8ad2dd9acec10c2fc454cabb7cf40af82
 Merge: cffc0c4 289cabe
@@ -1591,23 +827,11 @@ Date:   Sun Oct 21 18:15:13 2018 -0500
 
     adding
 
- templates/first_page.html | 34 ++++++++++++++++------------------
- 1 file changed, 16 insertions(+), 18 deletions(-)
-
 commit 289cabed69c3793fcdcd224995fe755797d3b710
 Author: Amber Tucker <tuckera@cs.utexas.edu>
 Date:   Sun Oct 21 17:48:45 2018 -0500
 
     Added Splash page and images
-
- splash.html                       |  86 ++++++++++++++++++++++++++++++++++++++
- static/images/bearsPackers.jpg    | Bin 0 -> 69601 bytes
- static/images/footballOnField.jpg | Bin 0 -> 1843395 bytes
- static/images/logo.png            | Bin 0 -> 9195 bytes
- static/images/pileUp.jpg          | Bin 0 -> 1317505 bytes
- static/images/tomBrady.jpg        | Bin 0 -> 297926 bytes
- templates/splash.html             |  78 ++++++++++++++++++++++++++++++++++
- 7 files changed, 164 insertions(+)
 
 commit b5de74ce89ba26f931ff227c730c1fc39b79940d
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1615,18 +839,11 @@ Date:   Sun Oct 21 17:26:38 2018 -0500
 
     adding static folders
 
- static/css/Readme.txt | 0
- static/js/Readme.txt  | 0
- 2 files changed, 0 insertions(+), 0 deletions(-)
-
 commit 56ba4bf6d2d82696ea2172daac828456a352b7d5
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Sun Oct 21 17:25:07 2018 -0500
 
      adding tom
-
- static/images/tom.png | Bin 0 -> 103119 bytes
- 1 file changed, 0 insertions(+), 0 deletions(-)
 
 commit 269110b0ccd4df6b26a7aebba988c3467d924db3
 Author: Jerry Han <jayh511ster@gmail.com>
@@ -1634,30 +851,14 @@ Date:   Sun Oct 21 17:20:44 2018 -0500
 
     adding stuff
 
- templates/first_page.html | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
-
 commit 3cbfec591d3f7cf8d7b81ddcd99fa177425e745b
 Author: Jerry Han <jayh511ster@gmail.com>
 Date:   Sun Oct 21 17:06:10 2018 -0500
 
     adding files to git
 
- .gitignore                |  1 +
- main.py                   | 34 ++++++++++++++++++++++++++++
- main1.py                  | 15 +++++++++++++
- main2.py                  | 17 ++++++++++++++
- mainfile.py               | 23 +++++++++++++++++++
- templates/book.html       | 12 ++++++++++
- templates/first_page.html | 56 +++++++++++++++++++++++++++++++++++++++++++++++
- templates/hello.html      | 10 +++++++++
- 8 files changed, 168 insertions(+)
-
 commit d7b0036405a9ce5a4e7ab3fe198c04c7388f4168
 Author: Jerry Han <jayhan@utexas.edu>
 Date:   Fri Oct 19 20:29:30 2018 +0000
 
     Initial commit
-
- README.md | 3 +++
- 1 file changed, 3 insertions(+)

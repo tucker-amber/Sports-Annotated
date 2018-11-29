@@ -1,6 +1,12 @@
 .DS_Store
-.mypy_cache
+.__pycache__
 .pylintrc
 *.pyc
 *.tmp
+.gcloudignore
+whoosh
+~
+players
+teams
+weeks
 venv
