@@ -17,6 +17,7 @@ before_script:
  - pip install --upgrade pip
  - pip install -r requirements.txt
  - printenv | sort
+ - python create_db.py
 test:
  script:
  - python test.py

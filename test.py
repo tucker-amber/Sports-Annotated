@@ -2,19 +2,26 @@ import os
 import sys
 import unittest
 from models import app, db, Player, Teams, Weeks
+from create_db import create_players, create_teams, create_weeks
 
 class DBTestCases(unittest.TestCase):
-   
-	def test_player_source_insert_1(self):
-		s = Player(id ='100', jersey_num = 830, name = "Dwayne Allen 0", age = 28, pos = "TE", team = 'patriots')
+	def setUp(self):
+		app.config['Testing'] = True
+		app.config['WTF_CSRF_ENABLED'] = False
+		app.config['DEBUG'] = False
+		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
+		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
+		self.app = app.test_client()
+
+	def test_source_insert_1(self):
+		s = Player(id ='100', jersey_num = 83, name = "Dwayne Allen 0", age = 28, pos = "TE", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
 		r = db.session.query(Player).filter_by(id = '100').one()
 		self.assertEqual(str(r.id), '100')
-
 		db.session.query(Player).filter_by(id = '100').delete()
 		db.session.commit()
-	def test_player_source_insert_2(self):
+	def test_source_insert_2(self):
 		s = Player(id ='200', jersey_num = 600, name = "Ryan Allen 0", age = 28, pos = "P", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
@@ -23,7 +30,7 @@ class DBTestCases(unittest.TestCase):
 
 		db.session.query(Player).filter_by(id = '200').delete()
 		db.session.commit()
-	def test_player_source_insert_3(self):
+	def test_source_insert_3(self):
 		s = Player(id ='300', jersey_num = 160, name = "Darren Andrews 0", age = 23, pos = "WR", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
@@ -87,63 +94,66 @@ class DBTestCases(unittest.TestCase):
 
 		db.session.query(Weeks).filter_by(id = '300').delete()
 		db.session.commit()
-		
+
 	## Complete test for db
 	
 	## Testing the page methods on mainfile.py
-class BasicTests(unittest.TestCase):
-	def setUp(self):
-		app.config['Testing'] = True
-		app.config['WTF_CSRF_ENABLED'] = False
-		app.config['DEBUG'] = False
-		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
-		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
-		self.app = app.test_client()
+	
 	def test_index_page(self):
 		response = self.app.get('/', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 		
 	def test_search_page(self):
-		response = self.app.get('/search/', follow_redirects = True)
+		response = self.app.get('/search', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 	
 	def test_weeks_page(self):
-		response = self.app.get('/weeks/', follow_redirects = True)
+		response = self.app.get('/weeks', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 	
 	def test_players_page(self):
-		response = self.app.get('/players/', follow_redirects = True)
+		response = self.app.get('/players', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 	
 	def test_brady_page(self, id = 1):
-		response = self.app.get('/brady/1/', follow_redirects = True)
+		response = self.app.get('/brady/1', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
-	
+		
+	def test_brady_page(self, id = 2):
+		response = self.app.get('/brady/2', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+		
+	def test_brady_page(self, id = 3):
+		response = self.app.get('/brady/3', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+		
 	def test_teams_page(self):
-		response = self.app.get('/teams/', follow_redirects = True)
+		response = self.app.get('/teams', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 		
 	def test_teampage_page(self, team_name = 'patriots'):
-		response = self.app.get('/teampage/patriots/', follow_redirects = True)
+		response = self.app.get('/teampage/patriots', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 	
 	def test_about_page(self):
-		response = self.app.get('/about/', follow_redirects = True)
+		response = self.app.get('/about', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 		
 	def test_game_page(self, team_name = 'patriots'):
-		response = self.app.get('/game/patriots/', follow_redirects = True)
+		response = self.app.get('/game/patriots', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 		
 	def test_splash_page(self):
-		response = self.app.get('/splash/', follow_redirects = True)
+		response = self.app.get('/splash', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 	
 	def test_test_page(self):
-		response = self.app.get('/test/', follow_redirects = True)
+		response = self.app.get('/test', follow_redirects = True)
 		self.assertEqual(response.status_code, 404)
 	
-	def teatDown(self):
+	def tearDown(self):
 		pass
 if __name__ == '__main__':
- unittest.main()
+	unittest.main()
+
+ 
