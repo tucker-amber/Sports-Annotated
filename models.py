@@ -20,7 +20,6 @@ import requests
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
-print(os.environ.get("DB_STRING",'postgres://postgres:Hello!123@/postgres?host=35.226.209.166'))
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['WHOOSH_BASE'] = 'whoosh'
 
@@ -82,9 +81,6 @@ class Weeks(db.Model):
 	score = db.Column(db.Integer, nullable = False)
 	overtime = db.Column(db.String(80), nullable = False)
 	injuries = db.Column(db.Integer, nullable = False)
-
-# db.drop_all()
-# db.create_all()
 
 
 # End of models.py

@@ -40,13 +40,6 @@
       </li>
     </ul>
 	<a class="navbar-brand"></a>
-	<form class="form-inline" method="GET" action="search">
-		<div class="form-group">
-			<label for="query"></label>
-			<input type = "text" class="form-control" name="query" id="query">
-		<button type="submit" class="btn btn-primary">Search</button>
-		</div>
-	</form>
   </div>  
 </nav>
 <br>
@@ -61,34 +54,7 @@
       <h1 class="text-center">Teams</h1>
     </div><br>
   </div> <br>
-<!--
-{% for i in team %}
 
-  
-  <div class="row justify-content-md-center">
-    <div class="col-sm-4 ml-2 mr-2 mb-3 bg-light">
-    <div class="container-fluid bg-light">
-      <dl>
-        <dt><h3 class="text-center"><a href="{{url_for('teampage',team_name = i.team)}}" style="text-decoration:none; color:black">{{i.team}}</a></h3></dt>
-          <dd>
-            <table width="100%">
-              <tr class="border  border-right-0 border-left-0 border-bottom-1">
-            <td><a href="{{url_for('teampage',team_name = i.team)}}" style="text-decoration:none color:black"><image class="img-fluid" src= "{{"../static/images/" +i.team + ".png" }}" alt="team logo" width="100px"></a></td>
-            </tr>
-            <tr class="border border-top-0 border-right-0 border-left-0 border-bottom-1">
-            </tr>
-           </table>
-        </dd>
-      </dl>
-    </div>
-    </div>
-  </div>
-
-{% endfor %}
--->
-{% from macros import render_pagination %}
-
-{% block content %}
 {% for i in team %}
 
   
@@ -113,8 +79,6 @@
 
 {% endfor %}
 
-  {{ render_pagination(pagination) }}
-{% endblock %}
 <!--
 {% if prev_page %}
 <a href="{{prev_page}}">Previous Page</a>

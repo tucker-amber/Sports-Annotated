@@ -3,13 +3,14 @@
 # creating first flask application
 #-----------------------------------------
 from flask import Flask, render_template, request, redirect
-from flask_restless import APIManager
+#from flask_restless import APIManager
 from flask_sqlalchemy import SQLAlchemy
 from models import app, db, Player, Teams, Weeks
 import flask_whooshalchemy as wa
 import os
 import requests
 import subprocess
+import platform
 
 wa.whoosh_index(app, Player)
 
@@ -19,9 +20,9 @@ def index():
   
 # search function
 @app.route('/search/')
+@app.route('/splash/search')
 def search():
   searches = Player.query.whoosh_search(request.args.get('query')).all()
-  print(searches)
   if not searches:
     searches = None
   return render_template('search.html', searches=searches)
@@ -109,17 +110,24 @@ def splash():
 # Navigates to unit test page
 @app.route('/test/')
 def test():
-  process = subprocess.Popen(["python3", "-m", "coverage", "run", "--branch", "test.py"],
+# Checks to see if the OS is Windows/Linux system
+  if platform.system() == 'Windows':
+    process = subprocess.Popen(["python", "-m", "coverage", "run", "--branch", "test.py"],
                               stdout=subprocess.PIPE,
 							  stderr=subprocess.PIPE,
 							  stdin=subprocess.PIPE)
+
+  else:
+    process = subprocess.Popen(["python3", "-m", "coverage", "run", "--branch", "test.py"],
+                              stdout=subprocess.PIPE,
+							  stderr=subprocess.PIPE,
+							  stdin=subprocess.PIPE)
+
   out, err = process.communicate()
-  print("out: ", out)
-  print("err: ", err)
   output=err+out
   output = output.decode("utf-8")
-  print("output: ", output)
   return render_template('test.html', output = "\n".join(output.split("\n")))
+
 
 if __name__ == "__main__":
  app.run(debug = True)

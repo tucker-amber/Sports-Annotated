@@ -1,91 +1,149 @@
 import os
 import sys
 import unittest
-from models import db, Player, Teams, Weeks
+from models import app, db, Player, Teams, Weeks
 
 class DBTestCases(unittest.TestCase):
-	def test_source_insert_1(self):
-		s = Player(id ='1', jersey_num = 83, name = "Dwayne Allen", age = 28, pos = "TE", team = 'patriots')
+   
+	def test_player_source_insert_1(self):
+		s = Player(id ='100', jersey_num = 830, name = "Dwayne Allen 0", age = 28, pos = "TE", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Player).filter_by(id = '1').one()
-		self.assertEqual(str(r.id), '1')
+		r = db.session.query(Player).filter_by(id = '100').one()
+		self.assertEqual(str(r.id), '100')
 
-		db.session.query(Player).filter_by(id = '1').delete()
+		db.session.query(Player).filter_by(id = '100').delete()
 		db.session.commit()
-	def test_source_insert_2(self):
-		s = Player(id ='2', jersey_num = 6, name = "Ryan Allen", age = 28, pos = "P", team = 'patriots')
+	def test_player_source_insert_2(self):
+		s = Player(id ='200', jersey_num = 600, name = "Ryan Allen 0", age = 28, pos = "P", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Player).filter_by(id = '2').one()
-		self.assertEqual(str(r.id), '2')
+		r = db.session.query(Player).filter_by(id = '200').one()
+		self.assertEqual(str(r.id), '200')
 
-		db.session.query(Player).filter_by(id = '2').delete()
+		db.session.query(Player).filter_by(id = '200').delete()
 		db.session.commit()
-	def test_source_insert_3(self):
-		s = Player(id ='3', jersey_num = 16, name = "Darren Andrews", age = 23, pos = "WR", team = 'patriots')
+	def test_player_source_insert_3(self):
+		s = Player(id ='300', jersey_num = 160, name = "Darren Andrews 0", age = 23, pos = "WR", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Player).filter_by(id = '3').one()
-		self.assertEqual(str(r.id), '3')
+		r = db.session.query(Player).filter_by(id = '300').one()
+		self.assertEqual(str(r.id), '300')
 
-		db.session.query(Player).filter_by(id = '3').delete()
+		db.session.query(Player).filter_by(id = '300').delete()
 		db.session.commit()
 	
-	def test_team_source_1(self):
-		s = Teams(id ='1', stadium_name = "Arrowhead Stadium", stadium_init = "ah", games_played = 368, city = "Kansas City", week = 1, team = 'chiefs')
+	def test_team_source_insert_1(self):
+		s = Teams(id ='100', stadium_name = "Arrowhead Stadium", stadium_init = "ah", games_played = 368, city = "Kansas City", week = 1, team = 'chiefs')
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Teams).filter_by(id = '1').one()
-		self.assertEqual(str(r.id), '1')
+		r = db.session.query(Teams).filter_by(id = '100').one()
+		self.assertEqual(str(r.id), '100')
 
-		db.session.query(Teams).filter_by(id = '1').delete()
+		db.session.query(Teams).filter_by(id = '100').delete()
 		db.session.commit()
-	def test_team_source_2(self):
-		s = Teams(id ='2', stadium_name = "AT&T Stadium", stadium_init = "att", games_played = 80, city = "Arlington", week = 1, team = 'cowboys')
+	def test_team_source_insert_2(self):
+		s = Teams(id ='200', stadium_name = "AT&T Stadium", stadium_init = "att", games_played = 80, city = "Arlington", week = 1, team = 'cowboys')
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Teams).filter_by(id = '2').one()
-		self.assertEqual(str(r.id), '2')
+		r = db.session.query(Teams).filter_by(id = '200').one()
+		self.assertEqual(str(r.id), '200')
 
-		db.session.query(Teams).filter_by(id = '2').delete()
+		db.session.query(Teams).filter_by(id = '200').delete()
 		db.session.commit()
-	def test_team_source_3(self):
-		s = Teams(id ='3', stadium_name = "Bank of America Stadium", stadium_init = "ba", games_played = 188, city = "Charlotte", week = 1, team = 'panthers')
+	def test_team_source_insert_3(self):
+		s = Teams(id ='300', stadium_name = "Bank of America Stadium", stadium_init = "ba", games_played = 188, city = "Charlotte", week = 1, team = 'panthers')
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Teams).filter_by(id = '3').one()
-		self.assertEqual(str(r.id), '3')
+		r = db.session.query(Teams).filter_by(id = '300').one()
+		self.assertEqual(str(r.id), '300')
 
-		db.session.query(Teams).filter_by(id = '3').delete()
+		db.session.query(Teams).filter_by(id = '300').delete()
 		db.session.commit()
-	def test_week_source_1(self):
-		s = Weeks(id ='1', week = 1, team = "chiefs", score = 38, overtime = "No",injuries = 1)
+	def test_week_source_insert_1(self):
+		s = Weeks(id ='100', week = 1, team = "chiefs", score = 38, overtime = "No",injuries = 1)
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Weeks).filter_by(id = '1').one()
-		self.assertEqual(str(r.id), '1')
+		r = db.session.query(Weeks).filter_by(id = '100').one()
+		self.assertEqual(str(r.id), '100')
 
-		db.session.query(Weeks).filter_by(id = '1').delete()
+		db.session.query(Weeks).filter_by(id = '100').delete()
 		db.session.commit()
-	def test_week_source_2(self):
-		s = Weeks(id ='2', week = 1, team = "cowboys", score = 8, overtime = "No" ,injuries = 3)
+	def test_week_source_insert_2(self):
+		s = Weeks(id ='200', week = 1, team = "cowboys", score = 8, overtime = "No" ,injuries = 3)
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Weeks).filter_by(id = '2').one()
-		self.assertEqual(str(r.id), '2')
+		r = db.session.query(Weeks).filter_by(id = '200').one()
+		self.assertEqual(str(r.id), '200')
 
-		db.session.query(Weeks).filter_by(id = '1').delete()
+		db.session.query(Weeks).filter_by(id = '200').delete()
 		db.session.commit()
-	def test_week_source_3(self):
-		s = Weeks(id ='3', week = 1, team = "panthers", score = 16, overtime = "No",injuries = 5)
+	def test_week_source_insert_3(self):
+		s = Weeks(id ='300', week = 1, team = "panthers", score = 16, overtime = "No",injuries = 5)
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Weeks).filter_by(id = '3').one()
-		self.assertEqual(str(r.id), '3')
+		r = db.session.query(Weeks).filter_by(id = '300').one()
+		self.assertEqual(str(r.id), '300')
 
-		db.session.query(Weeks).filter_by(id = '3').delete()
+		db.session.query(Weeks).filter_by(id = '300').delete()
 		db.session.commit()
-
+		
+	## Complete test for db
+	
+	## Testing the page methods on mainfile.py
+class BasicTests(unittest.TestCase):
+	def setUp(self):
+		app.config['Testing'] = True
+		app.config['WTF_CSRF_ENABLED'] = False
+		app.config['DEBUG'] = False
+		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
+		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
+		self.app = app.test_client()
+	def test_index_page(self):
+		response = self.app.get('/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+		
+	def test_search_page(self):
+		response = self.app.get('/search/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+	
+	def test_weeks_page(self):
+		response = self.app.get('/weeks/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+	
+	def test_players_page(self):
+		response = self.app.get('/players/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+	
+	def test_brady_page(self, id = 1):
+		response = self.app.get('/brady/1/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+	
+	def test_teams_page(self):
+		response = self.app.get('/teams/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+		
+	def test_teampage_page(self, team_name = 'patriots'):
+		response = self.app.get('/teampage/patriots/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+	
+	def test_about_page(self):
+		response = self.app.get('/about/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+		
+	def test_game_page(self, team_name = 'patriots'):
+		response = self.app.get('/game/patriots/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+		
+	def test_splash_page(self):
+		response = self.app.get('/splash/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+	
+	def test_test_page(self):
+		response = self.app.get('/test/', follow_redirects = True)
+		self.assertEqual(response.status_code, 404)
+	
+	def teatDown(self):
+		pass
 if __name__ == '__main__':
  unittest.main()

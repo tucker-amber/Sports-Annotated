@@ -1,6 +1,8 @@
 # beginning of create_db.py
 import json
-from models import db, Player, Teams, Weeks
+from models import app, db, Player, Teams, Weeks
+import flask_whooshalchemy as wa
+
 
 def load_json(filename):
 	with open(filename) as file:
@@ -52,7 +54,17 @@ def create_weeks():
 		db.session.add(newWeek)
 		# commit the session to my DB.
 		db.session.commit()		
-create_players()
-create_teams()
-create_weeks()
+# create_players()
+# create_teams()
+# create_weeks()
+
+if __name__ == "__main__":
+	db.drop_all()
+	db.create_all()
+	create_players()
+	create_teams()
+	create_weeks()
+	wa.whoosh_index(app, Player)
+
+	
 # end of create_db.py

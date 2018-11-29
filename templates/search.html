@@ -12,7 +12,7 @@
 <body>
 
 <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="{{url_for('splash')}}">
     <img src="../static/images/logo.png" alt="logo" width="80px">
     <span class="font-weight-bold">Sports Annotated</span>
   </a>
@@ -35,13 +35,7 @@
       </li>
     </ul>
 	<a class="navbar-brand"></a>
-	<form class="form-inline" method="GET" action="">
-		<div class="form-group">
-			<label for="query"></label>
-			<input type = "text" class="form-control" name="query" id="query">
-		<button type="submit" class="btn btn-primary">Search</button>
-		</div>
-	</form>
+
   </div>  
 </nav>
 
@@ -50,6 +44,7 @@
 	<div class="container bg-light">
 	<p> Can't Find that one</p>
 	</div>
+	<button><a href = "{{url_for('splash')}}">Return to homepage</a></button>
 {% else %}
 	{% for i in searches %}
 		<div class="container bg-light">
@@ -59,8 +54,10 @@
 
 		</div>
 	{% endfor %}
+	<button><a href = "{{url_for('splash')}}">Return to homepage</a></button>
 {% endif %}
 	
+
 
 </body>
 </html>
