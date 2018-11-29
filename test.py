@@ -4,7 +4,7 @@ import unittest
 from models import app, db, Player, Teams, Weeks
 
 class DBTestCases(unittest.TestCase):
-    def setUp(self):
+	def setUp(self):
 		app.config['Testing'] = True
 		app.config['WTF_CSRF_ENABLED'] = False
 		app.config['DEBUG'] = False
