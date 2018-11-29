@@ -13,87 +13,87 @@ class DBTestCases(unittest.TestCase):
 		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
 		self.app = app.test_client()
 
-	def test_source_insert_1(self):
-		s = Player(id ='1', jersey_num = 83, name = "Dwayne Allen", age = 28, pos = "TE", team = 'patriots')
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Player).filter_by(id = '1').one()
-		self.assertEqual(str(r.id), '1')
-		db.session.query(Player).filter_by(id = '1').delete()
-		db.session.commit()
-	def test_source_insert_2(self):
-		s = Player(id ='200', jersey_num = 600, name = "Ryan Allen 0", age = 28, pos = "P", team = 'patriots')
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Player).filter_by(id = '200').one()
-		self.assertEqual(str(r.id), '200')
+	# def test_source_insert_1(self):
+		# s = Player(id ='1', jersey_num = 83, name = "Dwayne Allen", age = 28, pos = "TE", team = 'patriots')
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Player).filter_by(id = '1').one()
+		# self.assertEqual(str(r.id), '1')
+		# db.session.query(Player).filter_by(id = '1').delete()
+		# db.session.commit()
+	# def test_source_insert_2(self):
+		# s = Player(id ='200', jersey_num = 600, name = "Ryan Allen 0", age = 28, pos = "P", team = 'patriots')
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Player).filter_by(id = '200').one()
+		# self.assertEqual(str(r.id), '200')
 
-		db.session.query(Player).filter_by(id = '200').delete()
-		db.session.commit()
-	def test_source_insert_3(self):
-		s = Player(id ='300', jersey_num = 160, name = "Darren Andrews 0", age = 23, pos = "WR", team = 'patriots')
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Player).filter_by(id = '300').one()
-		self.assertEqual(str(r.id), '300')
+		# db.session.query(Player).filter_by(id = '200').delete()
+		# db.session.commit()
+	# def test_source_insert_3(self):
+		# s = Player(id ='300', jersey_num = 160, name = "Darren Andrews 0", age = 23, pos = "WR", team = 'patriots')
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Player).filter_by(id = '300').one()
+		# self.assertEqual(str(r.id), '300')
 
-		db.session.query(Player).filter_by(id = '300').delete()
-		db.session.commit()
+		# db.session.query(Player).filter_by(id = '300').delete()
+		# db.session.commit()
 	
-	def test_team_source_insert_1(self):
-		s = Teams(id ='100', stadium_name = "Arrowhead Stadium", stadium_init = "ah", games_played = 368, city = "Kansas City", week = 1, team = 'chiefs')
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Teams).filter_by(id = '100').one()
-		self.assertEqual(str(r.id), '100')
+	# def test_team_source_insert_1(self):
+		# s = Teams(id ='100', stadium_name = "Arrowhead Stadium", stadium_init = "ah", games_played = 368, city = "Kansas City", week = 1, team = 'chiefs')
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Teams).filter_by(id = '100').one()
+		# self.assertEqual(str(r.id), '100')
 
-		db.session.query(Teams).filter_by(id = '100').delete()
-		db.session.commit()
-	def test_team_source_insert_2(self):
-		s = Teams(id ='200', stadium_name = "AT&T Stadium", stadium_init = "att", games_played = 80, city = "Arlington", week = 1, team = 'cowboys')
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Teams).filter_by(id = '200').one()
-		self.assertEqual(str(r.id), '200')
+		# db.session.query(Teams).filter_by(id = '100').delete()
+		# db.session.commit()
+	# def test_team_source_insert_2(self):
+		# s = Teams(id ='200', stadium_name = "AT&T Stadium", stadium_init = "att", games_played = 80, city = "Arlington", week = 1, team = 'cowboys')
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Teams).filter_by(id = '200').one()
+		# self.assertEqual(str(r.id), '200')
 
-		db.session.query(Teams).filter_by(id = '200').delete()
-		db.session.commit()
-	def test_team_source_insert_3(self):
-		s = Teams(id ='300', stadium_name = "Bank of America Stadium", stadium_init = "ba", games_played = 188, city = "Charlotte", week = 1, team = 'panthers')
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Teams).filter_by(id = '300').one()
-		self.assertEqual(str(r.id), '300')
+		# db.session.query(Teams).filter_by(id = '200').delete()
+		# db.session.commit()
+	# def test_team_source_insert_3(self):
+		# s = Teams(id ='300', stadium_name = "Bank of America Stadium", stadium_init = "ba", games_played = 188, city = "Charlotte", week = 1, team = 'panthers')
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Teams).filter_by(id = '300').one()
+		# self.assertEqual(str(r.id), '300')
 
-		db.session.query(Teams).filter_by(id = '300').delete()
-		db.session.commit()
-	def test_week_source_insert_1(self):
-		s = Weeks(id ='100', week = 1, team = "chiefs", score = 38, overtime = "No",injuries = 1)
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Weeks).filter_by(id = '100').one()
-		self.assertEqual(str(r.id), '100')
+		# db.session.query(Teams).filter_by(id = '300').delete()
+		# db.session.commit()
+	# def test_week_source_insert_1(self):
+		# s = Weeks(id ='100', week = 1, team = "chiefs", score = 38, overtime = "No",injuries = 1)
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Weeks).filter_by(id = '100').one()
+		# self.assertEqual(str(r.id), '100')
 
-		db.session.query(Weeks).filter_by(id = '100').delete()
-		db.session.commit()
-	def test_week_source_insert_2(self):
-		s = Weeks(id ='200', week = 1, team = "cowboys", score = 8, overtime = "No" ,injuries = 3)
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Weeks).filter_by(id = '200').one()
-		self.assertEqual(str(r.id), '200')
+		# db.session.query(Weeks).filter_by(id = '100').delete()
+		# db.session.commit()
+	# def test_week_source_insert_2(self):
+		# s = Weeks(id ='200', week = 1, team = "cowboys", score = 8, overtime = "No" ,injuries = 3)
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Weeks).filter_by(id = '200').one()
+		# self.assertEqual(str(r.id), '200')
 
-		db.session.query(Weeks).filter_by(id = '200').delete()
-		db.session.commit()
-	def test_week_source_insert_3(self):
-		s = Weeks(id ='300', week = 1, team = "panthers", score = 16, overtime = "No",injuries = 5)
-		db.session.add(s)
-		db.session.commit()
-		r = db.session.query(Weeks).filter_by(id = '300').one()
-		self.assertEqual(str(r.id), '300')
+		# db.session.query(Weeks).filter_by(id = '200').delete()
+		# db.session.commit()
+	# def test_week_source_insert_3(self):
+		# s = Weeks(id ='300', week = 1, team = "panthers", score = 16, overtime = "No",injuries = 5)
+		# db.session.add(s)
+		# db.session.commit()
+		# r = db.session.query(Weeks).filter_by(id = '300').one()
+		# self.assertEqual(str(r.id), '300')
 
-		db.session.query(Weeks).filter_by(id = '300').delete()
-		db.session.commit()
+		# db.session.query(Weeks).filter_by(id = '300').delete()
+		# db.session.commit()
 
 	## Complete test for db
 	
