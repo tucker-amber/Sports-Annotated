@@ -12,19 +12,15 @@ class DBTestCases(unittest.TestCase):
 		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
 		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
 		self.app = app.test_client()
-		
-	def setUp(self):
-		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
-		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
-		self.app = app.test_client()
+
 	def test_player_source_insert_1(self):
-		s = Player(id ='100', jersey_num = 830, name = "Dwayne Allen 0", age = 28, pos = "TE", team = 'patriots')
+		s = Player(id ='1', jersey_num = 83, name = "Dwayne Allen", age = 28, pos = "TE", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
-		r = db.session.query(Player).filter_by(id = '100').one()
-		self.assertEqual(str(r.id), '100')
+		r = db.session.query(Player).filter_by(id = '1').one()
+		self.assertEqual(str(r.id), '1')
 
-		db.session.query(Player).filter_by(id = '100').delete()
+		db.session.query(Player).filter_by(id = '1').delete()
 		db.session.commit()
 	def test_player_source_insert_2(self):
 		s = Player(id ='200', jersey_num = 600, name = "Ryan Allen 0", age = 28, pos = "P", team = 'patriots')
