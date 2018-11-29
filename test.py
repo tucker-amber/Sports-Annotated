@@ -4,7 +4,14 @@ import unittest
 from models import app, db, Player, Teams, Weeks
 
 class DBTestCases(unittest.TestCase):
-   
+    def setUp(self):
+		app.config['Testing'] = True
+		app.config['WTF_CSRF_ENABLED'] = False
+		app.config['DEBUG'] = False
+		app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DB_STRING",
+		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
+		self.app = app.test_client()
+	
 	def test_player_source_insert_1(self):
 		s = Player(id ='100', jersey_num = 830, name = "Dwayne Allen 0", age = 28, pos = "TE", team = 'patriots')
 		db.session.add(s)
@@ -87,6 +94,8 @@ class DBTestCases(unittest.TestCase):
 
 		db.session.query(Weeks).filter_by(id = '300').delete()
 		db.session.commit()
+	def teatDown(self):
+		pass
 		
 	## Complete test for db
 	
