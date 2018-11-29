@@ -13,16 +13,15 @@ class DBTestCases(unittest.TestCase):
 		'postgres://postgres:Hello!123@/postgres?host=35.226.209.166')
 		self.app = app.test_client()
 
-	def test_player_source_insert_1(self):
+	def test_source_insert_1(self):
 		s = Player(id ='1', jersey_num = 83, name = "Dwayne Allen", age = 28, pos = "TE", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
 		r = db.session.query(Player).filter_by(id = '1').one()
 		self.assertEqual(str(r.id), '1')
-
 		db.session.query(Player).filter_by(id = '1').delete()
 		db.session.commit()
-	def test_player_source_insert_2(self):
+	def test_source_insert_2(self):
 		s = Player(id ='200', jersey_num = 600, name = "Ryan Allen 0", age = 28, pos = "P", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
@@ -31,7 +30,7 @@ class DBTestCases(unittest.TestCase):
 
 		db.session.query(Player).filter_by(id = '200').delete()
 		db.session.commit()
-	def test_player_source_insert_3(self):
+	def test_source_insert_3(self):
 		s = Player(id ='300', jersey_num = 160, name = "Darren Andrews 0", age = 23, pos = "WR", team = 'patriots')
 		db.session.add(s)
 		db.session.commit()
